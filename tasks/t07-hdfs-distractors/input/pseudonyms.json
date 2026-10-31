@@ -1,0 +1,66 @@
+[
+  {
+    "persona_id": "P01",
+    "full_name": "Dariusz Cavendish",
+    "first_name": "Dariusz",
+    "last_name": "Cavendish",
+    "email": "dariusz.cavendish@pseudonym.example",
+    "username": "dcavendish"
+  },
+  {
+    "persona_id": "P02",
+    "full_name": "Ambrose Abernethy",
+    "first_name": "Ambrose",
+    "last_name": "Abernethy",
+    "email": "ambrose.abernethy@pseudonym.example",
+    "username": "aabernethy"
+  },
+  {
+    "persona_id": "P03",
+    "full_name": "Freya Strandberg",
+    "first_name": "Freya",
+    "last_name": "Strandberg",
+    "email": "freya.strandberg@pseudonym.example",
+    "username": "fstrandberg"
+  },
+  {
+    "persona_id": "P04",
+    "full_name": "Ilse Northcott",
+    "first_name": "Ilse",
+    "last_name": "Northcott",
+    "email": "ilse.northcott@pseudonym.example",
+    "username": "inorthcott"
+  },
+  {
+    "persona_id": "P05",
+    "full_name": "Viggo Isaksen",
+    "first_name": "Viggo",
+    "last_name": "Isaksen",
+    "email": "viggo.isaksen@pseudonym.example",
+    "username": "visaksen"
+  },
+  {
+    "persona_id": "P06",
+    "full_name": "Calliope Whitmore",
+    "first_name": "Calliope",
+    "last_name": "Whitmore",
+    "email": "calliope.whitmore@pseudonym.example",
+    "username": "cwhitmore"
+  },
+  {
+    "persona_id": "P07",
+    "full_name": "Rufus Hallorann",
+    "first_name": "Rufus",
+    "last_name": "Hallorann",
+    "email": "rufus.hallorann@pseudonym.example",
+    "username": "rhallorann"
+  },
+  {
+    "persona_id": "P08",
+    "full_name": "Tobias Dunmore",
+    "first_name": "Tobias",
+    "last_name": "Dunmore",
+    "email": "tobias.dunmore@pseudonym.example",
+    "username": "tdunmore"
+  }
+]

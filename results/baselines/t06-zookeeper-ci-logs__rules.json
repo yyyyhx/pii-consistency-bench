@@ -1,0 +1,126 @@
+{
+ "task_id": "t06-zookeeper-ci-logs",
+ "cleaner": "rules",
+ "elapsed_s": 0.0021,
+ "score": 0.6666666666666666,
+ "gate": true,
+ "components": {
+  "entity_recall": 0.5,
+  "continuity": 0.5,
+  "precision": 1.0,
+  "integrity": 1.0
+ },
+ "diagnostics": {
+  "grader_version": "grader-0.3",
+  "harmonic_mean": 0.6666666666666666,
+  "score_v1": 0.6666666666666666,
+  "min_component": 0.5,
+  "solved": false,
+  "gate_schema": true,
+  "gate_links": true,
+  "gate_text": true,
+  "occurrence_recall": 0.9714285714285714,
+  "occurrence_recall_structured": 1.0,
+  "occurrence_recall_free_text": 0.8888888888888888,
+  "separation": 1.0,
+  "entity_success": 0.5,
+  "entities_ok": [
+   "E02",
+   "E03"
+  ],
+  "bcubed_precision": 1.0,
+  "bcubed_recall": 0.96463133640553,
+  "form_accuracy": 0.9926470588235294,
+  "persona_resolved": 1.0,
+  "text_preservation": 1.0,
+  "distractor_preservation": 1.0,
+  "schema_valid": true,
+  "n_entities": 4,
+  "n_occurrences": 140,
+  "n_leaked": 4,
+  "n_residual_token_hits": 5,
+  "n_overscrub_edits": 0,
+  "n_integrity_failures": 0,
+  "n_link_failures": 0,
+  "n_schema_errors": 0,
+  "n_declared_personas": 0,
+  "mapping_errors": [],
+  "mapping_leaks": 0,
+  "recall_by_surface": {
+   "ci_builds.log": 1.0,
+   "ci_builds.triggered_by.display_name": 1.0,
+   "ci_builds.triggered_by.username": 1.0,
+   "comments.author.display_name": 1.0,
+   "comments.author.username": 1.0,
+   "comments.body": 0.6364,
+   "commits.author.email": 1.0,
+   "commits.author.name": 1.0,
+   "commits.committer.email": 1.0,
+   "commits.committer.name": 1.0,
+   "commits.message": 1.0,
+   "issues.assignee.display_name": 1.0,
+   "issues.assignee.username": 1.0,
+   "issues.creator.display_name": 1.0,
+   "issues.creator.username": 1.0,
+   "issues.description": 1.0,
+   "issues.reporter.display_name": 1.0,
+   "issues.reporter.username": 1.0
+  }
+ },
+ "failures": {
+  "leaks": [
+   [
+    "O0096",
+    "comments.body",
+    "Bartek",
+    "Bartek"
+   ],
+   [
+    "O0109",
+    "comments.body",
+    "Tatiana Barzani",
+    "Tatiana Barzani"
+   ],
+   [
+    "O0130",
+    "comments.body",
+    "Bartek",
+    "Bartek"
+   ],
+   [
+    "O0136",
+    "comments.body",
+    "Tatiana",
+    "Tatiana"
+   ]
+  ],
+  "continuity": [
+   {
+    "entity": "E01",
+    "personas": {
+     "P01": 122
+    },
+    "bad_form": 1,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.body",
+      "bartosz.jablonski at lab dot example dot org",
+      "ajankowski at lab dot example dot org"
+     ]
+    ]
+   },
+   {
+    "entity": "E04",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   }
+  ],
+  "overscrub": [],
+  "integrity": [],
+  "links": [],
+  "schema": []
+ }
+}

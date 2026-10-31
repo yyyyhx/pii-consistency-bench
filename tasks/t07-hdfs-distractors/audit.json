@@ -1,0 +1,68 @@
+{
+ "task_id": "t07-hdfs-distractors",
+ "records": {
+  "data/commits.jsonl": 10,
+  "data/issues.jsonl": 6,
+  "data/comments.jsonl": 26,
+  "data/people.jsonl": 3
+ },
+ "entities": 4,
+ "pool_size": 8,
+ "occurrences": 165,
+ "occurrences_synthetic": 28,
+ "occurrences_free_text": 28,
+ "occurrences_by_surface": {
+  "comments.author.display_name": 23,
+  "comments.author.username": 23,
+  "comments.body": 14,
+  "commits.author.email": 10,
+  "commits.author.name": 10,
+  "commits.committer.email": 10,
+  "commits.committer.name": 10,
+  "commits.message": 12,
+  "issues.assignee.display_name": 6,
+  "issues.assignee.username": 6,
+  "issues.creator.display_name": 6,
+  "issues.creator.username": 6,
+  "issues.description": 2,
+  "issues.reporter.display_name": 6,
+  "issues.reporter.username": 6,
+  "people.accounts.display_name": 3,
+  "people.accounts.email": 2,
+  "people.accounts.name": 2,
+  "people.accounts.username": 3,
+  "people.display_name": 3,
+  "people.emails": 2
+ },
+ "aliases_per_entity": {
+  "E01": 5,
+  "E02": 3,
+  "E03": 3,
+  "E04": 2
+ },
+ "collisions": [],
+ "distractors": 12,
+ "sanitizer_paragraph_decisions": {
+  "accept": 291513,
+  "too_short": 62198,
+  "mention": 33740,
+  "name": 15194,
+  "address": 8331,
+  "name_mid_sentence": 4973,
+  "handle": 4478,
+  "lower_name": 2061,
+  "unknown_proper": 1457,
+  "email": 253,
+  "initials": 220,
+  "quote_header": 89,
+  "lower_address": 81,
+  "assign_leftover": 52
+ },
+ "non_dictionary_capitalized_tokens": {
+  "Hadoop": 7,
+  "Findbugs": 6,
+  "Jackson": 3,
+  "Co": 2
+ },
+ "validation": "ok"
+}

@@ -1,0 +1,17 @@
+The task data in tasks/ and tasks_hard/ (and the derived Hugging Face dataset) is licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+
+It is derived from two datasets, both licensed under CC BY 4.0. If you use this data, please also credit them:
+
+* 20-MAD: Maëlick Claes and Mika V. Mäntylä. "20-MAD: 20 Years of Issues and Commits of Mozilla and Apache
+  Development." Proceedings of the 17th International Conference on Mining Software Repositories (MSR 2020).
+  Data: https://github.com/M3SOulu/MozillaApacheDataset-sample
+* SmartSHARK: Alexander Trautsch, Fabian Trautsch, Steffen Herbold. "The SmartSHARK Repository Mining Data."
+  Release 2.1 Small, GRO.data, doi:10.25625/PHV2VX
+
+Changes made: record structure (ids, hashes, timestamps, links between records) is kept from the source datasets.
+Every name, email address, username and personal reference was replaced by a synthetic identity. Free text from
+20-MAD was sanitized; free text in the SmartSHARK-derived tasks is generated from templates. See docs/DATA.md.
+
+The code in this repository is licensed separately under the MIT License (see LICENSE).

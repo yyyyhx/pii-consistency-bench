@@ -1,0 +1,411 @@
+{
+ "task_id": "t09-storm-linked-accounts",
+ "cleaner": "noop",
+ "elapsed_s": 0.0,
+ "score": 0.0,
+ "gate": true,
+ "components": {
+  "entity_recall": 0.0,
+  "continuity": 0.0,
+  "precision": 1.0,
+  "integrity": 1.0
+ },
+ "diagnostics": {
+  "grader_version": "grader-0.3",
+  "harmonic_mean": 0.0,
+  "score_v1": 0.0,
+  "min_component": 0.0,
+  "solved": false,
+  "gate_schema": true,
+  "gate_links": true,
+  "gate_text": true,
+  "occurrence_recall": 0.0,
+  "occurrence_recall_structured": 0.0,
+  "occurrence_recall_free_text": 0.0,
+  "separation": 1.0,
+  "entity_success": 0.0,
+  "entities_ok": [],
+  "bcubed_precision": 1.0,
+  "bcubed_recall": 0.06490384615384616,
+  "form_accuracy": 0.0,
+  "persona_resolved": 0.0,
+  "text_preservation": 1.0,
+  "distractor_preservation": 1.0,
+  "schema_valid": true,
+  "n_entities": 27,
+  "n_occurrences": 416,
+  "n_leaked": 416,
+  "n_residual_token_hits": 584,
+  "n_overscrub_edits": 0,
+  "n_integrity_failures": 0,
+  "n_link_failures": 0,
+  "n_schema_errors": 0,
+  "n_declared_personas": 0,
+  "mapping_errors": [],
+  "mapping_leaks": 0,
+  "recall_by_surface": {
+   "ci_builds.log": 0.0,
+   "comments.author.display_name": 0.0,
+   "comments.author.username": 0.0,
+   "comments.body": 0.0,
+   "commits.author.email": 0.0,
+   "commits.author.name": 0.0,
+   "commits.committer.email": 0.0,
+   "commits.committer.name": 0.0,
+   "commits.message": 0.0,
+   "issues.assignee.display_name": 0.0,
+   "issues.assignee.username": 0.0,
+   "issues.description": 0.0,
+   "issues.reporter.display_name": 0.0,
+   "issues.reporter.username": 0.0,
+   "mail.body": 0.0,
+   "mail.from.email": 0.0,
+   "mail.from.name": 0.0,
+   "pr_comments.author.display_name": 0.0,
+   "pr_comments.author.login": 0.0,
+   "pr_comments.body": 0.0,
+   "pull_requests.creator.display_name": 0.0,
+   "pull_requests.creator.login": 0.0,
+   "pull_requests.description": 0.0,
+   "pull_requests.source_repo_url": 0.0,
+   "reviews.body": 0.0,
+   "reviews.creator.display_name": 0.0,
+   "reviews.creator.login": 0.0
+  }
+ },
+ "failures": {
+  "leaks": [
+   [
+    "O0001",
+    "commits.author.name",
+    "Farhan Rautio",
+    "Farhan Rautio"
+   ],
+   [
+    "O0002",
+    "commits.author.email",
+    "farhan.rautio@example.com",
+    "farhan.rautio@example.com"
+   ],
+   [
+    "O0003",
+    "commits.committer.name",
+    "Farhan Rautio",
+    "Farhan Rautio"
+   ],
+   [
+    "O0004",
+    "commits.committer.email",
+    "farhan.rautio@example.com",
+    "farhan.rautio@example.com"
+   ],
+   [
+    "O0005",
+    "commits.message",
+    "Farhan Rautio",
+    "Farhan Rautio"
+   ],
+   [
+    "O0006",
+    "commits.message",
+    "farhan.rautio@example.com",
+    "farhan.rautio@example.com"
+   ],
+   [
+    "O0007",
+    "commits.author.name",
+    "Isidore Bergstrom",
+    "Isidore Bergstrom"
+   ],
+   [
+    "O0008",
+    "commits.author.email",
+    "isidore.bergstrom@dev.example.net",
+    "isidore.bergstrom@dev.example.net"
+   ],
+   [
+    "O0009",
+    "commits.committer.name",
+    "Isidore Bergstrom",
+    "Isidore Bergstrom"
+   ],
+   [
+    "O0010",
+    "commits.committer.email",
+    "isidore.bergstrom@dev.example.net",
+    "isidore.bergstrom@dev.example.net"
+   ],
+   [
+    "O0011",
+    "commits.message",
+    "Isidore Bergstrom",
+    "Isidore Bergstrom"
+   ],
+   [
+    "O0012",
+    "commits.message",
+    "isidore.bergstrom@dev.example.net",
+    "isidore.bergstrom@dev.example.net"
+   ],
+   [
+    "O0013",
+    "commits.author.name",
+    "Isidore Bergstrom",
+    "Isidore Bergstrom"
+   ],
+   [
+    "O0014",
+    "commits.author.email",
+    "isidore.bergstrom@dev.example.net",
+    "isidore.bergstrom@dev.example.net"
+   ],
+   [
+    "O0015",
+    "commits.committer.name",
+    "Isidore Bergstrom",
+    "Isidore Bergstrom"
+   ],
+   [
+    "O0016",
+    "commits.committer.email",
+    "isidore.bergstrom@dev.example.net",
+    "isidore.bergstrom@dev.example.net"
+   ],
+   [
+    "O0017",
+    "commits.message",
+    "Isidore Bergstrom",
+    "Isidore Bergstrom"
+   ],
+   [
+    "O0018",
+    "commits.message",
+    "isidore.bergstrom@dev.example.net",
+    "isidore.bergstrom@dev.example.net"
+   ],
+   [
+    "O0019",
+    "commits.author.name",
+    "Isidore Bergstrom",
+    "Isidore Bergstrom"
+   ],
+   [
+    "O0020",
+    "commits.author.email",
+    "isidore.bergstrom@dev.example.net",
+    "isidore.bergstrom@dev.example.net"
+   ],
+   [
+    "O0021",
+    "commits.committer.name",
+    "Isidore Bergstrom",
+    "Isidore Bergstrom"
+   ],
+   [
+    "O0022",
+    "commits.committer.email",
+    "isidore.bergstrom@dev.example.net",
+    "isidore.bergstrom@dev.example.net"
+   ],
+   [
+    "O0023",
+    "commits.author.name",
+    "Farhan Rautio",
+    "Farhan Rautio"
+   ],
+   [
+    "O0024",
+    "commits.author.email",
+    "farhan.rautio@example.com",
+    "farhan.rautio@example.com"
+   ],
+   [
+    "O0025",
+    "commits.committer.name",
+    "Farhan Rautio",
+    "Farhan Rautio"
+   ]
+  ],
+  "continuity": [
+   {
+    "entity": "E02",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E01",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E06",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E07",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E08",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E03",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E05",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E09",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E04",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E24",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E25",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E21",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E20",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E23",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E18",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E22",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E27",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E19",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E26",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E15",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E10",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E11",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E12",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E13",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E14",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   }
+  ],
+  "overscrub": [],
+  "integrity": [],
+  "links": [],
+  "schema": []
+ }
+}

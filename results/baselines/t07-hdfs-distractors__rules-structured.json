@@ -1,0 +1,239 @@
+{
+ "task_id": "t07-hdfs-distractors",
+ "cleaner": "rules-structured",
+ "elapsed_s": 0.0018,
+ "score": 0.5454545454545455,
+ "gate": true,
+ "components": {
+  "entity_recall": 0.25,
+  "continuity": 0.75,
+  "precision": 1.0,
+  "integrity": 1.0
+ },
+ "diagnostics": {
+  "grader_version": "grader-0.3",
+  "harmonic_mean": 0.5454545454545455,
+  "score_v1": 0.5454545454545455,
+  "min_component": 0.25,
+  "solved": false,
+  "gate_schema": true,
+  "gate_links": true,
+  "gate_text": true,
+  "occurrence_recall": 0.8303030303030303,
+  "occurrence_recall_structured": 1.0,
+  "occurrence_recall_free_text": 0.0,
+  "separation": 1.0,
+  "entity_success": 0.25,
+  "entities_ok": [
+   "E04"
+  ],
+  "bcubed_precision": 1.0,
+  "bcubed_recall": 0.7194991055456171,
+  "form_accuracy": 1.0,
+  "persona_resolved": 1.0,
+  "text_preservation": 1.0,
+  "distractor_preservation": 1.0,
+  "schema_valid": true,
+  "n_entities": 4,
+  "n_occurrences": 165,
+  "n_leaked": 28,
+  "n_residual_token_hits": 40,
+  "n_overscrub_edits": 0,
+  "n_integrity_failures": 0,
+  "n_link_failures": 0,
+  "n_schema_errors": 0,
+  "n_declared_personas": 0,
+  "mapping_errors": [],
+  "mapping_leaks": 0,
+  "recall_by_surface": {
+   "comments.author.display_name": 1.0,
+   "comments.author.username": 1.0,
+   "comments.body": 0.0,
+   "commits.author.email": 1.0,
+   "commits.author.name": 1.0,
+   "commits.committer.email": 1.0,
+   "commits.committer.name": 1.0,
+   "commits.message": 0.0,
+   "issues.assignee.display_name": 1.0,
+   "issues.assignee.username": 1.0,
+   "issues.creator.display_name": 1.0,
+   "issues.creator.username": 1.0,
+   "issues.description": 0.0,
+   "issues.reporter.display_name": 1.0,
+   "issues.reporter.username": 1.0,
+   "people.accounts.display_name": 1.0,
+   "people.accounts.email": 1.0,
+   "people.accounts.name": 1.0,
+   "people.accounts.username": 1.0,
+   "people.display_name": 1.0,
+   "people.emails": 1.0
+  }
+ },
+ "failures": {
+  "leaks": [
+   [
+    "O0043",
+    "commits.message",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0048",
+    "commits.message",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0053",
+    "commits.message",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0062",
+    "commits.message",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0067",
+    "commits.message",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0076",
+    "commits.message",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0077",
+    "commits.message",
+    "Ulrike Jablonski",
+    "Ulrike Jablonski"
+   ],
+   [
+    "O0078",
+    "commits.message",
+    "ulrike.jablonski@example.com",
+    "ulrike.jablonski@example.com"
+   ],
+   [
+    "O0083",
+    "commits.message",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0084",
+    "commits.message",
+    "Ulrike Jablonski",
+    "Ulrike Jablonski"
+   ],
+   [
+    "O0085",
+    "commits.message",
+    "ulrike.jablonski@example.com",
+    "ulrike.jablonski@example.com"
+   ],
+   [
+    "O0090",
+    "commits.message",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0025",
+    "issues.description",
+    "lulyanov",
+    "lulyanov"
+   ],
+   [
+    "O0038",
+    "issues.description",
+    "lulyanov",
+    "lulyanov"
+   ],
+   [
+    "O0097",
+    "comments.body",
+    "Leopold",
+    "Leopold"
+   ],
+   [
+    "O0102",
+    "comments.body",
+    "Ulrike",
+    "Ulrike"
+   ],
+   [
+    "O0105",
+    "comments.body",
+    "Leopold",
+    "Leopold"
+   ],
+   [
+    "O0106",
+    "comments.body",
+    "wendell-mor",
+    "wendell-mor"
+   ],
+   [
+    "O0109",
+    "comments.body",
+    "Leopold",
+    "Leopold"
+   ],
+   [
+    "O0116",
+    "comments.body",
+    "Leopold",
+    "Leopold"
+   ],
+   [
+    "O0119",
+    "comments.body",
+    "lulyanov",
+    "lulyanov"
+   ],
+   [
+    "O0122",
+    "comments.body",
+    "Leopold",
+    "Leopold"
+   ],
+   [
+    "O0133",
+    "comments.body",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0136",
+    "comments.body",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0139",
+    "comments.body",
+    "Wendell",
+    "Wendell"
+   ]
+  ],
+  "continuity": [
+   {
+    "entity": "E02",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   }
+  ],
+  "overscrub": [],
+  "integrity": [],
+  "links": [],
+  "schema": []
+ }
+}

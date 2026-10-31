@@ -1,0 +1,160 @@
+{
+ "task_id": "t01-zookeeper-directory",
+ "cleaner": "rules-structured",
+ "elapsed_s": 0.0017,
+ "score": 0.6666666666666666,
+ "gate": true,
+ "components": {
+  "entity_recall": 0.3333333333333333,
+  "continuity": 1.0,
+  "precision": 1.0,
+  "integrity": 1.0
+ },
+ "diagnostics": {
+  "grader_version": "grader-0.3",
+  "harmonic_mean": 0.6666666666666666,
+  "score_v1": 0.6666666666666666,
+  "min_component": 0.3333333333333333,
+  "solved": false,
+  "gate_schema": true,
+  "gate_links": true,
+  "gate_text": true,
+  "occurrence_recall": 0.9057971014492754,
+  "occurrence_recall_structured": 1.0,
+  "occurrence_recall_free_text": 0.0,
+  "separation": 1.0,
+  "entity_success": 0.3333333333333333,
+  "entities_ok": [
+   "E01",
+   "E03"
+  ],
+  "bcubed_precision": 1.0,
+  "bcubed_recall": 0.8276972624798711,
+  "form_accuracy": 1.0,
+  "persona_resolved": 1.0,
+  "text_preservation": 1.0,
+  "distractor_preservation": 1.0,
+  "schema_valid": true,
+  "n_entities": 6,
+  "n_occurrences": 138,
+  "n_leaked": 13,
+  "n_residual_token_hits": 17,
+  "n_overscrub_edits": 0,
+  "n_integrity_failures": 0,
+  "n_link_failures": 0,
+  "n_schema_errors": 0,
+  "n_declared_personas": 0,
+  "mapping_errors": [],
+  "mapping_leaks": 0,
+  "recall_by_surface": {
+   "comments.author.display_name": 1.0,
+   "comments.author.username": 1.0,
+   "comments.body": 0.0,
+   "commits.author.email": 1.0,
+   "commits.author.name": 1.0,
+   "commits.committer.email": 1.0,
+   "commits.committer.name": 1.0,
+   "commits.message": 0.0,
+   "issues.assignee.display_name": 1.0,
+   "issues.assignee.username": 1.0,
+   "issues.creator.display_name": 1.0,
+   "issues.creator.username": 1.0,
+   "issues.description": 0.0,
+   "issues.reporter.display_name": 1.0,
+   "issues.reporter.username": 1.0,
+   "people.accounts.display_name": 1.0,
+   "people.accounts.email": 1.0,
+   "people.accounts.name": 1.0,
+   "people.accounts.username": 1.0,
+   "people.display_name": 1.0,
+   "people.emails": 1.0
+  }
+ },
+ "failures": {
+  "leaks": [
+   [
+    "O0049",
+    "commits.message",
+    "Quentin Wojcik",
+    "Quentin Wojcik"
+   ],
+   [
+    "O0054",
+    "commits.message",
+    "Quentin Wojcik",
+    "Quentin Wojcik"
+   ],
+   [
+    "O0067",
+    "commits.message",
+    "Quentin Wojcik",
+    "Quentin Wojcik"
+   ],
+   [
+    "O0013",
+    "issues.description",
+    "qwojcik",
+    "qwojcik"
+   ],
+   [
+    "O0020",
+    "issues.description",
+    "qwojcik",
+    "qwojcik"
+   ],
+   [
+    "O0078",
+    "comments.body",
+    "Quentin",
+    "Quentin"
+   ],
+   [
+    "O0087",
+    "comments.body",
+    "qwojcik",
+    "qwojcik"
+   ],
+   [
+    "O0090",
+    "comments.body",
+    "espeka",
+    "espeka"
+   ],
+   [
+    "O0097",
+    "comments.body",
+    "qwojcik",
+    "qwojcik"
+   ],
+   [
+    "O0100",
+    "comments.body",
+    "Gideon",
+    "Gideon"
+   ],
+   [
+    "O0103",
+    "comments.body",
+    "Quentin Wojcik",
+    "Quentin Wojcik"
+   ],
+   [
+    "O0106",
+    "comments.body",
+    "Anselm",
+    "Anselm"
+   ],
+   [
+    "O0109",
+    "comments.body",
+    "qwojcik",
+    "qwojcik"
+   ]
+  ],
+  "continuity": [],
+  "overscrub": [],
+  "integrity": [],
+  "links": [],
+  "schema": []
+ }
+}

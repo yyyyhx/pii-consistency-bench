@@ -1,0 +1,39 @@
+[project]
+name = "pii-consistency-bench"
+version = "0.1.0"
+description = "Benchmark for identity-consistent PII pseudonymization across linked software-engineering records"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE", "LICENSE-DATA"]
+requires-python = ">=3.12"
+keywords = ["pii", "pseudonymization", "anonymization", "de-identification", "entity-resolution", "benchmark",
+            "privacy", "llm-agents", "mining-software-repositories"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Security",
+    "Intended Audience :: Science/Research",
+]
+# The grader, checks and baselines use the standard library only.
+dependencies = []
+
+[project.optional-dependencies]
+# Only for regenerating the 20-MAD tasks from the raw dataset.
+build = ["pyarrow>=15", "pandas>=2.1"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+piibench = "piibench.cli:main"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+piibench = ["data/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

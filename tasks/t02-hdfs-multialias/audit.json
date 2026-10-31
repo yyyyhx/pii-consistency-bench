@@ -1,0 +1,70 @@
+{
+ "task_id": "t02-hdfs-multialias",
+ "records": {
+  "data/commits.jsonl": 14,
+  "data/issues.jsonl": 7,
+  "data/comments.jsonl": 33
+ },
+ "entities": 9,
+ "pool_size": 16,
+ "occurrences": 199,
+ "occurrences_synthetic": 49,
+ "occurrences_free_text": 49,
+ "occurrences_by_surface": {
+  "comments.author.display_name": 26,
+  "comments.author.username": 26,
+  "comments.body": 26,
+  "commits.author.email": 14,
+  "commits.author.name": 14,
+  "commits.committer.email": 14,
+  "commits.committer.name": 14,
+  "commits.message": 21,
+  "issues.assignee.display_name": 7,
+  "issues.assignee.username": 7,
+  "issues.creator.display_name": 7,
+  "issues.creator.username": 7,
+  "issues.description": 2,
+  "issues.reporter.display_name": 7,
+  "issues.reporter.username": 7
+ },
+ "aliases_per_entity": {
+  "E01": 2,
+  "E02": 7,
+  "E03": 3,
+  "E04": 3,
+  "E05": 3,
+  "E06": 3,
+  "E07": 8,
+  "E08": 2,
+  "E09": 3
+ },
+ "collisions": [],
+ "distractors": 2,
+ "sanitizer_paragraph_decisions": {
+  "accept": 291513,
+  "too_short": 62198,
+  "mention": 33740,
+  "name": 15194,
+  "address": 8331,
+  "name_mid_sentence": 4973,
+  "handle": 4478,
+  "lower_name": 2061,
+  "unknown_proper": 1457,
+  "email": 253,
+  "initials": 220,
+  "quote_header": 89,
+  "lower_address": 81,
+  "assign_leftover": 52
+ },
+ "non_dictionary_capitalized_tokens": {
+  "Hadoop": 7,
+  "Namenode": 4,
+  "Standby": 4,
+  "Findbugs": 4,
+  "Failover": 3,
+  "Co": 1,
+  "Namenodes": 1,
+  "Filesystem": 1
+ },
+ "validation": "ok"
+}

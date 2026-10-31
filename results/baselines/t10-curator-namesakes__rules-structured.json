@@ -1,0 +1,377 @@
+{
+ "task_id": "t10-curator-namesakes",
+ "cleaner": "rules-structured",
+ "elapsed_s": 0.0031,
+ "score": 0.42105263157894735,
+ "gate": true,
+ "components": {
+  "entity_recall": 0.16,
+  "continuity": 0.8,
+  "precision": 1.0,
+  "integrity": 1.0
+ },
+ "diagnostics": {
+  "grader_version": "grader-0.3",
+  "harmonic_mean": 0.42105263157894735,
+  "score_v1": 0.42105263157894735,
+  "min_component": 0.16,
+  "solved": false,
+  "gate_schema": true,
+  "gate_links": true,
+  "gate_text": true,
+  "occurrence_recall": 0.7209302325581395,
+  "occurrence_recall_structured": 1.0,
+  "occurrence_recall_free_text": 0.0,
+  "separation": 1.0,
+  "entity_success": 0.16,
+  "entities_ok": [
+   "E12",
+   "E14",
+   "E17",
+   "E25"
+  ],
+  "bcubed_precision": 1.0,
+  "bcubed_recall": 0.5025147174375624,
+  "form_accuracy": 1.0,
+  "persona_resolved": 1.0,
+  "text_preservation": 1.0,
+  "distractor_preservation": 1.0,
+  "schema_valid": true,
+  "n_entities": 25,
+  "n_occurrences": 344,
+  "n_leaked": 96,
+  "n_residual_token_hits": 117,
+  "n_overscrub_edits": 0,
+  "n_integrity_failures": 0,
+  "n_link_failures": 0,
+  "n_schema_errors": 0,
+  "n_declared_personas": 0,
+  "mapping_errors": [],
+  "mapping_leaks": 0,
+  "recall_by_surface": {
+   "ci_builds.log": 0.0,
+   "comments.author.display_name": 1.0,
+   "comments.author.username": 1.0,
+   "comments.body": 0.0,
+   "commits.author.email": 1.0,
+   "commits.author.name": 1.0,
+   "commits.committer.email": 1.0,
+   "commits.committer.name": 1.0,
+   "commits.message": 0.0,
+   "issues.assignee.display_name": 1.0,
+   "issues.assignee.username": 1.0,
+   "issues.description": 0.0,
+   "issues.reporter.display_name": 1.0,
+   "issues.reporter.username": 1.0,
+   "mail.body": 0.0,
+   "mail.from.email": 1.0,
+   "mail.from.name": 1.0,
+   "pr_comments.author.display_name": 1.0,
+   "pr_comments.author.login": 1.0,
+   "pr_comments.body": 0.0,
+   "pull_requests.creator.display_name": 1.0,
+   "pull_requests.creator.login": 1.0,
+   "pull_requests.description": 0.0,
+   "pull_requests.source_repo_url": 0.0,
+   "reviews.body": 0.0,
+   "reviews.creator.display_name": 1.0,
+   "reviews.creator.login": 1.0
+  }
+ },
+ "failures": {
+  "leaks": [
+   [
+    "O0013",
+    "commits.message",
+    "Seraphina Zamora",
+    "Seraphina Zamora"
+   ],
+   [
+    "O0014",
+    "commits.message",
+    "seraphina.zamora@corp.example.com",
+    "seraphina.zamora@corp.example.com"
+   ],
+   [
+    "O0023",
+    "commits.message",
+    "Cosimo Gallagher",
+    "Cosimo Gallagher"
+   ],
+   [
+    "O0024",
+    "commits.message",
+    "cosimo.gallagher@lab.example.org",
+    "cosimo.gallagher@lab.example.org"
+   ],
+   [
+    "O0037",
+    "commits.message",
+    "Chiara Dobrowolski",
+    "Chiara Dobrowolski"
+   ],
+   [
+    "O0038",
+    "commits.message",
+    "chiara.dobrowolski@lab.example.org",
+    "chiara.dobrowolski@lab.example.org"
+   ],
+   [
+    "O0051",
+    "commits.message",
+    "Quentin Delacroix",
+    "Quentin Delacroix"
+   ],
+   [
+    "O0052",
+    "commits.message",
+    "quentin.delacroix@example.com",
+    "quentin.delacroix@example.com"
+   ],
+   [
+    "O0077",
+    "commits.message",
+    "Oksana Mendoza",
+    "Oksana Mendoza"
+   ],
+   [
+    "O0078",
+    "commits.message",
+    "oksana.mendoza@mail.example.org",
+    "oksana.mendoza@mail.example.org"
+   ],
+   [
+    "O0083",
+    "commits.message",
+    "Dmitri Lindqvist",
+    "Dmitri Lindqvist"
+   ],
+   [
+    "O0084",
+    "commits.message",
+    "dmitri.lindqvist@dev.example.net",
+    "dmitri.lindqvist@dev.example.net"
+   ],
+   [
+    "O0085",
+    "commits.message",
+    "Umberto Pellegrini",
+    "Umberto Pellegrini"
+   ],
+   [
+    "O0086",
+    "commits.message",
+    "umberto.pellegrini@dev.example.net",
+    "umberto.pellegrini@dev.example.net"
+   ],
+   [
+    "O0091",
+    "commits.message",
+    "Dmitri Lindqvist",
+    "Dmitri Lindqvist"
+   ],
+   [
+    "O0092",
+    "commits.message",
+    "dmitri.lindqvist@dev.example.net",
+    "dmitri.lindqvist@dev.example.net"
+   ],
+   [
+    "O0097",
+    "commits.message",
+    "Dmitri Lindqvist",
+    "Dmitri Lindqvist"
+   ],
+   [
+    "O0098",
+    "commits.message",
+    "dmitri.lindqvist@dev.example.net",
+    "dmitri.lindqvist@dev.example.net"
+   ],
+   [
+    "O0107",
+    "commits.message",
+    "Dmitri Lindqvist",
+    "Dmitri Lindqvist"
+   ],
+   [
+    "O0108",
+    "commits.message",
+    "dmitri.lindqvist@dev.example.net",
+    "dmitri.lindqvist@dev.example.net"
+   ],
+   [
+    "O0124",
+    "issues.description",
+    "clemlo",
+    "clemlo"
+   ],
+   [
+    "O0161",
+    "issues.description",
+    "zoltan-eri",
+    "zoltan-eri"
+   ],
+   [
+    "O0115",
+    "comments.body",
+    "dhakimi",
+    "dhakimi"
+   ],
+   [
+    "O0127",
+    "comments.body",
+    "zoltan-eri",
+    "zoltan-eri"
+   ],
+   [
+    "O0133",
+    "comments.body",
+    "cosimo.gallagher",
+    "cosimo.gallagher"
+   ]
+  ],
+  "continuity": [
+   {
+    "entity": "E03",
+    "personas": {
+     "P11": 18,
+     "P22": 4
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "mail.from.name",
+      "Zamora, Seraphina",
+      "Greer Penhaligon"
+     ],
+     [
+      "mail.from.email",
+      "seraphinaz42@post.example.org",
+      "greer.penhaligon@pseudonym.example"
+     ],
+     [
+      "mail.from.name",
+      "Zamora, Seraphina",
+      "Greer Penhaligon"
+     ],
+     [
+      "mail.from.email",
+      "seraphinaz42@post.example.org",
+      "greer.penhaligon@pseudonym.example"
+     ]
+    ]
+   },
+   {
+    "entity": "E06",
+    "personas": {
+     "P13": 12,
+     "P26": 2
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "pull_requests.creator.login",
+      "chiado",
+      "dgalbraith"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "Chiara D. Dobrowolski",
+      "Dorian Galbraith"
+     ]
+    ]
+   },
+   {
+    "entity": "E08",
+    "personas": {
+     "P14": 4,
+     "P27": 2
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "pull_requests.creator.login",
+      "ambertapir77",
+      "yabernethy"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "ambertapir77",
+      "yabernethy"
+     ]
+    ]
+   },
+   {
+    "entity": "E02",
+    "personas": {
+     "P16": 8,
+     "P28": 4,
+     "P23": 4
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "pull_requests.creator.login",
+      "mellownewt58",
+      "vashdown"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "mellownewt58",
+      "vashdown"
+     ],
+     [
+      "pull_requests.creator.login",
+      "mellownewt58",
+      "vashdown"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "mellownewt58",
+      "vashdown"
+     ]
+    ]
+   },
+   {
+    "entity": "E05",
+    "personas": {
+     "P17": 16,
+     "P29": 4
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "pull_requests.creator.login",
+      "lunarpuffin36",
+      "jlaurentis"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "lunarpuffin36",
+      "jlaurentis"
+     ],
+     [
+      "pull_requests.creator.login",
+      "lunarpuffin36",
+      "jlaurentis"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "lunarpuffin36",
+      "jlaurentis"
+     ]
+    ]
+   }
+  ],
+  "overscrub": [],
+  "integrity": [],
+  "links": [],
+  "schema": []
+ }
+}

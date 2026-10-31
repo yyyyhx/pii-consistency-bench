@@ -1,0 +1,6 @@
+{"person_id": "dev-001", "display_name": "Fenella Zamora", "emails": ["fenella.zamora@dev.example.net"], "accounts": [{"system": "git", "name": "Fenella Zamora", "email": "fenella.zamora@dev.example.net"}, {"system": "jira", "username": "feneza", "display_name": "Fenella Zamora"}]}
+{"person_id": "dev-002", "display_name": "Quentin Wojcik", "emails": ["quentin.wojcik@example.com"], "accounts": [{"system": "git", "name": "Quentin Wojcik", "email": "quentin.wojcik@example.com"}, {"system": "jira", "username": "qwojcik", "display_name": "Quentin Wojcik"}]}
+{"person_id": "dev-003", "display_name": "Kasimir Xiong", "emails": ["kasimir.xiong@mail.example.org"], "accounts": [{"system": "git", "name": "Kasimir Xiong", "email": "kasimir.xiong@mail.example.org"}, {"system": "jira", "username": "kasimir.xiong", "display_name": "Kasimir Xiong"}]}
+{"person_id": "dev-004", "display_name": "Esperanza Kaminski", "emails": [], "accounts": [{"system": "jira", "username": "espeka", "display_name": "Esperanza Kaminski"}]}
+{"person_id": "dev-005", "display_name": "Gideon Jorgensen", "emails": [], "accounts": [{"system": "jira", "username": "gideon-jor", "display_name": "Gideon Jorgensen"}]}
+{"person_id": "dev-006", "display_name": "Anselm Castellanos", "emails": [], "accounts": [{"system": "jira", "username": "anselm-cas", "display_name": "Anselm Castellanos"}]}

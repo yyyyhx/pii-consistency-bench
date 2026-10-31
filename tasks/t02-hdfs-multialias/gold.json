@@ -1,0 +1,3802 @@
+{
+ "task_id": "t02-hdfs-multialias",
+ "seed": 202,
+ "generator_version": "gen-0.1",
+ "provenance": {
+  "source": "20-MAD sample (M3SOulu/MozillaApacheDataset-sample, CC-BY 4.0)",
+  "project": "apache/HDFS + repo hadoop",
+  "real_structure": [
+   "commits",
+   "issues",
+   "comments"
+  ],
+  "synthetic": [
+   "all identities",
+   "injected mentions (synthetic=true)",
+   "injected non-PII distractor sentences"
+  ],
+  "seed_person": "mad:apache:21676",
+  "collisions": [],
+  "issue_keys": [
+   "HDFS-2261",
+   "HDFS-5715",
+   "HDFS-7172",
+   "HDFS-7858",
+   "HDFS-9637",
+   "HDFS-9780",
+   "HDFS-10463"
+  ],
+  "spec": {
+   "task_id": "t02-hdfs-multialias",
+   "title": "HDFS: multi-alias developers without a directory",
+   "difficulty": "medium",
+   "targets": [
+    "alias resolution from co-occurrence only",
+    "initial forms and second tracker accounts",
+    "via / contributed-by attributions",
+    "prose-only third parties, nicknames, mail-quote headers, URL-embedded usernames"
+   ],
+   "source": "apache",
+   "product": "HDFS",
+   "repo": "hadoop",
+   "seed": 202,
+   "n_issues": 7,
+   "max_comments_per_issue": 4,
+   "max_commits_per_issue": 2,
+   "max_entities": 7,
+   "min_seed_keys": 4,
+   "include_directory": false,
+   "include_bots": true,
+   "comment_mention_rate": 0.7,
+   "description_mention_rate": 0.4,
+   "commit_attribution_rate": 0.6,
+   "max_text_chars": 700,
+   "collisions": 0,
+   "ci_surface": false,
+   "distractor_rate": 0.0,
+   "hard_mention_rate": 0.35,
+   "third_parties": 2,
+   "notes": "Seed developer has >=4 raw identities; some aliases are linked only through context (e.g. 'F. Last' + personal email).",
+   "extra": {}
+  }
+ },
+ "files": {
+  "data/commits.jsonl": {
+   "key": "hash",
+   "fk": {
+    "issue_key": "data/issues.jsonl"
+   },
+   "text_fields": [
+    "message"
+   ]
+  },
+  "data/issues.jsonl": {
+   "key": "issue_key",
+   "fk": {},
+   "text_fields": [
+    "summary",
+    "description"
+   ]
+  },
+  "data/comments.jsonl": {
+   "key": "comment_id",
+   "fk": {
+    "issue_key": "data/issues.jsonl"
+   },
+   "text_fields": [
+    "body"
+   ]
+  }
+ },
+ "entities": [
+  {
+   "entity_id": "E01",
+   "source_ref": "mad:apache:7199",
+   "tokens": {
+    "names": [
+     "Hortense",
+     "Xiong"
+    ],
+    "usernames": [
+     "hortense-xio",
+     "xiongh"
+    ],
+    "emails": [],
+    "email_locals": []
+   },
+   "aliases": [
+    {
+     "alias_id": "E01.a1",
+     "form": "username",
+     "value": "hortense-xio"
+    },
+    {
+     "alias_id": "E01.a2",
+     "form": "full_name",
+     "value": "Hortense Xiong"
+    }
+   ]
+  },
+  {
+   "entity_id": "E02",
+   "source_ref": "mad:apache:8280",
+   "tokens": {
+    "names": [
+     "Tatiana",
+     "Wainwright",
+     "Tanya"
+    ],
+    "usernames": [
+     "tatiana-wai",
+     "wainwrightt"
+    ],
+    "emails": [
+     "tatiana.wainwright@example.com"
+    ],
+    "email_locals": [
+     "tatiana.wainwright"
+    ]
+   },
+   "aliases": [
+    {
+     "alias_id": "E02.a1",
+     "form": "username",
+     "value": "tatiana-wai"
+    },
+    {
+     "alias_id": "E02.a2",
+     "form": "full_name",
+     "value": "Tatiana Wainwright"
+    },
+    {
+     "alias_id": "E02.a3",
+     "form": "email",
+     "value": "tatiana.wainwright@example.com"
+    },
+    {
+     "alias_id": "E02.a4",
+     "form": "nickname",
+     "value": "Tanya"
+    },
+    {
+     "alias_id": "E02.a5",
+     "form": "last_first",
+     "value": "Wainwright, Tatiana"
+    },
+    {
+     "alias_id": "E02.a6",
+     "form": "email_obfuscated",
+     "value": "tatiana.wainwright at example dot com"
+    },
+    {
+     "alias_id": "E02.a7",
+     "form": "first_name",
+     "value": "Tatiana"
+    }
+   ]
+  },
+  {
+   "entity_id": "E03",
+   "source_ref": "mad:apache:28656",
+   "tokens": {
+    "names": [
+     "Clementine",
+     "Coutinho"
+    ],
+    "usernames": [
+     "clementine-cou",
+     "clementine.coutinho"
+    ],
+    "emails": [
+     "clementine.coutinho@dev.example.net"
+    ],
+    "email_locals": [
+     "clementine.coutinho"
+    ]
+   },
+   "aliases": [
+    {
+     "alias_id": "E03.a1",
+     "form": "username",
+     "value": "clementine-cou"
+    },
+    {
+     "alias_id": "E03.a2",
+     "form": "full_name",
+     "value": "Clementine Coutinho"
+    },
+    {
+     "alias_id": "E03.a3",
+     "form": "email",
+     "value": "clementine.coutinho@dev.example.net"
+    }
+   ]
+  },
+  {
+   "entity_id": "E04",
+   "source_ref": "mad:apache:3579",
+   "tokens": {
+    "names": [
+     "Brigitte",
+     "Gallagher",
+     "Gitte"
+    ],
+    "usernames": [
+     "brigga",
+     "gallagherb"
+    ],
+    "emails": [],
+    "email_locals": []
+   },
+   "aliases": [
+    {
+     "alias_id": "E04.a1",
+     "form": "username",
+     "value": "brigga"
+    },
+    {
+     "alias_id": "E04.a2",
+     "form": "full_name",
+     "value": "Brigitte Gallagher"
+    },
+    {
+     "alias_id": "E04.a3",
+     "form": "nickname",
+     "value": "Gitte"
+    }
+   ]
+  },
+  {
+   "entity_id": "E05",
+   "source_ref": "mad:apache:27552",
+   "tokens": {
+    "names": [
+     "Leopold",
+     "Jablonski"
+    ],
+    "usernames": [
+     "leopold.jablonski",
+     "leopoldj"
+    ],
+    "emails": [
+     "leopold.jablonski@lab.example.org"
+    ],
+    "email_locals": [
+     "leopold.jablonski"
+    ]
+   },
+   "aliases": [
+    {
+     "alias_id": "E05.a1",
+     "form": "username",
+     "value": "leopold.jablonski"
+    },
+    {
+     "alias_id": "E05.a2",
+     "form": "full_name",
+     "value": "Leopold Jablonski"
+    },
+    {
+     "alias_id": "E05.a3",
+     "form": "email",
+     "value": "leopold.jablonski@lab.example.org"
+    }
+   ]
+  },
+  {
+   "entity_id": "E06",
+   "source_ref": "mad:apache:26801",
+   "tokens": {
+    "names": [
+     "Ulrike",
+     "Eriksen"
+    ],
+    "usernames": [
+     "eriksenu",
+     "ulrikee"
+    ],
+    "emails": [],
+    "email_locals": []
+   },
+   "aliases": [
+    {
+     "alias_id": "E06.a1",
+     "form": "username",
+     "value": "eriksenu"
+    },
+    {
+     "alias_id": "E06.a2",
+     "form": "full_name",
+     "value": "Ulrike Eriksen"
+    },
+    {
+     "alias_id": "E06.a3",
+     "form": "first_name",
+     "value": "Ulrike"
+    }
+   ]
+  },
+  {
+   "entity_id": "E07",
+   "source_ref": "mad:apache:21676",
+   "tokens": {
+    "names": [
+     "Pascual",
+     "Lindqvist",
+     "Pasco"
+    ],
+    "usernames": [
+     "pascual-lin",
+     "pascual.lindqvist"
+    ],
+    "emails": [
+     "pascual.lindqvist@apache.example.org",
+     "pascual.lindqvist@corp.example.com"
+    ],
+    "email_locals": [
+     "pascual.lindqvist"
+    ]
+   },
+   "aliases": [
+    {
+     "alias_id": "E07.a1",
+     "form": "full_name",
+     "value": "Pascual Lindqvist"
+    },
+    {
+     "alias_id": "E07.a2",
+     "form": "email",
+     "value": "pascual.lindqvist@corp.example.com"
+    },
+    {
+     "alias_id": "E07.a3",
+     "form": "username",
+     "value": "pascual.lindqvist"
+    },
+    {
+     "alias_id": "E07.a4",
+     "form": "email",
+     "value": "pascual.lindqvist@apache.example.org"
+    },
+    {
+     "alias_id": "E07.a5",
+     "form": "nickname",
+     "value": "Pasco"
+    },
+    {
+     "alias_id": "E07.a6",
+     "form": "first_name",
+     "value": "Pascual"
+    },
+    {
+     "alias_id": "E07.a7",
+     "form": "username",
+     "value": "pascual-lin"
+    },
+    {
+     "alias_id": "E07.a8",
+     "form": "initial_last",
+     "value": "P. Lindqvist"
+    }
+   ]
+  },
+  {
+   "entity_id": "E08",
+   "source_ref": "synthetic:third_party:1",
+   "tokens": {
+    "names": [
+     "Gideon",
+     "Iwasaki"
+    ],
+    "usernames": [
+     "giwasaki"
+    ],
+    "emails": [
+     "gideon.iwasaki@lab.example.org"
+    ],
+    "email_locals": [
+     "gideon.iwasaki"
+    ]
+   },
+   "aliases": [
+    {
+     "alias_id": "E08.a1",
+     "form": "full_name",
+     "value": "Gideon Iwasaki"
+    },
+    {
+     "alias_id": "E08.a2",
+     "form": "email",
+     "value": "gideon.iwasaki@lab.example.org"
+    }
+   ]
+  },
+  {
+   "entity_id": "E09",
+   "source_ref": "synthetic:third_party:2",
+   "tokens": {
+    "names": [
+     "Umberto",
+     "Ferreira"
+    ],
+    "usernames": [
+     "umberto-fer"
+    ],
+    "emails": [
+     "umberto.ferreira@dev.example.net"
+    ],
+    "email_locals": [
+     "umberto.ferreira"
+    ]
+   },
+   "aliases": [
+    {
+     "alias_id": "E09.a1",
+     "form": "full_name",
+     "value": "Umberto Ferreira"
+    },
+    {
+     "alias_id": "E09.a2",
+     "form": "email",
+     "value": "umberto.ferreira@dev.example.net"
+    },
+    {
+     "alias_id": "E09.a3",
+     "form": "first_name",
+     "value": "Umberto"
+    }
+   ]
+  }
+ ],
+ "occurrences": [
+  {
+   "occ_id": "O0001",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "hortense-xio",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-2261",
+   "path": "reporter.username",
+   "span": null,
+   "surface": "issues.reporter.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0002",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Hortense Xiong",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-2261",
+   "path": "reporter.display_name",
+   "span": null,
+   "surface": "issues.reporter.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0003",
+   "entity_id": "E02",
+   "alias_id": "E02.a1",
+   "form": "username",
+   "value": "tatiana-wai",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-2261",
+   "path": "assignee.username",
+   "span": null,
+   "surface": "issues.assignee.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0004",
+   "entity_id": "E02",
+   "alias_id": "E02.a2",
+   "form": "full_name",
+   "value": "Tatiana Wainwright",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-2261",
+   "path": "assignee.display_name",
+   "span": null,
+   "surface": "issues.assignee.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0005",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "hortense-xio",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-2261",
+   "path": "creator.username",
+   "span": null,
+   "surface": "issues.creator.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0006",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Hortense Xiong",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-2261",
+   "path": "creator.display_name",
+   "span": null,
+   "surface": "issues.creator.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0007",
+   "entity_id": "E02",
+   "alias_id": "E02.a1",
+   "form": "username",
+   "value": "tatiana-wai",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-2261",
+   "path": "description",
+   "span": [
+    62,
+    73
+   ],
+   "surface": "issues.description",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0008",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "clementine-cou",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-5715",
+   "path": "reporter.username",
+   "span": null,
+   "surface": "issues.reporter.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0009",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Clementine Coutinho",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-5715",
+   "path": "reporter.display_name",
+   "span": null,
+   "surface": "issues.reporter.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0010",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "clementine-cou",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-5715",
+   "path": "assignee.username",
+   "span": null,
+   "surface": "issues.assignee.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0011",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Clementine Coutinho",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-5715",
+   "path": "assignee.display_name",
+   "span": null,
+   "surface": "issues.assignee.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0012",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "clementine-cou",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-5715",
+   "path": "creator.username",
+   "span": null,
+   "surface": "issues.creator.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0013",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Clementine Coutinho",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-5715",
+   "path": "creator.display_name",
+   "span": null,
+   "surface": "issues.creator.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0014",
+   "entity_id": "E04",
+   "alias_id": "E04.a1",
+   "form": "username",
+   "value": "brigga",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-7172",
+   "path": "reporter.username",
+   "span": null,
+   "surface": "issues.reporter.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0015",
+   "entity_id": "E04",
+   "alias_id": "E04.a2",
+   "form": "full_name",
+   "value": "Brigitte Gallagher",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-7172",
+   "path": "reporter.display_name",
+   "span": null,
+   "surface": "issues.reporter.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0016",
+   "entity_id": "E04",
+   "alias_id": "E04.a1",
+   "form": "username",
+   "value": "brigga",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-7172",
+   "path": "assignee.username",
+   "span": null,
+   "surface": "issues.assignee.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0017",
+   "entity_id": "E04",
+   "alias_id": "E04.a2",
+   "form": "full_name",
+   "value": "Brigitte Gallagher",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-7172",
+   "path": "assignee.display_name",
+   "span": null,
+   "surface": "issues.assignee.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0018",
+   "entity_id": "E04",
+   "alias_id": "E04.a1",
+   "form": "username",
+   "value": "brigga",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-7172",
+   "path": "creator.username",
+   "span": null,
+   "surface": "issues.creator.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0019",
+   "entity_id": "E04",
+   "alias_id": "E04.a2",
+   "form": "full_name",
+   "value": "Brigitte Gallagher",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-7172",
+   "path": "creator.display_name",
+   "span": null,
+   "surface": "issues.creator.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0020",
+   "entity_id": "E05",
+   "alias_id": "E05.a1",
+   "form": "username",
+   "value": "leopold.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-7858",
+   "path": "reporter.username",
+   "span": null,
+   "surface": "issues.reporter.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0021",
+   "entity_id": "E05",
+   "alias_id": "E05.a2",
+   "form": "full_name",
+   "value": "Leopold Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-7858",
+   "path": "reporter.display_name",
+   "span": null,
+   "surface": "issues.reporter.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0022",
+   "entity_id": "E05",
+   "alias_id": "E05.a1",
+   "form": "username",
+   "value": "leopold.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-7858",
+   "path": "assignee.username",
+   "span": null,
+   "surface": "issues.assignee.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0023",
+   "entity_id": "E05",
+   "alias_id": "E05.a2",
+   "form": "full_name",
+   "value": "Leopold Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-7858",
+   "path": "assignee.display_name",
+   "span": null,
+   "surface": "issues.assignee.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0024",
+   "entity_id": "E05",
+   "alias_id": "E05.a1",
+   "form": "username",
+   "value": "leopold.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-7858",
+   "path": "creator.username",
+   "span": null,
+   "surface": "issues.creator.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0025",
+   "entity_id": "E05",
+   "alias_id": "E05.a2",
+   "form": "full_name",
+   "value": "Leopold Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-7858",
+   "path": "creator.display_name",
+   "span": null,
+   "surface": "issues.creator.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0026",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-9637",
+   "path": "reporter.username",
+   "span": null,
+   "surface": "issues.reporter.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0027",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-9637",
+   "path": "reporter.display_name",
+   "span": null,
+   "surface": "issues.reporter.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0028",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-9637",
+   "path": "assignee.username",
+   "span": null,
+   "surface": "issues.assignee.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0029",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-9637",
+   "path": "assignee.display_name",
+   "span": null,
+   "surface": "issues.assignee.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0030",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-9637",
+   "path": "creator.username",
+   "span": null,
+   "surface": "issues.creator.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0031",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-9637",
+   "path": "creator.display_name",
+   "span": null,
+   "surface": "issues.creator.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0032",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-9780",
+   "path": "reporter.username",
+   "span": null,
+   "surface": "issues.reporter.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0033",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-9780",
+   "path": "reporter.display_name",
+   "span": null,
+   "surface": "issues.reporter.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0034",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-9780",
+   "path": "assignee.username",
+   "span": null,
+   "surface": "issues.assignee.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0035",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-9780",
+   "path": "assignee.display_name",
+   "span": null,
+   "surface": "issues.assignee.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0036",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-9780",
+   "path": "creator.username",
+   "span": null,
+   "surface": "issues.creator.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0037",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-9780",
+   "path": "creator.display_name",
+   "span": null,
+   "surface": "issues.creator.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0038",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-10463",
+   "path": "reporter.username",
+   "span": null,
+   "surface": "issues.reporter.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0039",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-10463",
+   "path": "reporter.display_name",
+   "span": null,
+   "surface": "issues.reporter.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0040",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-10463",
+   "path": "assignee.username",
+   "span": null,
+   "surface": "issues.assignee.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0041",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-10463",
+   "path": "assignee.display_name",
+   "span": null,
+   "surface": "issues.assignee.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0042",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-10463",
+   "path": "creator.username",
+   "span": null,
+   "surface": "issues.creator.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0043",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-10463",
+   "path": "creator.display_name",
+   "span": null,
+   "surface": "issues.creator.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0044",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-10463",
+   "path": "description",
+   "span": [
+    387,
+    395
+   ],
+   "surface": "issues.description",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0045",
+   "entity_id": "E02",
+   "alias_id": "E02.a2",
+   "form": "full_name",
+   "value": "Tatiana Wainwright",
+   "file": "data/commits.jsonl",
+   "key": "94a1833638df0e23155f5ae61b81416627486a15",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0046",
+   "entity_id": "E02",
+   "alias_id": "E02.a3",
+   "form": "email",
+   "value": "tatiana.wainwright@example.com",
+   "file": "data/commits.jsonl",
+   "key": "94a1833638df0e23155f5ae61b81416627486a15",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0047",
+   "entity_id": "E02",
+   "alias_id": "E02.a2",
+   "form": "full_name",
+   "value": "Tatiana Wainwright",
+   "file": "data/commits.jsonl",
+   "key": "94a1833638df0e23155f5ae61b81416627486a15",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0048",
+   "entity_id": "E02",
+   "alias_id": "E02.a3",
+   "form": "email",
+   "value": "tatiana.wainwright@example.com",
+   "file": "data/commits.jsonl",
+   "key": "94a1833638df0e23155f5ae61b81416627486a15",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0049",
+   "entity_id": "E02",
+   "alias_id": "E02.a2",
+   "form": "full_name",
+   "value": "Tatiana Wainwright",
+   "file": "data/commits.jsonl",
+   "key": "94a1833638df0e23155f5ae61b81416627486a15",
+   "path": "message",
+   "span": [
+    74,
+    92
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0050",
+   "entity_id": "E02",
+   "alias_id": "E02.a2",
+   "form": "full_name",
+   "value": "Tatiana Wainwright",
+   "file": "data/commits.jsonl",
+   "key": "c91bd3aabb6ade0ca4a49c40505daa1934ae3281",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0051",
+   "entity_id": "E02",
+   "alias_id": "E02.a3",
+   "form": "email",
+   "value": "tatiana.wainwright@example.com",
+   "file": "data/commits.jsonl",
+   "key": "c91bd3aabb6ade0ca4a49c40505daa1934ae3281",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0052",
+   "entity_id": "E02",
+   "alias_id": "E02.a2",
+   "form": "full_name",
+   "value": "Tatiana Wainwright",
+   "file": "data/commits.jsonl",
+   "key": "c91bd3aabb6ade0ca4a49c40505daa1934ae3281",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0053",
+   "entity_id": "E02",
+   "alias_id": "E02.a3",
+   "form": "email",
+   "value": "tatiana.wainwright@example.com",
+   "file": "data/commits.jsonl",
+   "key": "c91bd3aabb6ade0ca4a49c40505daa1934ae3281",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0054",
+   "entity_id": "E02",
+   "alias_id": "E02.a2",
+   "form": "full_name",
+   "value": "Tatiana Wainwright",
+   "file": "data/commits.jsonl",
+   "key": "c91bd3aabb6ade0ca4a49c40505daa1934ae3281",
+   "path": "message",
+   "span": [
+    74,
+    92
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0055",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Clementine Coutinho",
+   "file": "data/commits.jsonl",
+   "key": "70cff9e2f0c8f78c1dc54a064182971bb2106795",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0056",
+   "entity_id": "E03",
+   "alias_id": "E03.a3",
+   "form": "email",
+   "value": "clementine.coutinho@dev.example.net",
+   "file": "data/commits.jsonl",
+   "key": "70cff9e2f0c8f78c1dc54a064182971bb2106795",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0057",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Clementine Coutinho",
+   "file": "data/commits.jsonl",
+   "key": "70cff9e2f0c8f78c1dc54a064182971bb2106795",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0058",
+   "entity_id": "E03",
+   "alias_id": "E03.a3",
+   "form": "email",
+   "value": "clementine.coutinho@dev.example.net",
+   "file": "data/commits.jsonl",
+   "key": "70cff9e2f0c8f78c1dc54a064182971bb2106795",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0059",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Clementine Coutinho",
+   "file": "data/commits.jsonl",
+   "key": "70cff9e2f0c8f78c1dc54a064182971bb2106795",
+   "path": "message",
+   "span": [
+    111,
+    130
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0060",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Clementine Coutinho",
+   "file": "data/commits.jsonl",
+   "key": "ced619c93e1175cab1694cd6b59a01d4f3ca24b7",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0061",
+   "entity_id": "E03",
+   "alias_id": "E03.a3",
+   "form": "email",
+   "value": "clementine.coutinho@dev.example.net",
+   "file": "data/commits.jsonl",
+   "key": "ced619c93e1175cab1694cd6b59a01d4f3ca24b7",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0062",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Clementine Coutinho",
+   "file": "data/commits.jsonl",
+   "key": "ced619c93e1175cab1694cd6b59a01d4f3ca24b7",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0063",
+   "entity_id": "E03",
+   "alias_id": "E03.a3",
+   "form": "email",
+   "value": "clementine.coutinho@dev.example.net",
+   "file": "data/commits.jsonl",
+   "key": "ced619c93e1175cab1694cd6b59a01d4f3ca24b7",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0064",
+   "entity_id": "E02",
+   "alias_id": "E02.a2",
+   "form": "full_name",
+   "value": "Tatiana Wainwright",
+   "file": "data/commits.jsonl",
+   "key": "737f280ddeed58a2b1cd42c29533a01e7c6c3426",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0065",
+   "entity_id": "E02",
+   "alias_id": "E02.a3",
+   "form": "email",
+   "value": "tatiana.wainwright@example.com",
+   "file": "data/commits.jsonl",
+   "key": "737f280ddeed58a2b1cd42c29533a01e7c6c3426",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0066",
+   "entity_id": "E02",
+   "alias_id": "E02.a2",
+   "form": "full_name",
+   "value": "Tatiana Wainwright",
+   "file": "data/commits.jsonl",
+   "key": "737f280ddeed58a2b1cd42c29533a01e7c6c3426",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0067",
+   "entity_id": "E02",
+   "alias_id": "E02.a3",
+   "form": "email",
+   "value": "tatiana.wainwright@example.com",
+   "file": "data/commits.jsonl",
+   "key": "737f280ddeed58a2b1cd42c29533a01e7c6c3426",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0068",
+   "entity_id": "E04",
+   "alias_id": "E04.a2",
+   "form": "full_name",
+   "value": "Brigitte Gallagher",
+   "file": "data/commits.jsonl",
+   "key": "737f280ddeed58a2b1cd42c29533a01e7c6c3426",
+   "path": "message",
+   "span": [
+    135,
+    153
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0069",
+   "entity_id": "E02",
+   "alias_id": "E02.a2",
+   "form": "full_name",
+   "value": "Tatiana Wainwright",
+   "file": "data/commits.jsonl",
+   "key": "5db04a5a1a27d4199bfcc1c31a001ff4db32810b",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0070",
+   "entity_id": "E02",
+   "alias_id": "E02.a3",
+   "form": "email",
+   "value": "tatiana.wainwright@example.com",
+   "file": "data/commits.jsonl",
+   "key": "5db04a5a1a27d4199bfcc1c31a001ff4db32810b",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0071",
+   "entity_id": "E02",
+   "alias_id": "E02.a2",
+   "form": "full_name",
+   "value": "Tatiana Wainwright",
+   "file": "data/commits.jsonl",
+   "key": "5db04a5a1a27d4199bfcc1c31a001ff4db32810b",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0072",
+   "entity_id": "E02",
+   "alias_id": "E02.a3",
+   "form": "email",
+   "value": "tatiana.wainwright@example.com",
+   "file": "data/commits.jsonl",
+   "key": "5db04a5a1a27d4199bfcc1c31a001ff4db32810b",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0073",
+   "entity_id": "E04",
+   "alias_id": "E04.a2",
+   "form": "full_name",
+   "value": "Brigitte Gallagher",
+   "file": "data/commits.jsonl",
+   "key": "5db04a5a1a27d4199bfcc1c31a001ff4db32810b",
+   "path": "message",
+   "span": [
+    135,
+    153
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0074",
+   "entity_id": "E05",
+   "alias_id": "E05.a2",
+   "form": "full_name",
+   "value": "Leopold Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "030fcfa99c345ad57625486eeabedebf2fd4411f",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0075",
+   "entity_id": "E05",
+   "alias_id": "E05.a3",
+   "form": "email",
+   "value": "leopold.jablonski@lab.example.org",
+   "file": "data/commits.jsonl",
+   "key": "030fcfa99c345ad57625486eeabedebf2fd4411f",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0076",
+   "entity_id": "E05",
+   "alias_id": "E05.a2",
+   "form": "full_name",
+   "value": "Leopold Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "030fcfa99c345ad57625486eeabedebf2fd4411f",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0077",
+   "entity_id": "E05",
+   "alias_id": "E05.a3",
+   "form": "email",
+   "value": "leopold.jablonski@lab.example.org",
+   "file": "data/commits.jsonl",
+   "key": "030fcfa99c345ad57625486eeabedebf2fd4411f",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0078",
+   "entity_id": "E05",
+   "alias_id": "E05.a1",
+   "form": "username",
+   "value": "leopold.jablonski",
+   "file": "data/commits.jsonl",
+   "key": "030fcfa99c345ad57625486eeabedebf2fd4411f",
+   "path": "message",
+   "span": [
+    66,
+    83
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "username",
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0079",
+   "entity_id": "E05",
+   "alias_id": "E05.a2",
+   "form": "full_name",
+   "value": "Leopold Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "ffe6a34d5bd9a8fe6864f46d943118c85499bef0",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0080",
+   "entity_id": "E05",
+   "alias_id": "E05.a3",
+   "form": "email",
+   "value": "leopold.jablonski@lab.example.org",
+   "file": "data/commits.jsonl",
+   "key": "ffe6a34d5bd9a8fe6864f46d943118c85499bef0",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0081",
+   "entity_id": "E05",
+   "alias_id": "E05.a2",
+   "form": "full_name",
+   "value": "Leopold Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "ffe6a34d5bd9a8fe6864f46d943118c85499bef0",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0082",
+   "entity_id": "E05",
+   "alias_id": "E05.a3",
+   "form": "email",
+   "value": "leopold.jablonski@lab.example.org",
+   "file": "data/commits.jsonl",
+   "key": "ffe6a34d5bd9a8fe6864f46d943118c85499bef0",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0083",
+   "entity_id": "E05",
+   "alias_id": "E05.a1",
+   "form": "username",
+   "value": "leopold.jablonski",
+   "file": "data/commits.jsonl",
+   "key": "ffe6a34d5bd9a8fe6864f46d943118c85499bef0",
+   "path": "message",
+   "span": [
+    66,
+    83
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "username",
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0084",
+   "entity_id": "E07",
+   "alias_id": "E07.a1",
+   "form": "full_name",
+   "value": "Pascual Lindqvist",
+   "file": "data/commits.jsonl",
+   "key": "bc425a623fd06c4f56106fb2ea662b19e4434d11",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0085",
+   "entity_id": "E07",
+   "alias_id": "E07.a2",
+   "form": "email",
+   "value": "pascual.lindqvist@corp.example.com",
+   "file": "data/commits.jsonl",
+   "key": "bc425a623fd06c4f56106fb2ea662b19e4434d11",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0086",
+   "entity_id": "E07",
+   "alias_id": "E07.a1",
+   "form": "full_name",
+   "value": "Pascual Lindqvist",
+   "file": "data/commits.jsonl",
+   "key": "bc425a623fd06c4f56106fb2ea662b19e4434d11",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0087",
+   "entity_id": "E07",
+   "alias_id": "E07.a2",
+   "form": "email",
+   "value": "pascual.lindqvist@corp.example.com",
+   "file": "data/commits.jsonl",
+   "key": "bc425a623fd06c4f56106fb2ea662b19e4434d11",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0088",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/commits.jsonl",
+   "key": "bc425a623fd06c4f56106fb2ea662b19e4434d11",
+   "path": "message",
+   "span": [
+    45,
+    59
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0089",
+   "entity_id": "E07",
+   "alias_id": "E07.a3",
+   "form": "username",
+   "value": "pascual.lindqvist",
+   "file": "data/commits.jsonl",
+   "key": "bc425a623fd06c4f56106fb2ea662b19e4434d11",
+   "path": "message",
+   "span": [
+    64,
+    81
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "username",
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0090",
+   "entity_id": "E07",
+   "alias_id": "E07.a1",
+   "form": "full_name",
+   "value": "Pascual Lindqvist",
+   "file": "data/commits.jsonl",
+   "key": "ee4ace3edfea1adaa4f472edfd58e56f04e1ab9a",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0091",
+   "entity_id": "E07",
+   "alias_id": "E07.a4",
+   "form": "email",
+   "value": "pascual.lindqvist@apache.example.org",
+   "file": "data/commits.jsonl",
+   "key": "ee4ace3edfea1adaa4f472edfd58e56f04e1ab9a",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0092",
+   "entity_id": "E07",
+   "alias_id": "E07.a1",
+   "form": "full_name",
+   "value": "Pascual Lindqvist",
+   "file": "data/commits.jsonl",
+   "key": "ee4ace3edfea1adaa4f472edfd58e56f04e1ab9a",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0093",
+   "entity_id": "E07",
+   "alias_id": "E07.a4",
+   "form": "email",
+   "value": "pascual.lindqvist@apache.example.org",
+   "file": "data/commits.jsonl",
+   "key": "ee4ace3edfea1adaa4f472edfd58e56f04e1ab9a",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0094",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/commits.jsonl",
+   "key": "ee4ace3edfea1adaa4f472edfd58e56f04e1ab9a",
+   "path": "message",
+   "span": [
+    45,
+    59
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0095",
+   "entity_id": "E07",
+   "alias_id": "E07.a3",
+   "form": "username",
+   "value": "pascual.lindqvist",
+   "file": "data/commits.jsonl",
+   "key": "ee4ace3edfea1adaa4f472edfd58e56f04e1ab9a",
+   "path": "message",
+   "span": [
+    64,
+    81
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "username",
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0096",
+   "entity_id": "E07",
+   "alias_id": "E07.a1",
+   "form": "full_name",
+   "value": "Pascual Lindqvist",
+   "file": "data/commits.jsonl",
+   "key": "33ce7f6c072144f55be30c66099eef5bc736405e",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0097",
+   "entity_id": "E07",
+   "alias_id": "E07.a4",
+   "form": "email",
+   "value": "pascual.lindqvist@apache.example.org",
+   "file": "data/commits.jsonl",
+   "key": "33ce7f6c072144f55be30c66099eef5bc736405e",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0098",
+   "entity_id": "E07",
+   "alias_id": "E07.a1",
+   "form": "full_name",
+   "value": "Pascual Lindqvist",
+   "file": "data/commits.jsonl",
+   "key": "33ce7f6c072144f55be30c66099eef5bc736405e",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0099",
+   "entity_id": "E07",
+   "alias_id": "E07.a4",
+   "form": "email",
+   "value": "pascual.lindqvist@apache.example.org",
+   "file": "data/commits.jsonl",
+   "key": "33ce7f6c072144f55be30c66099eef5bc736405e",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0100",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/commits.jsonl",
+   "key": "33ce7f6c072144f55be30c66099eef5bc736405e",
+   "path": "message",
+   "span": [
+    67,
+    81
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0101",
+   "entity_id": "E07",
+   "alias_id": "E07.a3",
+   "form": "username",
+   "value": "pascual.lindqvist",
+   "file": "data/commits.jsonl",
+   "key": "33ce7f6c072144f55be30c66099eef5bc736405e",
+   "path": "message",
+   "span": [
+    86,
+    103
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "username",
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0102",
+   "entity_id": "E07",
+   "alias_id": "E07.a1",
+   "form": "full_name",
+   "value": "Pascual Lindqvist",
+   "file": "data/commits.jsonl",
+   "key": "383f3ff28ce6e6741f3f5054a0a4739eb13f0f8c",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0103",
+   "entity_id": "E07",
+   "alias_id": "E07.a4",
+   "form": "email",
+   "value": "pascual.lindqvist@apache.example.org",
+   "file": "data/commits.jsonl",
+   "key": "383f3ff28ce6e6741f3f5054a0a4739eb13f0f8c",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0104",
+   "entity_id": "E07",
+   "alias_id": "E07.a1",
+   "form": "full_name",
+   "value": "Pascual Lindqvist",
+   "file": "data/commits.jsonl",
+   "key": "383f3ff28ce6e6741f3f5054a0a4739eb13f0f8c",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0105",
+   "entity_id": "E07",
+   "alias_id": "E07.a4",
+   "form": "email",
+   "value": "pascual.lindqvist@apache.example.org",
+   "file": "data/commits.jsonl",
+   "key": "383f3ff28ce6e6741f3f5054a0a4739eb13f0f8c",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0106",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/commits.jsonl",
+   "key": "383f3ff28ce6e6741f3f5054a0a4739eb13f0f8c",
+   "path": "message",
+   "span": [
+    67,
+    81
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0107",
+   "entity_id": "E07",
+   "alias_id": "E07.a3",
+   "form": "username",
+   "value": "pascual.lindqvist",
+   "file": "data/commits.jsonl",
+   "key": "383f3ff28ce6e6741f3f5054a0a4739eb13f0f8c",
+   "path": "message",
+   "span": [
+    86,
+    103
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "username",
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0108",
+   "entity_id": "E07",
+   "alias_id": "E07.a1",
+   "form": "full_name",
+   "value": "Pascual Lindqvist",
+   "file": "data/commits.jsonl",
+   "key": "55c3e2de3d636482ef2c51bdf88e89a34fc58b32",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0109",
+   "entity_id": "E07",
+   "alias_id": "E07.a4",
+   "form": "email",
+   "value": "pascual.lindqvist@apache.example.org",
+   "file": "data/commits.jsonl",
+   "key": "55c3e2de3d636482ef2c51bdf88e89a34fc58b32",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0110",
+   "entity_id": "E07",
+   "alias_id": "E07.a1",
+   "form": "full_name",
+   "value": "Pascual Lindqvist",
+   "file": "data/commits.jsonl",
+   "key": "55c3e2de3d636482ef2c51bdf88e89a34fc58b32",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0111",
+   "entity_id": "E07",
+   "alias_id": "E07.a4",
+   "form": "email",
+   "value": "pascual.lindqvist@apache.example.org",
+   "file": "data/commits.jsonl",
+   "key": "55c3e2de3d636482ef2c51bdf88e89a34fc58b32",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0112",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/commits.jsonl",
+   "key": "55c3e2de3d636482ef2c51bdf88e89a34fc58b32",
+   "path": "message",
+   "span": [
+    67,
+    81
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0113",
+   "entity_id": "E07",
+   "alias_id": "E07.a3",
+   "form": "username",
+   "value": "pascual.lindqvist",
+   "file": "data/commits.jsonl",
+   "key": "55c3e2de3d636482ef2c51bdf88e89a34fc58b32",
+   "path": "message",
+   "span": [
+    86,
+    103
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "username",
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0114",
+   "entity_id": "E08",
+   "alias_id": "E08.a1",
+   "form": "full_name",
+   "value": "Gideon Iwasaki",
+   "file": "data/commits.jsonl",
+   "key": "55c3e2de3d636482ef2c51bdf88e89a34fc58b32",
+   "path": "message",
+   "span": [
+    122,
+    136
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0115",
+   "entity_id": "E08",
+   "alias_id": "E08.a2",
+   "form": "email",
+   "value": "gideon.iwasaki@lab.example.org",
+   "file": "data/commits.jsonl",
+   "key": "55c3e2de3d636482ef2c51bdf88e89a34fc58b32",
+   "path": "message",
+   "span": [
+    138,
+    168
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0116",
+   "entity_id": "E07",
+   "alias_id": "E07.a1",
+   "form": "full_name",
+   "value": "Pascual Lindqvist",
+   "file": "data/commits.jsonl",
+   "key": "b4c8729cf96a927b1ac6e1ebb8b694d58c7c2efa",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0117",
+   "entity_id": "E07",
+   "alias_id": "E07.a4",
+   "form": "email",
+   "value": "pascual.lindqvist@apache.example.org",
+   "file": "data/commits.jsonl",
+   "key": "b4c8729cf96a927b1ac6e1ebb8b694d58c7c2efa",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0118",
+   "entity_id": "E07",
+   "alias_id": "E07.a1",
+   "form": "full_name",
+   "value": "Pascual Lindqvist",
+   "file": "data/commits.jsonl",
+   "key": "b4c8729cf96a927b1ac6e1ebb8b694d58c7c2efa",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0119",
+   "entity_id": "E07",
+   "alias_id": "E07.a4",
+   "form": "email",
+   "value": "pascual.lindqvist@apache.example.org",
+   "file": "data/commits.jsonl",
+   "key": "b4c8729cf96a927b1ac6e1ebb8b694d58c7c2efa",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0120",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/commits.jsonl",
+   "key": "b4c8729cf96a927b1ac6e1ebb8b694d58c7c2efa",
+   "path": "message",
+   "span": [
+    67,
+    81
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0121",
+   "entity_id": "E07",
+   "alias_id": "E07.a3",
+   "form": "username",
+   "value": "pascual.lindqvist",
+   "file": "data/commits.jsonl",
+   "key": "b4c8729cf96a927b1ac6e1ebb8b694d58c7c2efa",
+   "path": "message",
+   "span": [
+    86,
+    103
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "username",
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0122",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "hortense-xio",
+   "file": "data/comments.jsonl",
+   "key": "13085486",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0123",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Hortense Xiong",
+   "file": "data/comments.jsonl",
+   "key": "13085486",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0124",
+   "entity_id": "E02",
+   "alias_id": "E02.a1",
+   "form": "username",
+   "value": "tatiana-wai",
+   "file": "data/comments.jsonl",
+   "key": "13085486",
+   "path": "body",
+   "span": [
+    2,
+    13
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0125",
+   "entity_id": "E02",
+   "alias_id": "E02.a4",
+   "form": "nickname",
+   "value": "Tanya",
+   "file": "data/comments.jsonl",
+   "key": "13085486",
+   "path": "body",
+   "span": [
+    389,
+    394
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0126",
+   "entity_id": "E07",
+   "alias_id": "E07.a3",
+   "form": "username",
+   "value": "pascual.lindqvist",
+   "file": "data/comments.jsonl",
+   "key": "13650234",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0127",
+   "entity_id": "E07",
+   "alias_id": "E07.a1",
+   "form": "full_name",
+   "value": "Pascual Lindqvist",
+   "file": "data/comments.jsonl",
+   "key": "13650234",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0128",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "hortense-xio",
+   "file": "data/comments.jsonl",
+   "key": "13650234",
+   "path": "body",
+   "span": [
+    190,
+    202
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0129",
+   "entity_id": "E07",
+   "alias_id": "E07.a3",
+   "form": "username",
+   "value": "pascual.lindqvist",
+   "file": "data/comments.jsonl",
+   "key": "13650266",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0130",
+   "entity_id": "E07",
+   "alias_id": "E07.a1",
+   "form": "full_name",
+   "value": "Pascual Lindqvist",
+   "file": "data/comments.jsonl",
+   "key": "13650266",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0131",
+   "entity_id": "E02",
+   "alias_id": "E02.a1",
+   "form": "username",
+   "value": "tatiana-wai",
+   "file": "data/comments.jsonl",
+   "key": "13650266",
+   "path": "body",
+   "span": [
+    2,
+    13
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0132",
+   "entity_id": "E02",
+   "alias_id": "E02.a5",
+   "form": "last_first",
+   "value": "Wainwright, Tatiana",
+   "file": "data/comments.jsonl",
+   "key": "13650266",
+   "path": "body",
+   "span": [
+    100,
+    119
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0133",
+   "entity_id": "E02",
+   "alias_id": "E02.a6",
+   "form": "email_obfuscated",
+   "value": "tatiana.wainwright at example dot com",
+   "file": "data/comments.jsonl",
+   "key": "13650266",
+   "path": "body",
+   "span": [
+    121,
+    158
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0134",
+   "entity_id": "E07",
+   "alias_id": "E07.a3",
+   "form": "username",
+   "value": "pascual.lindqvist",
+   "file": "data/comments.jsonl",
+   "key": "13650274",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0135",
+   "entity_id": "E07",
+   "alias_id": "E07.a1",
+   "form": "full_name",
+   "value": "Pascual Lindqvist",
+   "file": "data/comments.jsonl",
+   "key": "13650274",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0136",
+   "entity_id": "E02",
+   "alias_id": "E02.a1",
+   "form": "username",
+   "value": "tatiana-wai",
+   "file": "data/comments.jsonl",
+   "key": "13650274",
+   "path": "body",
+   "span": [
+    150,
+    161
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0137",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "clementine-cou",
+   "file": "data/comments.jsonl",
+   "key": "13861821",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0138",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Clementine Coutinho",
+   "file": "data/comments.jsonl",
+   "key": "13861821",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0139",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "clementine-cou",
+   "file": "data/comments.jsonl",
+   "key": "13861950",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0140",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Clementine Coutinho",
+   "file": "data/comments.jsonl",
+   "key": "13861950",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0141",
+   "entity_id": "E09",
+   "alias_id": "E09.a1",
+   "form": "full_name",
+   "value": "Umberto Ferreira",
+   "file": "data/comments.jsonl",
+   "key": "13861950",
+   "path": "body",
+   "span": [
+    59,
+    75
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0142",
+   "entity_id": "E09",
+   "alias_id": "E09.a2",
+   "form": "email",
+   "value": "umberto.ferreira@dev.example.net",
+   "file": "data/comments.jsonl",
+   "key": "13861950",
+   "path": "body",
+   "span": [
+    77,
+    109
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0143",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "clementine-cou",
+   "file": "data/comments.jsonl",
+   "key": "13864823",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0144",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Clementine Coutinho",
+   "file": "data/comments.jsonl",
+   "key": "13864823",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0145",
+   "entity_id": "E07",
+   "alias_id": "E07.a3",
+   "form": "username",
+   "value": "pascual.lindqvist",
+   "file": "data/comments.jsonl",
+   "key": "13864856",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0146",
+   "entity_id": "E07",
+   "alias_id": "E07.a1",
+   "form": "full_name",
+   "value": "Pascual Lindqvist",
+   "file": "data/comments.jsonl",
+   "key": "13864856",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0147",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Clementine Coutinho",
+   "file": "data/comments.jsonl",
+   "key": "13864856",
+   "path": "body",
+   "span": [
+    161,
+    180
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0148",
+   "entity_id": "E09",
+   "alias_id": "E09.a3",
+   "form": "first_name",
+   "value": "Umberto",
+   "file": "data/comments.jsonl",
+   "key": "13864856",
+   "path": "body",
+   "span": [
+    183,
+    190
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0149",
+   "entity_id": "E04",
+   "alias_id": "E04.a1",
+   "form": "username",
+   "value": "brigga",
+   "file": "data/comments.jsonl",
+   "key": "14153540",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0150",
+   "entity_id": "E04",
+   "alias_id": "E04.a2",
+   "form": "full_name",
+   "value": "Brigitte Gallagher",
+   "file": "data/comments.jsonl",
+   "key": "14153540",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0151",
+   "entity_id": "E02",
+   "alias_id": "E02.a7",
+   "form": "first_name",
+   "value": "Tatiana",
+   "file": "data/comments.jsonl",
+   "key": "14153540",
+   "path": "body",
+   "span": [
+    3,
+    10
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0152",
+   "entity_id": "E02",
+   "alias_id": "E02.a4",
+   "form": "nickname",
+   "value": "Tanya",
+   "file": "data/comments.jsonl",
+   "key": "14153540",
+   "path": "body",
+   "span": [
+    255,
+    260
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0153",
+   "entity_id": "E02",
+   "alias_id": "E02.a1",
+   "form": "username",
+   "value": "tatiana-wai",
+   "file": "data/comments.jsonl",
+   "key": "14153985",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0154",
+   "entity_id": "E02",
+   "alias_id": "E02.a2",
+   "form": "full_name",
+   "value": "Tatiana Wainwright",
+   "file": "data/comments.jsonl",
+   "key": "14153985",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0155",
+   "entity_id": "E07",
+   "alias_id": "E07.a3",
+   "form": "username",
+   "value": "pascual.lindqvist",
+   "file": "data/comments.jsonl",
+   "key": "14155675",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0156",
+   "entity_id": "E07",
+   "alias_id": "E07.a1",
+   "form": "full_name",
+   "value": "Pascual Lindqvist",
+   "file": "data/comments.jsonl",
+   "key": "14155675",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0157",
+   "entity_id": "E04",
+   "alias_id": "E04.a3",
+   "form": "nickname",
+   "value": "Gitte",
+   "file": "data/comments.jsonl",
+   "key": "14155675",
+   "path": "body",
+   "span": [
+    66,
+    71
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0158",
+   "entity_id": "E07",
+   "alias_id": "E07.a3",
+   "form": "username",
+   "value": "pascual.lindqvist",
+   "file": "data/comments.jsonl",
+   "key": "14155746",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0159",
+   "entity_id": "E07",
+   "alias_id": "E07.a1",
+   "form": "full_name",
+   "value": "Pascual Lindqvist",
+   "file": "data/comments.jsonl",
+   "key": "14155746",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0160",
+   "entity_id": "E02",
+   "alias_id": "E02.a1",
+   "form": "username",
+   "value": "tatiana-wai",
+   "file": "data/comments.jsonl",
+   "key": "14155746",
+   "path": "body",
+   "span": [
+    2,
+    13
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0161",
+   "entity_id": "E05",
+   "alias_id": "E05.a1",
+   "form": "username",
+   "value": "leopold.jablonski",
+   "file": "data/comments.jsonl",
+   "key": "14341375",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0162",
+   "entity_id": "E05",
+   "alias_id": "E05.a2",
+   "form": "full_name",
+   "value": "Leopold Jablonski",
+   "file": "data/comments.jsonl",
+   "key": "14341375",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0163",
+   "entity_id": "E05",
+   "alias_id": "E05.a1",
+   "form": "username",
+   "value": "leopold.jablonski",
+   "file": "data/comments.jsonl",
+   "key": "14341411",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0164",
+   "entity_id": "E05",
+   "alias_id": "E05.a2",
+   "form": "full_name",
+   "value": "Leopold Jablonski",
+   "file": "data/comments.jsonl",
+   "key": "14341411",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0165",
+   "entity_id": "E05",
+   "alias_id": "E05.a1",
+   "form": "username",
+   "value": "leopold.jablonski",
+   "file": "data/comments.jsonl",
+   "key": "14341411",
+   "path": "body",
+   "span": [
+    605,
+    622
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0166",
+   "entity_id": "E05",
+   "alias_id": "E05.a1",
+   "form": "username",
+   "value": "leopold.jablonski",
+   "file": "data/comments.jsonl",
+   "key": "14343868",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0167",
+   "entity_id": "E05",
+   "alias_id": "E05.a2",
+   "form": "full_name",
+   "value": "Leopold Jablonski",
+   "file": "data/comments.jsonl",
+   "key": "14343868",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0168",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "clementine-cou",
+   "file": "data/comments.jsonl",
+   "key": "14344503",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0169",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Clementine Coutinho",
+   "file": "data/comments.jsonl",
+   "key": "14344503",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0170",
+   "entity_id": "E05",
+   "alias_id": "E05.a1",
+   "form": "username",
+   "value": "leopold.jablonski",
+   "file": "data/comments.jsonl",
+   "key": "14344503",
+   "path": "body",
+   "span": [
+    343,
+    360
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0171",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "clementine-cou",
+   "file": "data/comments.jsonl",
+   "key": "14344503",
+   "path": "body",
+   "span": [
+    427,
+    441
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0172",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/comments.jsonl",
+   "key": "15128449",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0173",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/comments.jsonl",
+   "key": "15128449",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0174",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/comments.jsonl",
+   "key": "15135269",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0175",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/comments.jsonl",
+   "key": "15135269",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0176",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/comments.jsonl",
+   "key": "15135319",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0177",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/comments.jsonl",
+   "key": "15135319",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0178",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/comments.jsonl",
+   "key": "15135319",
+   "path": "body",
+   "span": [
+    193,
+    201
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0179",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/comments.jsonl",
+   "key": "15137715",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0180",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/comments.jsonl",
+   "key": "15137715",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0181",
+   "entity_id": "E07",
+   "alias_id": "E07.a1",
+   "form": "full_name",
+   "value": "Pascual Lindqvist",
+   "file": "data/comments.jsonl",
+   "key": "15137715",
+   "path": "body",
+   "span": [
+    186,
+    203
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0182",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/comments.jsonl",
+   "key": "15135266",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0183",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/comments.jsonl",
+   "key": "15135266",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0184",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/comments.jsonl",
+   "key": "15135266",
+   "path": "body",
+   "span": [
+    105,
+    113
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0185",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/comments.jsonl",
+   "key": "15135267",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0186",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/comments.jsonl",
+   "key": "15135267",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0187",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/comments.jsonl",
+   "key": "15135829",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0188",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/comments.jsonl",
+   "key": "15135829",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0189",
+   "entity_id": "E07",
+   "alias_id": "E07.a3",
+   "form": "username",
+   "value": "pascual.lindqvist",
+   "file": "data/comments.jsonl",
+   "key": "15135829",
+   "path": "body",
+   "span": [
+    122,
+    139
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0190",
+   "entity_id": "E07",
+   "alias_id": "E07.a5",
+   "form": "nickname",
+   "value": "Pasco",
+   "file": "data/comments.jsonl",
+   "key": "15135829",
+   "path": "body",
+   "span": [
+    158,
+    163
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0191",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/comments.jsonl",
+   "key": "15137327",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0192",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/comments.jsonl",
+   "key": "15137327",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0193",
+   "entity_id": "E07",
+   "alias_id": "E07.a5",
+   "form": "nickname",
+   "value": "Pasco",
+   "file": "data/comments.jsonl",
+   "key": "15137327",
+   "path": "body",
+   "span": [
+    430,
+    435
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0194",
+   "entity_id": "E06",
+   "alias_id": "E06.a1",
+   "form": "username",
+   "value": "eriksenu",
+   "file": "data/comments.jsonl",
+   "key": "15302165",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0195",
+   "entity_id": "E06",
+   "alias_id": "E06.a2",
+   "form": "full_name",
+   "value": "Ulrike Eriksen",
+   "file": "data/comments.jsonl",
+   "key": "15302165",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0196",
+   "entity_id": "E07",
+   "alias_id": "E07.a6",
+   "form": "first_name",
+   "value": "Pascual",
+   "file": "data/comments.jsonl",
+   "key": "15302165",
+   "path": "body",
+   "span": [
+    3,
+    10
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0197",
+   "entity_id": "E07",
+   "alias_id": "E07.a7",
+   "form": "username",
+   "value": "pascual-lin",
+   "file": "data/comments.jsonl",
+   "key": "15302984",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0198",
+   "entity_id": "E07",
+   "alias_id": "E07.a8",
+   "form": "initial_last",
+   "value": "P. Lindqvist",
+   "file": "data/comments.jsonl",
+   "key": "15302984",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0199",
+   "entity_id": "E06",
+   "alias_id": "E06.a3",
+   "form": "first_name",
+   "value": "Ulrike",
+   "file": "data/comments.jsonl",
+   "key": "15302984",
+   "path": "body",
+   "span": [
+    3,
+    9
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  }
+ ],
+ "distractors": [
+  {
+   "value": "Hadoop QA",
+   "kind": "bot"
+  },
+  {
+   "value": "hadoopqa",
+   "kind": "bot"
+  }
+ ]
+}

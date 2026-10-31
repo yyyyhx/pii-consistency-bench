@@ -1,0 +1,72 @@
+{
+ "task_id": "t01-zookeeper-directory",
+ "records": {
+  "data/commits.jsonl": 9,
+  "data/issues.jsonl": 6,
+  "data/comments.jsonl": 15,
+  "data/people.jsonl": 6
+ },
+ "entities": 6,
+ "pool_size": 11,
+ "occurrences": 138,
+ "occurrences_synthetic": 13,
+ "occurrences_free_text": 13,
+ "occurrences_by_surface": {
+  "comments.author.display_name": 14,
+  "comments.author.username": 14,
+  "comments.body": 8,
+  "commits.author.email": 9,
+  "commits.author.name": 9,
+  "commits.committer.email": 9,
+  "commits.committer.name": 9,
+  "commits.message": 3,
+  "issues.assignee.display_name": 5,
+  "issues.assignee.username": 5,
+  "issues.creator.display_name": 6,
+  "issues.creator.username": 6,
+  "issues.description": 2,
+  "issues.reporter.display_name": 6,
+  "issues.reporter.username": 6,
+  "people.accounts.display_name": 6,
+  "people.accounts.email": 3,
+  "people.accounts.name": 3,
+  "people.accounts.username": 6,
+  "people.display_name": 6,
+  "people.emails": 3
+ },
+ "aliases_per_entity": {
+  "E01": 3,
+  "E02": 4,
+  "E03": 3,
+  "E04": 2,
+  "E05": 3,
+  "E06": 3
+ },
+ "collisions": [],
+ "distractors": 2,
+ "sanitizer_paragraph_decisions": {
+  "accept": 65380,
+  "too_short": 15200,
+  "mention": 9399,
+  "address": 1308,
+  "name": 1273,
+  "handle": 709,
+  "name_mid_sentence": 586,
+  "lower_name": 541,
+  "unknown_proper": 396,
+  "quote_header": 195,
+  "lower_address": 115,
+  "email": 80,
+  "initials": 26,
+  "assign_leftover": 9
+ },
+ "non_dictionary_capitalized_tokens": {
+  "Java": 5,
+  "Refactor": 2,
+  "Using": 1,
+  "Maven": 1,
+  "Hadoop": 1,
+  "Findbugs": 1
+ },
+ "validation": "ok"
+}

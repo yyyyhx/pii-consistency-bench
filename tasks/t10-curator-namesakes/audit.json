@@ -1,0 +1,92 @@
+{
+ "task_id": "t10-curator-namesakes",
+ "records": {
+  "data/commits.jsonl": 22,
+  "data/issues.jsonl": 11,
+  "data/comments.jsonl": 42,
+  "data/pull_requests.jsonl": 11,
+  "data/reviews.jsonl": 4,
+  "data/pr_comments.jsonl": 7,
+  "data/mail.jsonl": 8,
+  "data/ci_builds.jsonl": 3
+ },
+ "entities": 25,
+ "entities_by_kind": {
+  "dev": 14,
+  "jira": 11
+ },
+ "opaque_handles": 3,
+ "pool_size": 40,
+ "occurrences": 344,
+ "occurrences_free_text": 96,
+ "occurrences_by_surface": {
+  "ci_builds.log": 9,
+  "comments.author.display_name": 32,
+  "comments.author.username": 32,
+  "comments.body": 25,
+  "commits.author.email": 22,
+  "commits.author.name": 22,
+  "commits.committer.email": 22,
+  "commits.committer.name": 22,
+  "commits.message": 20,
+  "issues.assignee.display_name": 7,
+  "issues.assignee.username": 7,
+  "issues.description": 2,
+  "issues.reporter.display_name": 11,
+  "issues.reporter.username": 11,
+  "mail.body": 13,
+  "mail.from.email": 8,
+  "mail.from.name": 8,
+  "pr_comments.author.display_name": 7,
+  "pr_comments.author.login": 7,
+  "pr_comments.body": 10,
+  "pull_requests.creator.display_name": 11,
+  "pull_requests.creator.login": 11,
+  "pull_requests.description": 4,
+  "pull_requests.source_repo_url": 9,
+  "reviews.body": 4,
+  "reviews.creator.display_name": 4,
+  "reviews.creator.login": 4
+ },
+ "aliases_per_entity": {
+  "E01": 5,
+  "E02": 5,
+  "E03": 7,
+  "E04": 5,
+  "E05": 4,
+  "E06": 5,
+  "E07": 3,
+  "E08": 4,
+  "E09": 2,
+  "E10": 2,
+  "E11": 4,
+  "E12": 2,
+  "E13": 2,
+  "E14": 2,
+  "E15": 2,
+  "E16": 2,
+  "E17": 2,
+  "E18": 2,
+  "E19": 3,
+  "E20": 2,
+  "E21": 3,
+  "E22": 3,
+  "E23": 3,
+  "E24": 3,
+  "E25": 2
+ },
+ "shared_first_names": [
+  [
+   "E03",
+   "E20"
+  ]
+ ],
+ "collisions": [
+  [
+   "E01",
+   "E12"
+  ]
+ ],
+ "distractors": 9,
+ "validation": "ok"
+}

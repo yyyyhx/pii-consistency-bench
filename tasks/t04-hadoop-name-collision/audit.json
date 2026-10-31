@@ -1,0 +1,78 @@
+{
+ "task_id": "t04-hadoop-name-collision",
+ "records": {
+  "data/commits.jsonl": 10,
+  "data/issues.jsonl": 7,
+  "data/comments.jsonl": 26,
+  "data/people.jsonl": 7
+ },
+ "entities": 8,
+ "pool_size": 14,
+ "occurrences": 192,
+ "occurrences_synthetic": 34,
+ "occurrences_free_text": 34,
+ "occurrences_by_surface": {
+  "comments.author.display_name": 26,
+  "comments.author.username": 26,
+  "comments.body": 21,
+  "commits.author.email": 10,
+  "commits.author.name": 10,
+  "commits.committer.email": 10,
+  "commits.committer.name": 10,
+  "commits.message": 10,
+  "issues.assignee.display_name": 7,
+  "issues.assignee.username": 7,
+  "issues.creator.display_name": 7,
+  "issues.creator.username": 7,
+  "issues.description": 3,
+  "issues.reporter.display_name": 7,
+  "issues.reporter.username": 7,
+  "people.accounts.display_name": 7,
+  "people.accounts.email": 1,
+  "people.accounts.name": 1,
+  "people.accounts.username": 7,
+  "people.display_name": 7,
+  "people.emails": 1
+ },
+ "aliases_per_entity": {
+  "E01": 7,
+  "E02": 3,
+  "E03": 3,
+  "E04": 4,
+  "E05": 2,
+  "E06": 2,
+  "E07": 2,
+  "E08": 2
+ },
+ "collisions": [
+  [
+   "E04",
+   "E07"
+  ]
+ ],
+ "distractors": 0,
+ "sanitizer_paragraph_decisions": {
+  "accept": 265104,
+  "too_short": 50833,
+  "mention": 21628,
+  "name": 12468,
+  "address": 8799,
+  "name_mid_sentence": 3492,
+  "handle": 2806,
+  "lower_name": 2283,
+  "unknown_proper": 2212,
+  "email": 1614,
+  "initials": 237,
+  "lower_address": 135,
+  "assign_leftover": 60,
+  "quote_header": 28
+ },
+ "non_dictionary_capitalized_tokens": {
+  "Findbugs": 7,
+  "Co": 2,
+  "Avro": 2,
+  "Hadoop": 1,
+  "Nov": 1
+ },
+ "validation": "ok"
+}

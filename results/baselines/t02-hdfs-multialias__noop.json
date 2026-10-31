@@ -1,0 +1,287 @@
+{
+ "task_id": "t02-hdfs-multialias",
+ "cleaner": "noop",
+ "elapsed_s": 0.0,
+ "score": 0.0,
+ "gate": true,
+ "components": {
+  "entity_recall": 0.0,
+  "continuity": 0.0,
+  "precision": 1.0,
+  "integrity": 1.0
+ },
+ "diagnostics": {
+  "grader_version": "grader-0.3",
+  "harmonic_mean": 0.0,
+  "score_v1": 0.0,
+  "min_component": 0.0,
+  "solved": false,
+  "gate_schema": true,
+  "gate_links": true,
+  "gate_text": true,
+  "occurrence_recall": 0.0,
+  "occurrence_recall_structured": 0.0,
+  "occurrence_recall_free_text": 0.0,
+  "separation": 1.0,
+  "entity_success": 0.0,
+  "entities_ok": [],
+  "bcubed_precision": 1.0,
+  "bcubed_recall": 0.04522613065326633,
+  "form_accuracy": 0.0,
+  "persona_resolved": 0.0,
+  "text_preservation": 1.0,
+  "distractor_preservation": 1.0,
+  "schema_valid": true,
+  "n_entities": 9,
+  "n_occurrences": 199,
+  "n_leaked": 199,
+  "n_residual_token_hits": 289,
+  "n_overscrub_edits": 0,
+  "n_integrity_failures": 0,
+  "n_link_failures": 0,
+  "n_schema_errors": 0,
+  "n_declared_personas": 0,
+  "mapping_errors": [],
+  "mapping_leaks": 0,
+  "recall_by_surface": {
+   "comments.author.display_name": 0.0,
+   "comments.author.username": 0.0,
+   "comments.body": 0.0,
+   "commits.author.email": 0.0,
+   "commits.author.name": 0.0,
+   "commits.committer.email": 0.0,
+   "commits.committer.name": 0.0,
+   "commits.message": 0.0,
+   "issues.assignee.display_name": 0.0,
+   "issues.assignee.username": 0.0,
+   "issues.creator.display_name": 0.0,
+   "issues.creator.username": 0.0,
+   "issues.description": 0.0,
+   "issues.reporter.display_name": 0.0,
+   "issues.reporter.username": 0.0
+  }
+ },
+ "failures": {
+  "leaks": [
+   [
+    "O0045",
+    "commits.author.name",
+    "Tatiana Wainwright",
+    "Tatiana Wainwright"
+   ],
+   [
+    "O0046",
+    "commits.author.email",
+    "tatiana.wainwright@example.com",
+    "tatiana.wainwright@example.com"
+   ],
+   [
+    "O0047",
+    "commits.committer.name",
+    "Tatiana Wainwright",
+    "Tatiana Wainwright"
+   ],
+   [
+    "O0048",
+    "commits.committer.email",
+    "tatiana.wainwright@example.com",
+    "tatiana.wainwright@example.com"
+   ],
+   [
+    "O0049",
+    "commits.message",
+    "Tatiana Wainwright",
+    "Tatiana Wainwright"
+   ],
+   [
+    "O0050",
+    "commits.author.name",
+    "Tatiana Wainwright",
+    "Tatiana Wainwright"
+   ],
+   [
+    "O0051",
+    "commits.author.email",
+    "tatiana.wainwright@example.com",
+    "tatiana.wainwright@example.com"
+   ],
+   [
+    "O0052",
+    "commits.committer.name",
+    "Tatiana Wainwright",
+    "Tatiana Wainwright"
+   ],
+   [
+    "O0053",
+    "commits.committer.email",
+    "tatiana.wainwright@example.com",
+    "tatiana.wainwright@example.com"
+   ],
+   [
+    "O0054",
+    "commits.message",
+    "Tatiana Wainwright",
+    "Tatiana Wainwright"
+   ],
+   [
+    "O0055",
+    "commits.author.name",
+    "Clementine Coutinho",
+    "Clementine Coutinho"
+   ],
+   [
+    "O0056",
+    "commits.author.email",
+    "clementine.coutinho@dev.example.net",
+    "clementine.coutinho@dev.example.net"
+   ],
+   [
+    "O0057",
+    "commits.committer.name",
+    "Clementine Coutinho",
+    "Clementine Coutinho"
+   ],
+   [
+    "O0058",
+    "commits.committer.email",
+    "clementine.coutinho@dev.example.net",
+    "clementine.coutinho@dev.example.net"
+   ],
+   [
+    "O0059",
+    "commits.message",
+    "Clementine Coutinho",
+    "Clementine Coutinho"
+   ],
+   [
+    "O0060",
+    "commits.author.name",
+    "Clementine Coutinho",
+    "Clementine Coutinho"
+   ],
+   [
+    "O0061",
+    "commits.author.email",
+    "clementine.coutinho@dev.example.net",
+    "clementine.coutinho@dev.example.net"
+   ],
+   [
+    "O0062",
+    "commits.committer.name",
+    "Clementine Coutinho",
+    "Clementine Coutinho"
+   ],
+   [
+    "O0063",
+    "commits.committer.email",
+    "clementine.coutinho@dev.example.net",
+    "clementine.coutinho@dev.example.net"
+   ],
+   [
+    "O0064",
+    "commits.author.name",
+    "Tatiana Wainwright",
+    "Tatiana Wainwright"
+   ],
+   [
+    "O0065",
+    "commits.author.email",
+    "tatiana.wainwright@example.com",
+    "tatiana.wainwright@example.com"
+   ],
+   [
+    "O0066",
+    "commits.committer.name",
+    "Tatiana Wainwright",
+    "Tatiana Wainwright"
+   ],
+   [
+    "O0067",
+    "commits.committer.email",
+    "tatiana.wainwright@example.com",
+    "tatiana.wainwright@example.com"
+   ],
+   [
+    "O0068",
+    "commits.message",
+    "Brigitte Gallagher",
+    "Brigitte Gallagher"
+   ],
+   [
+    "O0069",
+    "commits.author.name",
+    "Tatiana Wainwright",
+    "Tatiana Wainwright"
+   ]
+  ],
+  "continuity": [
+   {
+    "entity": "E02",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E03",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E04",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E05",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E07",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E06",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E08",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E01",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E09",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   }
+  ],
+  "overscrub": [],
+  "integrity": [],
+  "links": [],
+  "schema": []
+ }
+}

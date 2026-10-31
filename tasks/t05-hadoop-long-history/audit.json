@@ -1,0 +1,70 @@
+{
+ "task_id": "t05-hadoop-long-history",
+ "records": {
+  "data/commits.jsonl": 32,
+  "data/issues.jsonl": 14,
+  "data/comments.jsonl": 57
+ },
+ "entities": 8,
+ "pool_size": 14,
+ "occurrences": 422,
+ "occurrences_synthetic": 96,
+ "occurrences_free_text": 96,
+ "occurrences_by_surface": {
+  "comments.author.display_name": 57,
+  "comments.author.username": 57,
+  "comments.body": 55,
+  "commits.author.email": 32,
+  "commits.author.name": 32,
+  "commits.committer.email": 32,
+  "commits.committer.name": 32,
+  "commits.message": 35,
+  "issues.assignee.display_name": 14,
+  "issues.assignee.username": 14,
+  "issues.creator.display_name": 14,
+  "issues.creator.username": 14,
+  "issues.description": 6,
+  "issues.reporter.display_name": 14,
+  "issues.reporter.username": 14
+ },
+ "aliases_per_entity": {
+  "E01": 8,
+  "E02": 6,
+  "E03": 6,
+  "E04": 2,
+  "E05": 3,
+  "E06": 3,
+  "E07": 3,
+  "E08": 2
+ },
+ "collisions": [],
+ "distractors": 0,
+ "sanitizer_paragraph_decisions": {
+  "accept": 265104,
+  "too_short": 50833,
+  "mention": 21628,
+  "name": 12468,
+  "address": 8799,
+  "name_mid_sentence": 3492,
+  "handle": 2806,
+  "lower_name": 2283,
+  "unknown_proper": 2212,
+  "email": 1614,
+  "initials": 237,
+  "lower_address": 135,
+  "assign_leftover": 60,
+  "quote_header": 28
+ },
+ "non_dictionary_capitalized_tokens": {
+  "Findbugs": 8,
+  "Java": 6,
+  "Co": 5,
+  "Hadoop": 5,
+  "Nov": 1,
+  "Fri": 1,
+  "Jun": 1,
+  "Dockerfile": 1,
+  "Thu": 1
+ },
+ "validation": "ok"
+}

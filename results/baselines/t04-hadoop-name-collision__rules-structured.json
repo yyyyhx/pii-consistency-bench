@@ -1,0 +1,262 @@
+{
+ "task_id": "t04-hadoop-name-collision",
+ "cleaner": "rules-structured",
+ "elapsed_s": 0.0019,
+ "score": 0.6382978723404256,
+ "gate": true,
+ "components": {
+  "entity_recall": 0.375,
+  "continuity": 0.625,
+  "precision": 1.0,
+  "integrity": 1.0
+ },
+ "diagnostics": {
+  "grader_version": "grader-0.3",
+  "harmonic_mean": 0.6382978723404256,
+  "score_v1": 0.6382978723404256,
+  "min_component": 0.375,
+  "solved": false,
+  "gate_schema": true,
+  "gate_links": true,
+  "gate_text": true,
+  "occurrence_recall": 0.8229166666666666,
+  "occurrence_recall_structured": 1.0,
+  "occurrence_recall_free_text": 0.0,
+  "separation": 0.75,
+  "entity_success": 0.25,
+  "entities_ok": [
+   "E05",
+   "E06"
+  ],
+  "bcubed_precision": 0.9739583333333334,
+  "bcubed_recall": 0.7189527575020276,
+  "form_accuracy": 1.0,
+  "persona_resolved": 1.0,
+  "text_preservation": 1.0,
+  "distractor_preservation": 1.0,
+  "schema_valid": true,
+  "n_entities": 8,
+  "n_occurrences": 192,
+  "n_leaked": 34,
+  "n_residual_token_hits": 42,
+  "n_overscrub_edits": 0,
+  "n_integrity_failures": 0,
+  "n_link_failures": 0,
+  "n_schema_errors": 0,
+  "n_declared_personas": 0,
+  "mapping_errors": [],
+  "mapping_leaks": 0,
+  "recall_by_surface": {
+   "comments.author.display_name": 1.0,
+   "comments.author.username": 1.0,
+   "comments.body": 0.0,
+   "commits.author.email": 1.0,
+   "commits.author.name": 1.0,
+   "commits.committer.email": 1.0,
+   "commits.committer.name": 1.0,
+   "commits.message": 0.0,
+   "issues.assignee.display_name": 1.0,
+   "issues.assignee.username": 1.0,
+   "issues.creator.display_name": 1.0,
+   "issues.creator.username": 1.0,
+   "issues.description": 0.0,
+   "issues.reporter.display_name": 1.0,
+   "issues.reporter.username": 1.0,
+   "people.accounts.display_name": 1.0,
+   "people.accounts.email": 1.0,
+   "people.accounts.name": 1.0,
+   "people.accounts.username": 1.0,
+   "people.display_name": 1.0,
+   "people.emails": 1.0
+  }
+ },
+ "failures": {
+  "leaks": [
+   [
+    "O0058",
+    "commits.message",
+    "Ulrike Arcuri",
+    "Ulrike Arcuri"
+   ],
+   [
+    "O0063",
+    "commits.message",
+    "uarcuri",
+    "uarcuri"
+   ],
+   [
+    "O0068",
+    "commits.message",
+    "uarcuri",
+    "uarcuri"
+   ],
+   [
+    "O0073",
+    "commits.message",
+    "Ulrike Arcuri",
+    "Ulrike Arcuri"
+   ],
+   [
+    "O0082",
+    "commits.message",
+    "Oksana Lindqvist",
+    "Oksana Lindqvist"
+   ],
+   [
+    "O0083",
+    "commits.message",
+    "oksana.lindqvist@dev.example.net",
+    "oksana.lindqvist@dev.example.net"
+   ],
+   [
+    "O0088",
+    "commits.message",
+    "Ulrike Arcuri",
+    "Ulrike Arcuri"
+   ],
+   [
+    "O0089",
+    "commits.message",
+    "Oksana Lindqvist",
+    "Oksana Lindqvist"
+   ],
+   [
+    "O0090",
+    "commits.message",
+    "oksana.lindqvist@dev.example.net",
+    "oksana.lindqvist@dev.example.net"
+   ],
+   [
+    "O0095",
+    "commits.message",
+    "Ulrike Arcuri",
+    "Ulrike Arcuri"
+   ],
+   [
+    "O0007",
+    "issues.description",
+    "uarcuri",
+    "uarcuri"
+   ],
+   [
+    "O0014",
+    "issues.description",
+    "uarcuri",
+    "uarcuri"
+   ],
+   [
+    "O0021",
+    "issues.description",
+    "uarcuri",
+    "uarcuri"
+   ],
+   [
+    "O0100",
+    "comments.body",
+    "uarcuri",
+    "uarcuri"
+   ],
+   [
+    "O0103",
+    "comments.body",
+    "dmitca",
+    "dmitca"
+   ],
+   [
+    "O0106",
+    "comments.body",
+    "Dmitri",
+    "Dmitri"
+   ],
+   [
+    "O0109",
+    "comments.body",
+    "dmitca",
+    "dmitca"
+   ],
+   [
+    "O0112",
+    "comments.body",
+    "uarcuri",
+    "uarcuri"
+   ],
+   [
+    "O0113",
+    "comments.body",
+    "Dima",
+    "Dima"
+   ],
+   [
+    "O0122",
+    "comments.body",
+    "Ulrike",
+    "Ulrike"
+   ],
+   [
+    "O0127",
+    "comments.body",
+    "Ulrike",
+    "Ulrike"
+   ],
+   [
+    "O0128",
+    "comments.body",
+    "Oksana",
+    "Oksana"
+   ],
+   [
+    "O0131",
+    "comments.body",
+    "Bartosz",
+    "Bartosz"
+   ],
+   [
+    "O0134",
+    "comments.body",
+    "uarcuri",
+    "uarcuri"
+   ],
+   [
+    "O0141",
+    "comments.body",
+    "Ulrike",
+    "Ulrike"
+   ]
+  ],
+  "continuity": [
+   {
+    "entity": "E02",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E04",
+    "personas": {
+     "P03": 5
+    },
+    "bad_form": 0,
+    "shared_with": [
+     "E07"
+    ],
+    "examples": []
+   },
+   {
+    "entity": "E07",
+    "personas": {
+     "P03": 5
+    },
+    "bad_form": 0,
+    "shared_with": [
+     "E04"
+    ],
+    "examples": []
+   }
+  ],
+  "overscrub": [],
+  "integrity": [],
+  "links": [],
+  "schema": []
+ }
+}

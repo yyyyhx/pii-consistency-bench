@@ -1,0 +1,90 @@
+[
+  {
+    "persona_id": "P01",
+    "full_name": "Gunnar Quennell",
+    "first_name": "Gunnar",
+    "last_name": "Quennell",
+    "email": "gunnar.quennell@pseudonym.example",
+    "username": "gquennell"
+  },
+  {
+    "persona_id": "P02",
+    "full_name": "Saoirse Okonkwo",
+    "first_name": "Saoirse",
+    "last_name": "Okonkwo",
+    "email": "saoirse.okonkwo@pseudonym.example",
+    "username": "sokonkwo"
+  },
+  {
+    "persona_id": "P03",
+    "full_name": "Ugo Strandberg",
+    "first_name": "Ugo",
+    "last_name": "Strandberg",
+    "email": "ugo.strandberg@pseudonym.example",
+    "username": "ustrandberg"
+  },
+  {
+    "persona_id": "P04",
+    "full_name": "Isolde Ravenscroft",
+    "first_name": "Isolde",
+    "last_name": "Ravenscroft",
+    "email": "isolde.ravenscroft@pseudonym.example",
+    "username": "iravenscroft"
+  },
+  {
+    "persona_id": "P05",
+    "full_name": "Osric Ellingsen",
+    "first_name": "Osric",
+    "last_name": "Ellingsen",
+    "email": "osric.ellingsen@pseudonym.example",
+    "username": "oellingsen"
+  },
+  {
+    "persona_id": "P06",
+    "full_name": "Lucian Hallorann",
+    "first_name": "Lucian",
+    "last_name": "Hallorann",
+    "email": "lucian.hallorann@pseudonym.example",
+    "username": "lhallorann"
+  },
+  {
+    "persona_id": "P07",
+    "full_name": "Margit Galbraith",
+    "first_name": "Margit",
+    "last_name": "Galbraith",
+    "email": "margit.galbraith@pseudonym.example",
+    "username": "mgalbraith"
+  },
+  {
+    "persona_id": "P08",
+    "full_name": "Bjorn Duquesne",
+    "first_name": "Bjorn",
+    "last_name": "Duquesne",
+    "email": "bjorn.duquesne@pseudonym.example",
+    "username": "bduquesne"
+  },
+  {
+    "persona_id": "P09",
+    "full_name": "Zuzana Albrecht",
+    "first_name": "Zuzana",
+    "last_name": "Albrecht",
+    "email": "zuzana.albrecht@pseudonym.example",
+    "username": "zalbrecht"
+  },
+  {
+    "persona_id": "P10",
+    "full_name": "Beatrix Ashdown",
+    "first_name": "Beatrix",
+    "last_name": "Ashdown",
+    "email": "beatrix.ashdown@pseudonym.example",
+    "username": "bashdown"
+  },
+  {
+    "persona_id": "P11",
+    "full_name": "Perpetua Bergkamp",
+    "first_name": "Perpetua",
+    "last_name": "Bergkamp",
+    "email": "perpetua.bergkamp@pseudonym.example",
+    "username": "pbergkamp"
+  }
+]

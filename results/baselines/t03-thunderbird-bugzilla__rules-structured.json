@@ -1,0 +1,164 @@
+{
+ "task_id": "t03-thunderbird-bugzilla",
+ "cleaner": "rules-structured",
+ "elapsed_s": 0.0016,
+ "score": 0.6,
+ "gate": true,
+ "components": {
+  "entity_recall": 0.2857142857142857,
+  "continuity": 0.8571428571428571,
+  "precision": 1.0,
+  "integrity": 1.0
+ },
+ "diagnostics": {
+  "grader_version": "grader-0.3",
+  "harmonic_mean": 0.6,
+  "score_v1": 0.6,
+  "min_component": 0.2857142857142857,
+  "solved": false,
+  "gate_schema": true,
+  "gate_links": true,
+  "gate_text": true,
+  "occurrence_recall": 0.8962962962962963,
+  "occurrence_recall_structured": 1.0,
+  "occurrence_recall_free_text": 0.8157894736842105,
+  "separation": 1.0,
+  "entity_success": 0.2857142857142857,
+  "entities_ok": [
+   "E02",
+   "E05"
+  ],
+  "bcubed_precision": 1.0,
+  "bcubed_recall": 0.8308111162480094,
+  "form_accuracy": 1.0,
+  "persona_resolved": 1.0,
+  "text_preservation": 1.0,
+  "distractor_preservation": 1.0,
+  "schema_valid": true,
+  "n_entities": 7,
+  "n_occurrences": 135,
+  "n_leaked": 14,
+  "n_residual_token_hits": 17,
+  "n_overscrub_edits": 0,
+  "n_integrity_failures": 0,
+  "n_link_failures": 0,
+  "n_schema_errors": 0,
+  "n_declared_personas": 0,
+  "mapping_errors": [],
+  "mapping_leaks": 0,
+  "recall_by_surface": {
+   "bugs.assigned_to.display_name": 1.0,
+   "bugs.assigned_to.login": 1.0,
+   "bugs.creator.display_name": 1.0,
+   "bugs.creator.login": 1.0,
+   "comments.creator.display_name": 1.0,
+   "comments.creator.login": 1.0,
+   "comments.text": 0.0,
+   "commits.author.email": 1.0,
+   "commits.author.name": 1.0,
+   "commits.committer.email": 1.0,
+   "commits.committer.name": 1.0
+  }
+ },
+ "failures": {
+  "leaks": [
+   [
+    "O0074",
+    "comments.text",
+    "Eulalia Moreau",
+    "Eulalia Moreau"
+   ],
+   [
+    "O0078",
+    "comments.text",
+    "Eulalia",
+    "Eulalia"
+   ],
+   [
+    "O0085",
+    "comments.text",
+    "Imelda",
+    "Imelda"
+   ],
+   [
+    "O0095",
+    "comments.text",
+    "Rosalind Zamora",
+    "Rosalind Zamora"
+   ],
+   [
+    "O0096",
+    "comments.text",
+    "rosalind-zam",
+    "rosalind-zam"
+   ],
+   [
+    "O0097",
+    "comments.text",
+    "Roz",
+    "Roz"
+   ],
+   [
+    "O0104",
+    "comments.text",
+    "rosalind-zam",
+    "rosalind-zam"
+   ],
+   [
+    "O0108",
+    "comments.text",
+    "nikolai.rasmussen",
+    "nikolai.rasmussen"
+   ],
+   [
+    "O0112",
+    "comments.text",
+    "Rosalind",
+    "Rosalind"
+   ],
+   [
+    "O0119",
+    "comments.text",
+    "Rosalind Zamora",
+    "Rosalind Zamora"
+   ],
+   [
+    "O0120",
+    "comments.text",
+    "rosalind-zam",
+    "rosalind-zam"
+   ],
+   [
+    "O0130",
+    "comments.text",
+    "rosalind.zamora@corp.example.com",
+    "rosalind.zamora@corp.example.com"
+   ],
+   [
+    "O0134",
+    "comments.text",
+    "mendozas",
+    "mendozas"
+   ],
+   [
+    "O0135",
+    "comments.text",
+    "Roz",
+    "Roz"
+   ]
+  ],
+  "continuity": [
+   {
+    "entity": "E03",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   }
+  ],
+  "overscrub": [],
+  "integrity": [],
+  "links": [],
+  "schema": []
+ }
+}

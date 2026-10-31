@@ -1,0 +1,522 @@
+{
+ "task_id": "h1-storm-opaque",
+ "cleaner": "rules-structured",
+ "elapsed_s": 0.0038,
+ "score": 0.6354883081155434,
+ "gate": true,
+ "components": {
+  "entity_recall": 0.3548387096774194,
+  "continuity": 0.6774193548387096,
+  "precision": 1.0,
+  "integrity": 1.0
+ },
+ "diagnostics": {
+  "grader_version": "grader-0.3",
+  "harmonic_mean": 0.6354883081155434,
+  "score_v1": 0.6354883081155434,
+  "min_component": 0.3548387096774194,
+  "solved": false,
+  "gate_schema": true,
+  "gate_links": true,
+  "gate_text": true,
+  "occurrence_recall": 0.6902286902286903,
+  "occurrence_recall_structured": 1.0,
+  "occurrence_recall_free_text": 0.0,
+  "separation": 1.0,
+  "entity_success": 0.3548387096774194,
+  "entities_ok": [
+   "E11",
+   "E13",
+   "E14",
+   "E15",
+   "E16",
+   "E17",
+   "E18",
+   "E19",
+   "E21",
+   "E26",
+   "E29"
+  ],
+  "bcubed_precision": 1.0,
+  "bcubed_recall": 0.4315400623205714,
+  "form_accuracy": 1.0,
+  "persona_resolved": 1.0,
+  "text_preservation": 1.0,
+  "distractor_preservation": 1.0,
+  "schema_valid": true,
+  "n_entities": 31,
+  "n_occurrences": 481,
+  "n_leaked": 149,
+  "n_residual_token_hits": 177,
+  "n_overscrub_edits": 0,
+  "n_integrity_failures": 0,
+  "n_link_failures": 0,
+  "n_schema_errors": 0,
+  "n_declared_personas": 0,
+  "mapping_errors": [],
+  "mapping_leaks": 0,
+  "recall_by_surface": {
+   "ci_builds.log": 0.0,
+   "comments.author.display_name": 1.0,
+   "comments.author.username": 1.0,
+   "comments.body": 0.0,
+   "commits.author.email": 1.0,
+   "commits.author.name": 1.0,
+   "commits.committer.email": 1.0,
+   "commits.committer.name": 1.0,
+   "commits.message": 0.0,
+   "issues.assignee.display_name": 1.0,
+   "issues.assignee.username": 1.0,
+   "issues.description": 0.0,
+   "issues.reporter.display_name": 1.0,
+   "issues.reporter.username": 1.0,
+   "mail.body": 0.0,
+   "mail.from.email": 1.0,
+   "mail.from.name": 1.0,
+   "pr_comments.author.display_name": 1.0,
+   "pr_comments.author.login": 1.0,
+   "pr_comments.body": 0.0,
+   "pull_requests.creator.display_name": 1.0,
+   "pull_requests.creator.login": 1.0,
+   "pull_requests.description": 0.0,
+   "pull_requests.source_repo_url": 0.0,
+   "reviews.body": 0.0,
+   "reviews.creator.display_name": 1.0,
+   "reviews.creator.login": 1.0
+  }
+ },
+ "failures": {
+  "leaks": [
+   [
+    "O0005",
+    "commits.message",
+    "Anselm Kowalczyk",
+    "Anselm Kowalczyk"
+   ],
+   [
+    "O0006",
+    "commits.message",
+    "anselm.kowalczyk@dev.example.net",
+    "anselm.kowalczyk@dev.example.net"
+   ],
+   [
+    "O0015",
+    "commits.message",
+    "Ulrike Nakashima",
+    "Ulrike Nakashima"
+   ],
+   [
+    "O0016",
+    "commits.message",
+    "ulrike.nakashima@mail.example.org",
+    "ulrike.nakashima@mail.example.org"
+   ],
+   [
+    "O0025",
+    "commits.message",
+    "Anselm Kowalczyk",
+    "Anselm Kowalczyk"
+   ],
+   [
+    "O0026",
+    "commits.message",
+    "anselm.kowalczyk@dev.example.net",
+    "anselm.kowalczyk@dev.example.net"
+   ],
+   [
+    "O0031",
+    "commits.message",
+    "Zofia Ibarra",
+    "Zofia Ibarra"
+   ],
+   [
+    "O0032",
+    "commits.message",
+    "zofia.ibarra@example.com",
+    "zofia.ibarra@example.com"
+   ],
+   [
+    "O0045",
+    "commits.message",
+    "Ulrike Nakashima",
+    "Ulrike Nakashima"
+   ],
+   [
+    "O0046",
+    "commits.message",
+    "ulrike.nakashima@mail.example.org",
+    "ulrike.nakashima@mail.example.org"
+   ],
+   [
+    "O0067",
+    "commits.message",
+    "Hortense Zamora",
+    "Hortense Zamora"
+   ],
+   [
+    "O0068",
+    "commits.message",
+    "hortense.zamora@dev.example.net",
+    "hortense.zamora@dev.example.net"
+   ],
+   [
+    "O0073",
+    "commits.message",
+    "Hortense Zamora",
+    "Hortense Zamora"
+   ],
+   [
+    "O0074",
+    "commits.message",
+    "hortense.zamora@dev.example.net",
+    "hortense.zamora@dev.example.net"
+   ],
+   [
+    "O0079",
+    "commits.message",
+    "Yolanda Eriksen",
+    "Yolanda Eriksen"
+   ],
+   [
+    "O0080",
+    "commits.message",
+    "yolanda.eriksen@lab.example.org",
+    "yolanda.eriksen@lab.example.org"
+   ],
+   [
+    "O0085",
+    "commits.message",
+    "Yolanda Eriksen",
+    "Yolanda Eriksen"
+   ],
+   [
+    "O0086",
+    "commits.message",
+    "yolanda.eriksen@lab.example.org",
+    "yolanda.eriksen@lab.example.org"
+   ],
+   [
+    "O0099",
+    "commits.message",
+    "Radomir Quiroga",
+    "Radomir Quiroga"
+   ],
+   [
+    "O0100",
+    "commits.message",
+    "radomir.quiroga@lab.example.org",
+    "radomir.quiroga@lab.example.org"
+   ],
+   [
+    "O0113",
+    "commits.message",
+    "Marisol Dobrowolski",
+    "Marisol Dobrowolski"
+   ],
+   [
+    "O0114",
+    "commits.message",
+    "marisol.dobrowolski@lab.example.org",
+    "marisol.dobrowolski@lab.example.org"
+   ],
+   [
+    "O0119",
+    "commits.message",
+    "Marisol Dobrowolski",
+    "Marisol Dobrowolski"
+   ],
+   [
+    "O0120",
+    "commits.message",
+    "marisol.dobrowolski@lab.example.org",
+    "marisol.dobrowolski@lab.example.org"
+   ],
+   [
+    "O0125",
+    "commits.message",
+    "Marisol Dobrowolski",
+    "Marisol Dobrowolski"
+   ]
+  ],
+  "continuity": [
+   {
+    "entity": "E02",
+    "personas": {
+     "P07": 24,
+     "P37": 4,
+     "P25": 4
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "pull_requests.creator.login",
+      "briskbison72",
+      "mquarrie"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "briskbison72",
+      "mquarrie"
+     ],
+     [
+      "pull_requests.creator.login",
+      "briskbison72",
+      "mquarrie"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "briskbison72",
+      "mquarrie"
+     ]
+    ]
+   },
+   {
+    "entity": "E01",
+    "personas": {
+     "P08": 36,
+     "P35": 8
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "pull_requests.creator.login",
+      "rapidnewt41",
+      "gokonkwo"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "rapidnewt41",
+      "gokonkwo"
+     ],
+     [
+      "pull_requests.creator.login",
+      "rapidnewt41",
+      "gokonkwo"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "rapidnewt41",
+      "gokonkwo"
+     ]
+    ]
+   },
+   {
+    "entity": "E09",
+    "personas": {
+     "P09": 8,
+     "P38": 2
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "pull_requests.creator.login",
+      "dustymarten28",
+      "dwhitmore"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "dustymarten28",
+      "dwhitmore"
+     ]
+    ]
+   },
+   {
+    "entity": "E06",
+    "personas": {
+     "P10": 10,
+     "P40": 2
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "pull_requests.creator.login",
+      "tidalplover82",
+      "rcoverdale"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "tidalplover82",
+      "rcoverdale"
+     ]
+    ]
+   },
+   {
+    "entity": "E07",
+    "personas": {
+     "P11": 12,
+     "P39": 2
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "pull_requests.creator.login",
+      "frostykestrel19",
+      "fyardley"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "frostykestrel19",
+      "fyardley"
+     ]
+    ]
+   },
+   {
+    "entity": "E08",
+    "personas": {
+     "P12": 4,
+     "P41": 2,
+     "P26": 4
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "pull_requests.creator.login",
+      "quietfox57",
+      "fmontague"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "quietfox57",
+      "fmontague"
+     ],
+     [
+      "mail.from.name",
+      "Lindqvist, Ottilie",
+      "Hamish Tunstall"
+     ],
+     [
+      "mail.from.email",
+      "ottiliel13@post.example.org",
+      "hamish.tunstall@pseudonym.example"
+     ]
+    ]
+   },
+   {
+    "entity": "E03",
+    "personas": {
+     "P13": 14,
+     "P42": 4
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "pull_requests.creator.login",
+      "dustyibis62",
+      "ejessop"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "dustyibis62",
+      "ejessop"
+     ],
+     [
+      "pull_requests.creator.login",
+      "dustyibis62",
+      "ejessop"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "dustyibis62",
+      "ejessop"
+     ]
+    ]
+   },
+   {
+    "entity": "E05",
+    "personas": {
+     "P14": 8,
+     "P43": 2
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "pull_requests.creator.login",
+      "rapidosprey11",
+      "cwestergaard"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "rapidosprey11",
+      "cwestergaard"
+     ]
+    ]
+   },
+   {
+    "entity": "E04",
+    "personas": {
+     "P16": 16,
+     "P44": 4,
+     "P27": 2
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "pull_requests.creator.login",
+      "polarwren26",
+      "meverleigh"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "polarwren26",
+      "meverleigh"
+     ],
+     [
+      "pull_requests.creator.login",
+      "polarwren26",
+      "meverleigh"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "polarwren26",
+      "meverleigh"
+     ]
+    ]
+   },
+   {
+    "entity": "E10",
+    "personas": {
+     "P17": 4,
+     "P45": 2,
+     "P28": 4
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "pull_requests.creator.login",
+      "frostygecko41",
+      "ilockhart"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "frostygecko41",
+      "ilockhart"
+     ],
+     [
+      "mail.from.name",
+      "ferreira, haruki",
+      "Isolde Laurentis"
+     ],
+     [
+      "mail.from.email",
+      "harukif97@example.net",
+      "isolde.laurentis@pseudonym.example"
+     ]
+    ]
+   }
+  ],
+  "overscrub": [],
+  "integrity": [],
+  "links": [],
+  "schema": []
+ }
+}

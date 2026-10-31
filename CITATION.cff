@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use PII Consistency Bench, please cite it as below, together with the 20-MAD and SmartSHARK datasets it is built from."
+title: "PII Consistency Bench: a benchmark for identity-consistent PII pseudonymization across linked software-engineering records"
+type: dataset
+authors:
+  - given-names: Hexuan
+version: 0.1.0
+date-released: "2026-10-30"
+license: [MIT, CC-BY-4.0]
+repository-code: "https://github.com/yyyyhx/pii-consistency-bench"
+keywords:
+  - pii
+  - pseudonymization
+  - anonymization
+  - de-identification
+  - entity resolution
+  - benchmark
+  - llm agents
+references:
+  - type: conference-paper
+    title: "20-MAD: 20 Years of Issues and Commits of Mozilla and Apache Development"
+    authors:
+      - family-names: Claes
+        given-names: Maëlick
+      - family-names: Mäntylä
+        given-names: Mika V.
+    collection-title: "Proceedings of the 17th International Conference on Mining Software Repositories (MSR 2020)"
+    year: 2020
+  - type: dataset
+    title: "The SmartSHARK Repository Mining Data, release 2.1 Small"
+    authors:
+      - family-names: Trautsch
+        given-names: Alexander
+      - family-names: Trautsch
+        given-names: Fabian
+      - family-names: Herbold
+        given-names: Steffen
+    doi: 10.25625/PHV2VX

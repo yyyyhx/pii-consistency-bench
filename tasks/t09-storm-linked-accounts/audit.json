@@ -1,0 +1,93 @@
+{
+ "task_id": "t09-storm-linked-accounts",
+ "records": {
+  "data/commits.jsonl": 27,
+  "data/issues.jsonl": 11,
+  "data/comments.jsonl": 40,
+  "data/pull_requests.jsonl": 12,
+  "data/reviews.jsonl": 2,
+  "data/pr_comments.jsonl": 12,
+  "data/mail.jsonl": 14,
+  "data/ci_builds.jsonl": 4
+ },
+ "entities": 27,
+ "entities_by_kind": {
+  "dev": 17,
+  "jira": 10
+ },
+ "opaque_handles": 5,
+ "pool_size": 43,
+ "occurrences": 416,
+ "occurrences_free_text": 128,
+ "occurrences_by_surface": {
+  "ci_builds.log": 12,
+  "comments.author.display_name": 29,
+  "comments.author.username": 29,
+  "comments.body": 37,
+  "commits.author.email": 27,
+  "commits.author.name": 27,
+  "commits.committer.email": 27,
+  "commits.committer.name": 27,
+  "commits.message": 26,
+  "issues.assignee.display_name": 10,
+  "issues.assignee.username": 10,
+  "issues.description": 2,
+  "issues.reporter.display_name": 11,
+  "issues.reporter.username": 11,
+  "mail.body": 20,
+  "mail.from.email": 14,
+  "mail.from.name": 14,
+  "pr_comments.author.display_name": 12,
+  "pr_comments.author.login": 12,
+  "pr_comments.body": 17,
+  "pull_requests.creator.display_name": 12,
+  "pull_requests.creator.login": 12,
+  "pull_requests.description": 2,
+  "pull_requests.source_repo_url": 10,
+  "reviews.body": 2,
+  "reviews.creator.display_name": 2,
+  "reviews.creator.login": 2
+ },
+ "aliases_per_entity": {
+  "E01": 4,
+  "E02": 6,
+  "E03": 5,
+  "E04": 6,
+  "E05": 7,
+  "E06": 6,
+  "E07": 6,
+  "E08": 5,
+  "E09": 2,
+  "E10": 2,
+  "E11": 2,
+  "E12": 2,
+  "E13": 2,
+  "E14": 2,
+  "E15": 2,
+  "E16": 2,
+  "E17": 2,
+  "E18": 3,
+  "E19": 2,
+  "E20": 3,
+  "E21": 3,
+  "E22": 3,
+  "E23": 3,
+  "E24": 3,
+  "E25": 2,
+  "E26": 2,
+  "E27": 3
+ },
+ "shared_first_names": [
+  [
+   "E05",
+   "E24"
+  ],
+  [
+   "E06",
+   "E18"
+  ]
+ ],
+ "collisions": [],
+ "distractors": 11,
+ "validation": "ok"
+}

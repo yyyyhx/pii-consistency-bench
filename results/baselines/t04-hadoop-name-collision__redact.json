@@ -1,0 +1,357 @@
+{
+ "task_id": "t04-hadoop-name-collision",
+ "cleaner": "redact",
+ "elapsed_s": 0.0035,
+ "score": 0.0,
+ "gate": true,
+ "components": {
+  "entity_recall": 0.625,
+  "continuity": 0.0,
+  "precision": 1.0,
+  "integrity": 1.0
+ },
+ "diagnostics": {
+  "grader_version": "grader-0.3",
+  "harmonic_mean": 0.0,
+  "score_v1": 0.0,
+  "min_component": 0.0,
+  "solved": false,
+  "gate_schema": true,
+  "gate_links": true,
+  "gate_text": true,
+  "occurrence_recall": 0.9479166666666666,
+  "occurrence_recall_structured": 1.0,
+  "occurrence_recall_free_text": 0.7058823529411765,
+  "separation": 1.0,
+  "entity_success": 0.0,
+  "entities_ok": [],
+  "bcubed_precision": 1.0,
+  "bcubed_recall": 0.041666666666666664,
+  "form_accuracy": 0.0,
+  "persona_resolved": 0.0,
+  "text_preservation": 1.0,
+  "distractor_preservation": 1.0,
+  "schema_valid": true,
+  "n_entities": 8,
+  "n_occurrences": 192,
+  "n_leaked": 10,
+  "n_residual_token_hits": 12,
+  "n_overscrub_edits": 0,
+  "n_integrity_failures": 0,
+  "n_link_failures": 0,
+  "n_schema_errors": 0,
+  "n_declared_personas": 0,
+  "mapping_errors": [],
+  "mapping_leaks": 0,
+  "recall_by_surface": {
+   "comments.author.display_name": 1.0,
+   "comments.author.username": 1.0,
+   "comments.body": 0.7143,
+   "commits.author.email": 1.0,
+   "commits.author.name": 1.0,
+   "commits.committer.email": 1.0,
+   "commits.committer.name": 1.0,
+   "commits.message": 0.6,
+   "issues.assignee.display_name": 1.0,
+   "issues.assignee.username": 1.0,
+   "issues.creator.display_name": 1.0,
+   "issues.creator.username": 1.0,
+   "issues.description": 1.0,
+   "issues.reporter.display_name": 1.0,
+   "issues.reporter.username": 1.0,
+   "people.accounts.display_name": 1.0,
+   "people.accounts.email": 1.0,
+   "people.accounts.name": 1.0,
+   "people.accounts.username": 1.0,
+   "people.display_name": 1.0,
+   "people.emails": 1.0
+  }
+ },
+ "failures": {
+  "leaks": [
+   [
+    "O0082",
+    "commits.message",
+    "Oksana Lindqvist",
+    "Oksana Lindqvist"
+   ],
+   [
+    "O0083",
+    "commits.message",
+    "oksana.lindqvist@dev.example.net",
+    "oksana.lindqvist@dev.example.net"
+   ],
+   [
+    "O0089",
+    "commits.message",
+    "Oksana Lindqvist",
+    "Oksana Lindqvist"
+   ],
+   [
+    "O0090",
+    "commits.message",
+    "oksana.lindqvist@dev.example.net",
+    "oksana.lindqvist@dev.example.net"
+   ],
+   [
+    "O0113",
+    "comments.body",
+    "Dima",
+    "Dima"
+   ],
+   [
+    "O0128",
+    "comments.body",
+    "Oksana",
+    "Oksana"
+   ],
+   [
+    "O0146",
+    "comments.body",
+    "Oksana",
+    "Oksana"
+   ],
+   [
+    "O0150",
+    "comments.body",
+    "Ulli",
+    "Ulli"
+   ],
+   [
+    "O0155",
+    "comments.body",
+    "ulrike.arcuri at lab dot example dot org",
+    "ulrike.arcuri at lab dot example dot org"
+   ],
+   [
+    "O0161",
+    "comments.body",
+    "Oksana",
+    "Oksana"
+   ]
+  ],
+  "continuity": [
+   {
+    "entity": "E01",
+    "personas": {
+     "None": 135
+    },
+    "bad_form": 135,
+    "shared_with": [],
+    "examples": [
+     [
+      "commits.author.name",
+      "Ulrike Arcuri",
+      "[REDACTED]"
+     ],
+     [
+      "commits.author.email",
+      "ulrike.arcuri@lab.example.org",
+      "[REDACTED_EMAIL]"
+     ],
+     [
+      "commits.committer.name",
+      "Ulrike Arcuri",
+      "[REDACTED]"
+     ],
+     [
+      "commits.committer.email",
+      "ulrike.arcuri@lab.example.org",
+      "[REDACTED_EMAIL]"
+     ]
+    ]
+   },
+   {
+    "entity": "E02",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E03",
+    "personas": {
+     "None": 18
+    },
+    "bad_form": 18,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.author.username",
+      "bartoszb",
+      "[REDACTED_USER]"
+     ],
+     [
+      "comments.author.display_name",
+      "Bartosz Barzani",
+      "[REDACTED]"
+     ],
+     [
+      "comments.author.username",
+      "bartoszb",
+      "[REDACTED_USER]"
+     ],
+     [
+      "comments.author.display_name",
+      "Bartosz Barzani",
+      "[REDACTED]"
+     ]
+    ]
+   },
+   {
+    "entity": "E04",
+    "personas": {
+     "None": 8
+    },
+    "bad_form": 8,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.author.username",
+      "dmitca",
+      "[REDACTED_USER]"
+     ],
+     [
+      "comments.author.display_name",
+      "Dmitri Castellano",
+      "[REDACTED]"
+     ],
+     [
+      "comments.body",
+      "dmitca",
+      "[REDACTED_USER]"
+     ],
+     [
+      "comments.body",
+      "Dmitri",
+      "[REDACTED]"
+     ]
+    ]
+   },
+   {
+    "entity": "E05",
+    "personas": {
+     "None": 5
+    },
+    "bad_form": 5,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.author.username",
+      "umbertom",
+      "[REDACTED_USER]"
+     ],
+     [
+      "comments.author.display_name",
+      "Umberto Mendoza",
+      "[REDACTED]"
+     ],
+     [
+      "people.display_name",
+      "Umberto Mendoza",
+      "[REDACTED]"
+     ],
+     [
+      "people.accounts.username",
+      "umbertom",
+      "[REDACTED_USER]"
+     ]
+    ]
+   },
+   {
+    "entity": "E06",
+    "personas": {
+     "None": 5
+    },
+    "bad_form": 5,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.author.username",
+      "horatioe",
+      "[REDACTED_USER]"
+     ],
+     [
+      "comments.author.display_name",
+      "Horatio Eberhardt",
+      "[REDACTED]"
+     ],
+     [
+      "people.display_name",
+      "Horatio Eberhardt",
+      "[REDACTED]"
+     ],
+     [
+      "people.accounts.username",
+      "horatioe",
+      "[REDACTED_USER]"
+     ]
+    ]
+   },
+   {
+    "entity": "E07",
+    "personas": {
+     "None": 5
+    },
+    "bad_form": 5,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.author.username",
+      "dmitri-cas",
+      "[REDACTED_USER]"
+     ],
+     [
+      "comments.author.display_name",
+      "Dmitri Castellano",
+      "[REDACTED]"
+     ],
+     [
+      "people.display_name",
+      "Dmitri Castellano",
+      "[REDACTED]"
+     ],
+     [
+      "people.accounts.username",
+      "dmitri-cas",
+      "[REDACTED_USER]"
+     ]
+    ]
+   },
+   {
+    "entity": "E08",
+    "personas": {
+     "None": 6
+    },
+    "bad_form": 6,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.author.username",
+      "gideons",
+      "[REDACTED_USER]"
+     ],
+     [
+      "comments.author.display_name",
+      "Gideon Szymanski",
+      "[REDACTED]"
+     ],
+     [
+      "comments.body",
+      "gideons",
+      "[REDACTED_USER]"
+     ],
+     [
+      "people.display_name",
+      "Gideon Szymanski",
+      "[REDACTED]"
+     ]
+    ]
+   }
+  ],
+  "overscrub": [],
+  "integrity": [],
+  "links": [],
+  "schema": []
+ }
+}

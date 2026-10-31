@@ -1,0 +1,2620 @@
+{
+ "task_id": "t06-zookeeper-ci-logs",
+ "seed": 606,
+ "generator_version": "gen-0.1",
+ "provenance": {
+  "source": "20-MAD sample (M3SOulu/MozillaApacheDataset-sample, CC-BY 4.0)",
+  "project": "apache/ZOOKEEPER + repo zookeeper",
+  "real_structure": [
+   "commits",
+   "issues",
+   "comments"
+  ],
+  "synthetic": [
+   "all identities",
+   "injected mentions (synthetic=true)",
+   "CI builds and logs (linked to real commit hashes)",
+   "injected non-PII distractor sentences"
+  ],
+  "seed_person": "mad:apache:2819",
+  "collisions": [],
+  "issue_keys": [
+   "ZOOKEEPER-8",
+   "ZOOKEEPER-186",
+   "ZOOKEEPER-198",
+   "ZOOKEEPER-516",
+   "ZOOKEEPER-983",
+   "ZOOKEEPER-1277"
+  ],
+  "spec": {
+   "task_id": "t06-zookeeper-ci-logs",
+   "title": "ZooKeeper: commits plus synthetic CI build logs",
+   "difficulty": "medium",
+   "targets": [
+    "unstructured console logs",
+    "home-directory paths",
+    "notification emails",
+    "Jenkins change lists",
+    "prose-only third parties, nicknames, mail-quote headers, URL-embedded usernames"
+   ],
+   "source": "apache",
+   "product": "ZOOKEEPER",
+   "repo": "zookeeper",
+   "seed": 606,
+   "n_issues": 6,
+   "max_comments_per_issue": 3,
+   "max_commits_per_issue": 2,
+   "max_entities": 7,
+   "min_seed_keys": 2,
+   "include_directory": false,
+   "include_bots": true,
+   "comment_mention_rate": 0.5,
+   "description_mention_rate": 0.3,
+   "commit_attribution_rate": 0.4,
+   "max_text_chars": 700,
+   "collisions": 0,
+   "ci_surface": true,
+   "distractor_rate": 0.0,
+   "hard_mention_rate": 0.25,
+   "third_parties": 1,
+   "notes": "CI surface is fully synthetic (the sources have no CI data) but linked to real commit hashes and the same personas; /home/jenkins is a system path.",
+   "extra": {}
+  }
+ },
+ "files": {
+  "data/commits.jsonl": {
+   "key": "hash",
+   "fk": {
+    "issue_key": "data/issues.jsonl"
+   },
+   "text_fields": [
+    "message"
+   ]
+  },
+  "data/issues.jsonl": {
+   "key": "issue_key",
+   "fk": {},
+   "text_fields": [
+    "summary",
+    "description"
+   ]
+  },
+  "data/comments.jsonl": {
+   "key": "comment_id",
+   "fk": {
+    "issue_key": "data/issues.jsonl"
+   },
+   "text_fields": [
+    "body"
+   ]
+  },
+  "data/ci_builds.jsonl": {
+   "key": "build_id",
+   "fk": {
+    "commit": "data/commits.jsonl"
+   },
+   "text_fields": [
+    "log"
+   ]
+  }
+ },
+ "entities": [
+  {
+   "entity_id": "E01",
+   "source_ref": "mad:apache:5509",
+   "tokens": {
+    "names": [
+     "Bartosz",
+     "Jablonski",
+     "Bartek"
+    ],
+    "usernames": [
+     "bartosz.jablonski",
+     "bjablonski"
+    ],
+    "emails": [
+     "bartosz.jablonski@lab.example.org"
+    ],
+    "email_locals": [
+     "bartosz.jablonski"
+    ]
+   },
+   "aliases": [
+    {
+     "alias_id": "E01.a1",
+     "form": "username",
+     "value": "bartosz.jablonski"
+    },
+    {
+     "alias_id": "E01.a2",
+     "form": "full_name",
+     "value": "Bartosz Jablonski"
+    },
+    {
+     "alias_id": "E01.a3",
+     "form": "email",
+     "value": "bartosz.jablonski@lab.example.org"
+    },
+    {
+     "alias_id": "E01.a4",
+     "form": "nickname",
+     "value": "Bartek"
+    },
+    {
+     "alias_id": "E01.a5",
+     "form": "first_name",
+     "value": "Bartosz"
+    },
+    {
+     "alias_id": "E01.a6",
+     "form": "last_first",
+     "value": "Jablonski, Bartosz"
+    },
+    {
+     "alias_id": "E01.a7",
+     "form": "email_obfuscated",
+     "value": "bartosz.jablonski at lab dot example dot org"
+    }
+   ]
+  },
+  {
+   "entity_id": "E02",
+   "source_ref": "mad:apache:2819",
+   "tokens": {
+    "names": [
+     "Quentin",
+     "Wainwright"
+    ],
+    "usernames": [
+     "quentin-wai",
+     "quentin.wainwright"
+    ],
+    "emails": [],
+    "email_locals": []
+   },
+   "aliases": [
+    {
+     "alias_id": "E02.a1",
+     "form": "username",
+     "value": "quentin-wai"
+    },
+    {
+     "alias_id": "E02.a2",
+     "form": "full_name",
+     "value": "Quentin Wainwright"
+    },
+    {
+     "alias_id": "E02.a3",
+     "form": "first_name",
+     "value": "Quentin"
+    }
+   ]
+  },
+  {
+   "entity_id": "E03",
+   "source_ref": "mad:apache:7494",
+   "tokens": {
+    "names": [
+     "Priyanka",
+     "Ostrowski"
+    ],
+    "usernames": [
+     "ostrowskip",
+     "priyanka-ost"
+    ],
+    "emails": [],
+    "email_locals": []
+   },
+   "aliases": [
+    {
+     "alias_id": "E03.a1",
+     "form": "username",
+     "value": "priyanka-ost"
+    },
+    {
+     "alias_id": "E03.a2",
+     "form": "full_name",
+     "value": "Priyanka Ostrowski"
+    }
+   ]
+  },
+  {
+   "entity_id": "E04",
+   "source_ref": "synthetic:third_party:1",
+   "tokens": {
+    "names": [
+     "Tatiana",
+     "Barzani"
+    ],
+    "usernames": [
+     "tbarzani"
+    ],
+    "emails": [],
+    "email_locals": []
+   },
+   "aliases": [
+    {
+     "alias_id": "E04.a1",
+     "form": "full_name",
+     "value": "Tatiana Barzani"
+    },
+    {
+     "alias_id": "E04.a2",
+     "form": "first_name",
+     "value": "Tatiana"
+    }
+   ]
+  }
+ ],
+ "occurrences": [
+  {
+   "occ_id": "O0001",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-8",
+   "path": "reporter.username",
+   "span": null,
+   "surface": "issues.reporter.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0002",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-8",
+   "path": "reporter.display_name",
+   "span": null,
+   "surface": "issues.reporter.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0003",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-8",
+   "path": "assignee.username",
+   "span": null,
+   "surface": "issues.assignee.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0004",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-8",
+   "path": "assignee.display_name",
+   "span": null,
+   "surface": "issues.assignee.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0005",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-8",
+   "path": "creator.username",
+   "span": null,
+   "surface": "issues.creator.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0006",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-8",
+   "path": "creator.display_name",
+   "span": null,
+   "surface": "issues.creator.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0007",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-8",
+   "path": "description",
+   "span": [
+    131,
+    148
+   ],
+   "surface": "issues.description",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0008",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-186",
+   "path": "reporter.username",
+   "span": null,
+   "surface": "issues.reporter.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0009",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-186",
+   "path": "reporter.display_name",
+   "span": null,
+   "surface": "issues.reporter.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0010",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-186",
+   "path": "assignee.username",
+   "span": null,
+   "surface": "issues.assignee.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0011",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-186",
+   "path": "assignee.display_name",
+   "span": null,
+   "surface": "issues.assignee.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0012",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-186",
+   "path": "creator.username",
+   "span": null,
+   "surface": "issues.creator.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0013",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-186",
+   "path": "creator.display_name",
+   "span": null,
+   "surface": "issues.creator.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0014",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-186",
+   "path": "description",
+   "span": [
+    114,
+    131
+   ],
+   "surface": "issues.description",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0015",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-198",
+   "path": "reporter.username",
+   "span": null,
+   "surface": "issues.reporter.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0016",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-198",
+   "path": "reporter.display_name",
+   "span": null,
+   "surface": "issues.reporter.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0017",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-198",
+   "path": "assignee.username",
+   "span": null,
+   "surface": "issues.assignee.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0018",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-198",
+   "path": "assignee.display_name",
+   "span": null,
+   "surface": "issues.assignee.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0019",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-198",
+   "path": "creator.username",
+   "span": null,
+   "surface": "issues.creator.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0020",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-198",
+   "path": "creator.display_name",
+   "span": null,
+   "surface": "issues.creator.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0021",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-516",
+   "path": "reporter.username",
+   "span": null,
+   "surface": "issues.reporter.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0022",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-516",
+   "path": "reporter.display_name",
+   "span": null,
+   "surface": "issues.reporter.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0023",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-516",
+   "path": "assignee.username",
+   "span": null,
+   "surface": "issues.assignee.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0024",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-516",
+   "path": "assignee.display_name",
+   "span": null,
+   "surface": "issues.assignee.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0025",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-516",
+   "path": "creator.username",
+   "span": null,
+   "surface": "issues.creator.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0026",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-516",
+   "path": "creator.display_name",
+   "span": null,
+   "surface": "issues.creator.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0027",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-983",
+   "path": "reporter.username",
+   "span": null,
+   "surface": "issues.reporter.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0028",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-983",
+   "path": "reporter.display_name",
+   "span": null,
+   "surface": "issues.reporter.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0029",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-983",
+   "path": "assignee.username",
+   "span": null,
+   "surface": "issues.assignee.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0030",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-983",
+   "path": "assignee.display_name",
+   "span": null,
+   "surface": "issues.assignee.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0031",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-983",
+   "path": "creator.username",
+   "span": null,
+   "surface": "issues.creator.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0032",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-983",
+   "path": "creator.display_name",
+   "span": null,
+   "surface": "issues.creator.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0033",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-983",
+   "path": "description",
+   "span": [
+    333,
+    350
+   ],
+   "surface": "issues.description",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0034",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-1277",
+   "path": "reporter.username",
+   "span": null,
+   "surface": "issues.reporter.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0035",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-1277",
+   "path": "reporter.display_name",
+   "span": null,
+   "surface": "issues.reporter.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0036",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-1277",
+   "path": "assignee.username",
+   "span": null,
+   "surface": "issues.assignee.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0037",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-1277",
+   "path": "assignee.display_name",
+   "span": null,
+   "surface": "issues.assignee.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0038",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-1277",
+   "path": "creator.username",
+   "span": null,
+   "surface": "issues.creator.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0039",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/issues.jsonl",
+   "key": "ZOOKEEPER-1277",
+   "path": "creator.display_name",
+   "span": null,
+   "surface": "issues.creator.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0040",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "ff98502017f564c14008f5e55ba536bef7d60b78",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0041",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/commits.jsonl",
+   "key": "ff98502017f564c14008f5e55ba536bef7d60b78",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0042",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "ff98502017f564c14008f5e55ba536bef7d60b78",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0043",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/commits.jsonl",
+   "key": "ff98502017f564c14008f5e55ba536bef7d60b78",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0044",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1190",
+   "path": "log",
+   "span": [
+    433,
+    450
+   ],
+   "surface": "ci_builds.log",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0045",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1190",
+   "path": "log",
+   "span": [
+    662,
+    695
+   ],
+   "surface": "ci_builds.log",
+   "synthetic": true,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0046",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "0598b1e581dd526b225166ca3704597126c778c3",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0047",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/commits.jsonl",
+   "key": "0598b1e581dd526b225166ca3704597126c778c3",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0048",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "0598b1e581dd526b225166ca3704597126c778c3",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0049",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/commits.jsonl",
+   "key": "0598b1e581dd526b225166ca3704597126c778c3",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0050",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1198",
+   "path": "log",
+   "span": [
+    435,
+    452
+   ],
+   "surface": "ci_builds.log",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0051",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1198",
+   "path": "log",
+   "span": [
+    662,
+    695
+   ],
+   "surface": "ci_builds.log",
+   "synthetic": true,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0052",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "60808e0a7312525e2d3dfb82c5535582d1de391b",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0053",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/commits.jsonl",
+   "key": "60808e0a7312525e2d3dfb82c5535582d1de391b",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0054",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "60808e0a7312525e2d3dfb82c5535582d1de391b",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0055",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/commits.jsonl",
+   "key": "60808e0a7312525e2d3dfb82c5535582d1de391b",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0056",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "60808e0a7312525e2d3dfb82c5535582d1de391b",
+   "path": "message",
+   "span": [
+    91,
+    108
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0057",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1207",
+   "path": "log",
+   "span": [
+    445,
+    462
+   ],
+   "surface": "ci_builds.log",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0058",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1207",
+   "path": "log",
+   "span": [
+    635,
+    668
+   ],
+   "surface": "ci_builds.log",
+   "synthetic": true,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0059",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "6e69b7cc29200ad553154bef32b43e448c610092",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0060",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/commits.jsonl",
+   "key": "6e69b7cc29200ad553154bef32b43e448c610092",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0061",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "6e69b7cc29200ad553154bef32b43e448c610092",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0062",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/commits.jsonl",
+   "key": "6e69b7cc29200ad553154bef32b43e448c610092",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0063",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "6e69b7cc29200ad553154bef32b43e448c610092",
+   "path": "message",
+   "span": [
+    82,
+    99
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0064",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1213",
+   "path": "log",
+   "span": [
+    436,
+    453
+   ],
+   "surface": "ci_builds.log",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0065",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1213",
+   "path": "log",
+   "span": [
+    617,
+    650
+   ],
+   "surface": "ci_builds.log",
+   "synthetic": true,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0066",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "5cd2fb1b82039a8b3b58b225ba917c8a9df18987",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0067",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/commits.jsonl",
+   "key": "5cd2fb1b82039a8b3b58b225ba917c8a9df18987",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0068",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "5cd2fb1b82039a8b3b58b225ba917c8a9df18987",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0069",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/commits.jsonl",
+   "key": "5cd2fb1b82039a8b3b58b225ba917c8a9df18987",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0070",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/commits.jsonl",
+   "key": "5cd2fb1b82039a8b3b58b225ba917c8a9df18987",
+   "path": "message",
+   "span": [
+    67,
+    84
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "username",
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0071",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1214",
+   "path": "triggered_by.username",
+   "span": null,
+   "surface": "ci_builds.triggered_by.username",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0072",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1214",
+   "path": "triggered_by.display_name",
+   "span": null,
+   "surface": "ci_builds.triggered_by.display_name",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0073",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1214",
+   "path": "log",
+   "span": [
+    16,
+    33
+   ],
+   "surface": "ci_builds.log",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0074",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1214",
+   "path": "log",
+   "span": [
+    445,
+    462
+   ],
+   "surface": "ci_builds.log",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0075",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1214",
+   "path": "log",
+   "span": [
+    673,
+    706
+   ],
+   "surface": "ci_builds.log",
+   "synthetic": true,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0076",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "297517b5e1461400039aa7c4fdbbd246183a133f",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0077",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/commits.jsonl",
+   "key": "297517b5e1461400039aa7c4fdbbd246183a133f",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0078",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "297517b5e1461400039aa7c4fdbbd246183a133f",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0079",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/commits.jsonl",
+   "key": "297517b5e1461400039aa7c4fdbbd246183a133f",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0080",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/commits.jsonl",
+   "key": "297517b5e1461400039aa7c4fdbbd246183a133f",
+   "path": "message",
+   "span": [
+    74,
+    91
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "username",
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0081",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1215",
+   "path": "triggered_by.username",
+   "span": null,
+   "surface": "ci_builds.triggered_by.username",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0082",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1215",
+   "path": "triggered_by.display_name",
+   "span": null,
+   "surface": "ci_builds.triggered_by.display_name",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0083",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1215",
+   "path": "log",
+   "span": [
+    16,
+    33
+   ],
+   "surface": "ci_builds.log",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0084",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1215",
+   "path": "log",
+   "span": [
+    452,
+    469
+   ],
+   "surface": "ci_builds.log",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0085",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1215",
+   "path": "log",
+   "span": [
+    583,
+    600
+   ],
+   "surface": "ci_builds.log",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0086",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1215",
+   "path": "log",
+   "span": [
+    712,
+    745
+   ],
+   "surface": "ci_builds.log",
+   "synthetic": true,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0087",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "a0ef2911dcef777dcfd0a4d5e8d63cdf280c9b60",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0088",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/commits.jsonl",
+   "key": "a0ef2911dcef777dcfd0a4d5e8d63cdf280c9b60",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0089",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "a0ef2911dcef777dcfd0a4d5e8d63cdf280c9b60",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0090",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/commits.jsonl",
+   "key": "a0ef2911dcef777dcfd0a4d5e8d63cdf280c9b60",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0091",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/commits.jsonl",
+   "key": "a0ef2911dcef777dcfd0a4d5e8d63cdf280c9b60",
+   "path": "message",
+   "span": [
+    74,
+    91
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "username",
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0092",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1224",
+   "path": "log",
+   "span": [
+    443,
+    460
+   ],
+   "surface": "ci_builds.log",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0093",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "bartosz.jablonski@lab.example.org",
+   "file": "data/ci_builds.jsonl",
+   "key": "ZooKeeper-trunk#1224",
+   "path": "log",
+   "span": [
+    631,
+    664
+   ],
+   "surface": "ci_builds.log",
+   "synthetic": true,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0094",
+   "entity_id": "E02",
+   "alias_id": "E02.a1",
+   "form": "username",
+   "value": "quentin-wai",
+   "file": "data/comments.jsonl",
+   "key": "12610001",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0095",
+   "entity_id": "E02",
+   "alias_id": "E02.a2",
+   "form": "full_name",
+   "value": "Quentin Wainwright",
+   "file": "data/comments.jsonl",
+   "key": "12610001",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0096",
+   "entity_id": "E01",
+   "alias_id": "E01.a4",
+   "form": "nickname",
+   "value": "Bartek",
+   "file": "data/comments.jsonl",
+   "key": "12610001",
+   "path": "body",
+   "span": [
+    270,
+    276
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0097",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "priyanka-ost",
+   "file": "data/comments.jsonl",
+   "key": "12610027",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0098",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Priyanka Ostrowski",
+   "file": "data/comments.jsonl",
+   "key": "12610027",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0099",
+   "entity_id": "E02",
+   "alias_id": "E02.a3",
+   "form": "first_name",
+   "value": "Quentin",
+   "file": "data/comments.jsonl",
+   "key": "12610027",
+   "path": "body",
+   "span": [
+    3,
+    10
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0100",
+   "entity_id": "E02",
+   "alias_id": "E02.a1",
+   "form": "username",
+   "value": "quentin-wai",
+   "file": "data/comments.jsonl",
+   "key": "12610031",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0101",
+   "entity_id": "E02",
+   "alias_id": "E02.a2",
+   "form": "full_name",
+   "value": "Quentin Wainwright",
+   "file": "data/comments.jsonl",
+   "key": "12610031",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0102",
+   "entity_id": "E01",
+   "alias_id": "E01.a5",
+   "form": "first_name",
+   "value": "Bartosz",
+   "file": "data/comments.jsonl",
+   "key": "12610031",
+   "path": "body",
+   "span": [
+    3,
+    10
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0103",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/comments.jsonl",
+   "key": "12639516",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0104",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/comments.jsonl",
+   "key": "12639516",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0105",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/comments.jsonl",
+   "key": "12639519",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0106",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/comments.jsonl",
+   "key": "12639519",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0107",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/comments.jsonl",
+   "key": "12639731",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0108",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/comments.jsonl",
+   "key": "12639731",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0109",
+   "entity_id": "E04",
+   "alias_id": "E04.a1",
+   "form": "full_name",
+   "value": "Tatiana Barzani",
+   "file": "data/comments.jsonl",
+   "key": "12639731",
+   "path": "body",
+   "span": [
+    102,
+    117
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0110",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/comments.jsonl",
+   "key": "12641147",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0111",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/comments.jsonl",
+   "key": "12641147",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0112",
+   "entity_id": "E02",
+   "alias_id": "E02.a1",
+   "form": "username",
+   "value": "quentin-wai",
+   "file": "data/comments.jsonl",
+   "key": "12641152",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0113",
+   "entity_id": "E02",
+   "alias_id": "E02.a2",
+   "form": "full_name",
+   "value": "Quentin Wainwright",
+   "file": "data/comments.jsonl",
+   "key": "12641152",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0114",
+   "entity_id": "E01",
+   "alias_id": "E01.a5",
+   "form": "first_name",
+   "value": "Bartosz",
+   "file": "data/comments.jsonl",
+   "key": "12641152",
+   "path": "body",
+   "span": [
+    35,
+    42
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0115",
+   "entity_id": "E01",
+   "alias_id": "E01.a6",
+   "form": "last_first",
+   "value": "Jablonski, Bartosz",
+   "file": "data/comments.jsonl",
+   "key": "12641152",
+   "path": "body",
+   "span": [
+    66,
+    84
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0116",
+   "entity_id": "E01",
+   "alias_id": "E01.a7",
+   "form": "email_obfuscated",
+   "value": "bartosz.jablonski at lab dot example dot org",
+   "file": "data/comments.jsonl",
+   "key": "12641152",
+   "path": "body",
+   "span": [
+    86,
+    130
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0117",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/comments.jsonl",
+   "key": "12642765",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0118",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/comments.jsonl",
+   "key": "12642765",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0119",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/comments.jsonl",
+   "key": "12754385",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0120",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/comments.jsonl",
+   "key": "12754385",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0121",
+   "entity_id": "E02",
+   "alias_id": "E02.a1",
+   "form": "username",
+   "value": "quentin-wai",
+   "file": "data/comments.jsonl",
+   "key": "12755313",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0122",
+   "entity_id": "E02",
+   "alias_id": "E02.a2",
+   "form": "full_name",
+   "value": "Quentin Wainwright",
+   "file": "data/comments.jsonl",
+   "key": "12755313",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0123",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/comments.jsonl",
+   "key": "12755630",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0124",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/comments.jsonl",
+   "key": "12755630",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0125",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/comments.jsonl",
+   "key": "12989977",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0126",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/comments.jsonl",
+   "key": "12989977",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0127",
+   "entity_id": "E02",
+   "alias_id": "E02.a1",
+   "form": "username",
+   "value": "quentin-wai",
+   "file": "data/comments.jsonl",
+   "key": "12992316",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0128",
+   "entity_id": "E02",
+   "alias_id": "E02.a2",
+   "form": "full_name",
+   "value": "Quentin Wainwright",
+   "file": "data/comments.jsonl",
+   "key": "12992316",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0129",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/comments.jsonl",
+   "key": "12992316",
+   "path": "body",
+   "span": [
+    127,
+    144
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0130",
+   "entity_id": "E01",
+   "alias_id": "E01.a4",
+   "form": "nickname",
+   "value": "Bartek",
+   "file": "data/comments.jsonl",
+   "key": "12992316",
+   "path": "body",
+   "span": [
+    147,
+    153
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0131",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/comments.jsonl",
+   "key": "12999893",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0132",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/comments.jsonl",
+   "key": "12999893",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0133",
+   "entity_id": "E02",
+   "alias_id": "E02.a3",
+   "form": "first_name",
+   "value": "Quentin",
+   "file": "data/comments.jsonl",
+   "key": "12999893",
+   "path": "body",
+   "span": [
+    0,
+    7
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0134",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/comments.jsonl",
+   "key": "13142282",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0135",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/comments.jsonl",
+   "key": "13142282",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0136",
+   "entity_id": "E04",
+   "alias_id": "E04.a2",
+   "form": "first_name",
+   "value": "Tatiana",
+   "file": "data/comments.jsonl",
+   "key": "13142282",
+   "path": "body",
+   "span": [
+    193,
+    200
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0137",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/comments.jsonl",
+   "key": "13148917",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0138",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/comments.jsonl",
+   "key": "13148917",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0139",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "bartosz.jablonski",
+   "file": "data/comments.jsonl",
+   "key": "13149943",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0140",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Bartosz Jablonski",
+   "file": "data/comments.jsonl",
+   "key": "13149943",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  }
+ ],
+ "distractors": [
+  {
+   "value": "/home/jenkins",
+   "kind": "system_account"
+  },
+  {
+   "value": "Hadoop QA",
+   "kind": "bot"
+  },
+  {
+   "value": "ZooKeeper-trunk",
+   "kind": "ci_job"
+  },
+  {
+   "value": "hadoopqa",
+   "kind": "bot"
+  }
+ ]
+}

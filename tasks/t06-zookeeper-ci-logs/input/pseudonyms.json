@@ -1,0 +1,66 @@
+[
+  {
+    "persona_id": "P01",
+    "full_name": "Adaeze Jankowski",
+    "first_name": "Adaeze",
+    "last_name": "Jankowski",
+    "email": "adaeze.jankowski@pseudonym.example",
+    "username": "ajankowski"
+  },
+  {
+    "persona_id": "P02",
+    "full_name": "Margit Abernethy",
+    "first_name": "Margit",
+    "last_name": "Abernethy",
+    "email": "margit.abernethy@pseudonym.example",
+    "username": "mabernethy"
+  },
+  {
+    "persona_id": "P03",
+    "full_name": "Benedikt Marchetti",
+    "first_name": "Benedikt",
+    "last_name": "Marchetti",
+    "email": "benedikt.marchetti@pseudonym.example",
+    "username": "bmarchetti"
+  },
+  {
+    "persona_id": "P04",
+    "full_name": "Galina Zabrowski",
+    "first_name": "Galina",
+    "last_name": "Zabrowski",
+    "email": "galina.zabrowski@pseudonym.example",
+    "username": "gzabrowski"
+  },
+  {
+    "persona_id": "P05",
+    "full_name": "Evander Fitzroy",
+    "first_name": "Evander",
+    "last_name": "Fitzroy",
+    "email": "evander.fitzroy@pseudonym.example",
+    "username": "efitzroy"
+  },
+  {
+    "persona_id": "P06",
+    "full_name": "Yara Sundqvist",
+    "first_name": "Yara",
+    "last_name": "Sundqvist",
+    "email": "yara.sundqvist@pseudonym.example",
+    "username": "ysundqvist"
+  },
+  {
+    "persona_id": "P07",
+    "full_name": "Leontine Cavendish",
+    "first_name": "Leontine",
+    "last_name": "Cavendish",
+    "email": "leontine.cavendish@pseudonym.example",
+    "username": "lcavendish"
+  },
+  {
+    "persona_id": "P08",
+    "full_name": "Matthias Kerrigan",
+    "first_name": "Matthias",
+    "last_name": "Kerrigan",
+    "email": "matthias.kerrigan@pseudonym.example",
+    "username": "mkerrigan"
+  }
+]

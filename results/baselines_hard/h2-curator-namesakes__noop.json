@@ -1,0 +1,411 @@
+{
+ "task_id": "h2-curator-namesakes",
+ "cleaner": "noop",
+ "elapsed_s": 0.0,
+ "score": 0.0,
+ "gate": true,
+ "components": {
+  "entity_recall": 0.0,
+  "continuity": 0.0,
+  "precision": 1.0,
+  "integrity": 1.0
+ },
+ "diagnostics": {
+  "grader_version": "grader-0.3",
+  "harmonic_mean": 0.0,
+  "score_v1": 0.0,
+  "min_component": 0.0,
+  "solved": false,
+  "gate_schema": true,
+  "gate_links": true,
+  "gate_text": true,
+  "occurrence_recall": 0.0,
+  "occurrence_recall_structured": 0.0,
+  "occurrence_recall_free_text": 0.0,
+  "separation": 1.0,
+  "entity_success": 0.0,
+  "entities_ok": [],
+  "bcubed_precision": 1.0,
+  "bcubed_recall": 0.07532467532467532,
+  "form_accuracy": 0.0,
+  "persona_resolved": 0.0,
+  "text_preservation": 1.0,
+  "distractor_preservation": 1.0,
+  "schema_valid": true,
+  "n_entities": 29,
+  "n_occurrences": 385,
+  "n_leaked": 385,
+  "n_residual_token_hits": 534,
+  "n_overscrub_edits": 0,
+  "n_integrity_failures": 0,
+  "n_link_failures": 0,
+  "n_schema_errors": 0,
+  "n_declared_personas": 0,
+  "mapping_errors": [],
+  "mapping_leaks": 0,
+  "recall_by_surface": {
+   "ci_builds.log": 0.0,
+   "comments.author.display_name": 0.0,
+   "comments.author.username": 0.0,
+   "comments.body": 0.0,
+   "commits.author.email": 0.0,
+   "commits.author.name": 0.0,
+   "commits.committer.email": 0.0,
+   "commits.committer.name": 0.0,
+   "commits.message": 0.0,
+   "issues.assignee.display_name": 0.0,
+   "issues.assignee.username": 0.0,
+   "issues.description": 0.0,
+   "issues.reporter.display_name": 0.0,
+   "issues.reporter.username": 0.0,
+   "mail.body": 0.0,
+   "mail.from.email": 0.0,
+   "mail.from.name": 0.0,
+   "pr_comments.author.display_name": 0.0,
+   "pr_comments.author.login": 0.0,
+   "pr_comments.body": 0.0,
+   "pull_requests.creator.display_name": 0.0,
+   "pull_requests.creator.login": 0.0,
+   "pull_requests.description": 0.0,
+   "pull_requests.source_repo_url": 0.0,
+   "reviews.body": 0.0,
+   "reviews.creator.display_name": 0.0,
+   "reviews.creator.login": 0.0
+  }
+ },
+ "failures": {
+  "leaks": [
+   [
+    "O0001",
+    "commits.author.name",
+    "Haruki Szymanski",
+    "Haruki Szymanski"
+   ],
+   [
+    "O0002",
+    "commits.author.email",
+    "haruki.szymanski@dev.example.net",
+    "haruki.szymanski@dev.example.net"
+   ],
+   [
+    "O0003",
+    "commits.committer.name",
+    "Haruki Szymanski",
+    "Haruki Szymanski"
+   ],
+   [
+    "O0004",
+    "commits.committer.email",
+    "haruki.szymanski@dev.example.net",
+    "haruki.szymanski@dev.example.net"
+   ],
+   [
+    "O0005",
+    "commits.author.name",
+    "Haruki Szymanski",
+    "Haruki Szymanski"
+   ],
+   [
+    "O0006",
+    "commits.author.email",
+    "haruki.szymanski@dev.example.net",
+    "haruki.szymanski@dev.example.net"
+   ],
+   [
+    "O0007",
+    "commits.committer.name",
+    "Haruki Szymanski",
+    "Haruki Szymanski"
+   ],
+   [
+    "O0008",
+    "commits.committer.email",
+    "haruki.szymanski@dev.example.net",
+    "haruki.szymanski@dev.example.net"
+   ],
+   [
+    "O0009",
+    "commits.author.name",
+    "Haruki Szymanski",
+    "Haruki Szymanski"
+   ],
+   [
+    "O0010",
+    "commits.author.email",
+    "haruki.szymanski@dev.example.net",
+    "haruki.szymanski@dev.example.net"
+   ],
+   [
+    "O0011",
+    "commits.committer.name",
+    "Haruki Szymanski",
+    "Haruki Szymanski"
+   ],
+   [
+    "O0012",
+    "commits.committer.email",
+    "haruki.szymanski@dev.example.net",
+    "haruki.szymanski@dev.example.net"
+   ],
+   [
+    "O0013",
+    "commits.author.name",
+    "Kasimir Urquhart",
+    "Kasimir Urquhart"
+   ],
+   [
+    "O0014",
+    "commits.author.email",
+    "kasimir.urquhart@corp.example.com",
+    "kasimir.urquhart@corp.example.com"
+   ],
+   [
+    "O0015",
+    "commits.committer.name",
+    "Kasimir Urquhart",
+    "Kasimir Urquhart"
+   ],
+   [
+    "O0016",
+    "commits.committer.email",
+    "kasimir.urquhart@corp.example.com",
+    "kasimir.urquhart@corp.example.com"
+   ],
+   [
+    "O0017",
+    "commits.message",
+    "Kasimir Urquhart",
+    "Kasimir Urquhart"
+   ],
+   [
+    "O0018",
+    "commits.message",
+    "kasimir.urquhart@corp.example.com",
+    "kasimir.urquhart@corp.example.com"
+   ],
+   [
+    "O0019",
+    "commits.author.name",
+    "Bartosz Castellanos",
+    "Bartosz Castellanos"
+   ],
+   [
+    "O0020",
+    "commits.author.email",
+    "bartosz.castellanos@example.com",
+    "bartosz.castellanos@example.com"
+   ],
+   [
+    "O0021",
+    "commits.committer.name",
+    "Bartosz Castellanos",
+    "Bartosz Castellanos"
+   ],
+   [
+    "O0022",
+    "commits.committer.email",
+    "bartosz.castellanos@example.com",
+    "bartosz.castellanos@example.com"
+   ],
+   [
+    "O0023",
+    "commits.message",
+    "Bartosz Castellanos",
+    "Bartosz Castellanos"
+   ],
+   [
+    "O0024",
+    "commits.message",
+    "bartosz.castellanos@example.com",
+    "bartosz.castellanos@example.com"
+   ],
+   [
+    "O0025",
+    "commits.author.name",
+    "Bartosz Castellanos",
+    "Bartosz Castellanos"
+   ]
+  ],
+  "continuity": [
+   {
+    "entity": "E03",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E09",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E04",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E06",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E08",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E07",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E02",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E05",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E10",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E16",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E01",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E11",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E14",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E12",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E19",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E20",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E22",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E23",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E25",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E24",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E26",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E27",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E28",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E21",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E29",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   }
+  ],
+  "overscrub": [],
+  "integrity": [],
+  "links": [],
+  "schema": []
+ }
+}

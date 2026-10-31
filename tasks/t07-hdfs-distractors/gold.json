@@ -1,0 +1,3021 @@
+{
+ "task_id": "t07-hdfs-distractors",
+ "seed": 707,
+ "generator_version": "gen-0.1",
+ "provenance": {
+  "source": "20-MAD sample (M3SOulu/MozillaApacheDataset-sample, CC-BY 4.0)",
+  "project": "apache/HDFS + repo hadoop",
+  "real_structure": [
+   "commits",
+   "issues",
+   "comments"
+  ],
+  "synthetic": [
+   "all identities",
+   "injected mentions (synthetic=true)",
+   "people directory (rendering of real merge clusters)",
+   "injected non-PII distractor sentences"
+  ],
+  "seed_person": "mad:apache:11780",
+  "collisions": [],
+  "issue_keys": [
+   "HDFS-508",
+   "HDFS-581",
+   "HDFS-636",
+   "HDFS-652",
+   "HDFS-3368",
+   "HDFS-8071"
+  ],
+  "spec": {
+   "task_id": "t07-hdfs-distractors",
+   "title": "HDFS: precision under person-like non-PII",
+   "difficulty": "medium",
+   "targets": [
+    "over-scrubbing",
+    "mailing-list addresses",
+    "@Override/@param annotations",
+    "bots and library names",
+    "prose-only third parties, nicknames, mail-quote headers, URL-embedded usernames"
+   ],
+   "source": "apache",
+   "product": "HDFS",
+   "repo": "hadoop",
+   "seed": 707,
+   "n_issues": 6,
+   "max_comments_per_issue": 5,
+   "max_commits_per_issue": 2,
+   "max_entities": 7,
+   "min_seed_keys": 2,
+   "include_directory": true,
+   "include_bots": true,
+   "comment_mention_rate": 0.5,
+   "description_mention_rate": 0.3,
+   "commit_attribution_rate": 0.3,
+   "max_text_chars": 700,
+   "collisions": 0,
+   "ci_surface": false,
+   "distractor_rate": 0.6,
+   "hard_mention_rate": 0.25,
+   "third_parties": 1,
+   "notes": "Injected distractor sentences must survive verbatim.",
+   "extra": {}
+  }
+ },
+ "files": {
+  "data/commits.jsonl": {
+   "key": "hash",
+   "fk": {
+    "issue_key": "data/issues.jsonl"
+   },
+   "text_fields": [
+    "message"
+   ]
+  },
+  "data/issues.jsonl": {
+   "key": "issue_key",
+   "fk": {},
+   "text_fields": [
+    "summary",
+    "description"
+   ]
+  },
+  "data/comments.jsonl": {
+   "key": "comment_id",
+   "fk": {
+    "issue_key": "data/issues.jsonl"
+   },
+   "text_fields": [
+    "body"
+   ]
+  },
+  "data/people.jsonl": {
+   "key": "person_id",
+   "fk": {},
+   "text_fields": []
+  }
+ },
+ "entities": [
+  {
+   "entity_id": "E01",
+   "source_ref": "mad:apache:28457",
+   "tokens": {
+    "names": [
+     "Leopold",
+     "Ulyanov"
+    ],
+    "usernames": [
+     "lulyanov",
+     "ulyanovl"
+    ],
+    "emails": [
+     "leopold.ulyanov@corp.example.com",
+     "lulyanov@apache.example.org"
+    ],
+    "email_locals": [
+     "leopold.ulyanov",
+     "lulyanov"
+    ]
+   },
+   "aliases": [
+    {
+     "alias_id": "E01.a1",
+     "form": "username",
+     "value": "lulyanov"
+    },
+    {
+     "alias_id": "E01.a2",
+     "form": "full_name",
+     "value": "Leopold Ulyanov"
+    },
+    {
+     "alias_id": "E01.a3",
+     "form": "email",
+     "value": "leopold.ulyanov@corp.example.com"
+    },
+    {
+     "alias_id": "E01.a4",
+     "form": "email",
+     "value": "lulyanov@apache.example.org"
+    },
+    {
+     "alias_id": "E01.a5",
+     "form": "first_name",
+     "value": "Leopold"
+    }
+   ]
+  },
+  {
+   "entity_id": "E02",
+   "source_ref": "synthetic:third_party:1",
+   "tokens": {
+    "names": [
+     "Ulrike",
+     "Jablonski"
+    ],
+    "usernames": [
+     "ulrike-jab"
+    ],
+    "emails": [
+     "ulrike.jablonski@example.com"
+    ],
+    "email_locals": [
+     "ulrike.jablonski"
+    ]
+   },
+   "aliases": [
+    {
+     "alias_id": "E02.a1",
+     "form": "full_name",
+     "value": "Ulrike Jablonski"
+    },
+    {
+     "alias_id": "E02.a2",
+     "form": "email",
+     "value": "ulrike.jablonski@example.com"
+    },
+    {
+     "alias_id": "E02.a3",
+     "form": "first_name",
+     "value": "Ulrike"
+    }
+   ]
+  },
+  {
+   "entity_id": "E03",
+   "source_ref": "mad:apache:11780",
+   "tokens": {
+    "names": [
+     "Wendell",
+     "Moreau"
+    ],
+    "usernames": [
+     "wendell-mor",
+     "wendellm"
+    ],
+    "emails": [],
+    "email_locals": []
+   },
+   "aliases": [
+    {
+     "alias_id": "E03.a1",
+     "form": "username",
+     "value": "wendell-mor"
+    },
+    {
+     "alias_id": "E03.a2",
+     "form": "full_name",
+     "value": "Wendell Moreau"
+    },
+    {
+     "alias_id": "E03.a3",
+     "form": "first_name",
+     "value": "Wendell"
+    }
+   ]
+  },
+  {
+   "entity_id": "E04",
+   "source_ref": "mad:apache:22688",
+   "tokens": {
+    "names": [
+     "Soren",
+     "Kowalczyk"
+    ],
+    "usernames": [
+     "soreko",
+     "soren.kowalczyk"
+    ],
+    "emails": [],
+    "email_locals": []
+   },
+   "aliases": [
+    {
+     "alias_id": "E04.a1",
+     "form": "username",
+     "value": "soreko"
+    },
+    {
+     "alias_id": "E04.a2",
+     "form": "full_name",
+     "value": "Soren Kowalczyk"
+    }
+   ]
+  }
+ ],
+ "occurrences": [
+  {
+   "occ_id": "O0001",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-508",
+   "path": "reporter.username",
+   "span": null,
+   "surface": "issues.reporter.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0002",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-508",
+   "path": "reporter.display_name",
+   "span": null,
+   "surface": "issues.reporter.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0003",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-508",
+   "path": "assignee.username",
+   "span": null,
+   "surface": "issues.assignee.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0004",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-508",
+   "path": "assignee.display_name",
+   "span": null,
+   "surface": "issues.assignee.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0005",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-508",
+   "path": "creator.username",
+   "span": null,
+   "surface": "issues.creator.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0006",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-508",
+   "path": "creator.display_name",
+   "span": null,
+   "surface": "issues.creator.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0007",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-581",
+   "path": "reporter.username",
+   "span": null,
+   "surface": "issues.reporter.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0008",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-581",
+   "path": "reporter.display_name",
+   "span": null,
+   "surface": "issues.reporter.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0009",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-581",
+   "path": "assignee.username",
+   "span": null,
+   "surface": "issues.assignee.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0010",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-581",
+   "path": "assignee.display_name",
+   "span": null,
+   "surface": "issues.assignee.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0011",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-581",
+   "path": "creator.username",
+   "span": null,
+   "surface": "issues.creator.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0012",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-581",
+   "path": "creator.display_name",
+   "span": null,
+   "surface": "issues.creator.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0013",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-636",
+   "path": "reporter.username",
+   "span": null,
+   "surface": "issues.reporter.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0014",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-636",
+   "path": "reporter.display_name",
+   "span": null,
+   "surface": "issues.reporter.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0015",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-636",
+   "path": "assignee.username",
+   "span": null,
+   "surface": "issues.assignee.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0016",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-636",
+   "path": "assignee.display_name",
+   "span": null,
+   "surface": "issues.assignee.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0017",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-636",
+   "path": "creator.username",
+   "span": null,
+   "surface": "issues.creator.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0018",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-636",
+   "path": "creator.display_name",
+   "span": null,
+   "surface": "issues.creator.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0019",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-652",
+   "path": "reporter.username",
+   "span": null,
+   "surface": "issues.reporter.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0020",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-652",
+   "path": "reporter.display_name",
+   "span": null,
+   "surface": "issues.reporter.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0021",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-652",
+   "path": "assignee.username",
+   "span": null,
+   "surface": "issues.assignee.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0022",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-652",
+   "path": "assignee.display_name",
+   "span": null,
+   "surface": "issues.assignee.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0023",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-652",
+   "path": "creator.username",
+   "span": null,
+   "surface": "issues.creator.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0024",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-652",
+   "path": "creator.display_name",
+   "span": null,
+   "surface": "issues.creator.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0025",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-652",
+   "path": "description",
+   "span": [
+    223,
+    231
+   ],
+   "surface": "issues.description",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0026",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-3368",
+   "path": "reporter.username",
+   "span": null,
+   "surface": "issues.reporter.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0027",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-3368",
+   "path": "reporter.display_name",
+   "span": null,
+   "surface": "issues.reporter.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0028",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-3368",
+   "path": "assignee.username",
+   "span": null,
+   "surface": "issues.assignee.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0029",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-3368",
+   "path": "assignee.display_name",
+   "span": null,
+   "surface": "issues.assignee.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0030",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-3368",
+   "path": "creator.username",
+   "span": null,
+   "surface": "issues.creator.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0031",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-3368",
+   "path": "creator.display_name",
+   "span": null,
+   "surface": "issues.creator.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0032",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-8071",
+   "path": "reporter.username",
+   "span": null,
+   "surface": "issues.reporter.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0033",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-8071",
+   "path": "reporter.display_name",
+   "span": null,
+   "surface": "issues.reporter.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0034",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-8071",
+   "path": "assignee.username",
+   "span": null,
+   "surface": "issues.assignee.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0035",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-8071",
+   "path": "assignee.display_name",
+   "span": null,
+   "surface": "issues.assignee.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0036",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-8071",
+   "path": "creator.username",
+   "span": null,
+   "surface": "issues.creator.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0037",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-8071",
+   "path": "creator.display_name",
+   "span": null,
+   "surface": "issues.creator.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0038",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/issues.jsonl",
+   "key": "HDFS-8071",
+   "path": "description",
+   "span": [
+    2,
+    10
+   ],
+   "surface": "issues.description",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0039",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "9c3e5bd44167d3fd21054da0331c82f004d44dc6",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0040",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "leopold.ulyanov@corp.example.com",
+   "file": "data/commits.jsonl",
+   "key": "9c3e5bd44167d3fd21054da0331c82f004d44dc6",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0041",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "9c3e5bd44167d3fd21054da0331c82f004d44dc6",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0042",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "leopold.ulyanov@corp.example.com",
+   "file": "data/commits.jsonl",
+   "key": "9c3e5bd44167d3fd21054da0331c82f004d44dc6",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0043",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "9c3e5bd44167d3fd21054da0331c82f004d44dc6",
+   "path": "message",
+   "span": [
+    62,
+    77
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0044",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "8d29e6c6f66bbddd98ebe19e57ad487eeb494aac",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0045",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "leopold.ulyanov@corp.example.com",
+   "file": "data/commits.jsonl",
+   "key": "8d29e6c6f66bbddd98ebe19e57ad487eeb494aac",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0046",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "8d29e6c6f66bbddd98ebe19e57ad487eeb494aac",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0047",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "leopold.ulyanov@corp.example.com",
+   "file": "data/commits.jsonl",
+   "key": "8d29e6c6f66bbddd98ebe19e57ad487eeb494aac",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0048",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "8d29e6c6f66bbddd98ebe19e57ad487eeb494aac",
+   "path": "message",
+   "span": [
+    86,
+    101
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0049",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "0809d3a98bab1499c4f0c9c4b12c0c2781947e66",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0050",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "leopold.ulyanov@corp.example.com",
+   "file": "data/commits.jsonl",
+   "key": "0809d3a98bab1499c4f0c9c4b12c0c2781947e66",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0051",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "0809d3a98bab1499c4f0c9c4b12c0c2781947e66",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0052",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "leopold.ulyanov@corp.example.com",
+   "file": "data/commits.jsonl",
+   "key": "0809d3a98bab1499c4f0c9c4b12c0c2781947e66",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0053",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "0809d3a98bab1499c4f0c9c4b12c0c2781947e66",
+   "path": "message",
+   "span": [
+    81,
+    96
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0054",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "af8338958a5401dfc1790c0e093b0a9de0607d8c",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0055",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "leopold.ulyanov@corp.example.com",
+   "file": "data/commits.jsonl",
+   "key": "af8338958a5401dfc1790c0e093b0a9de0607d8c",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0056",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "af8338958a5401dfc1790c0e093b0a9de0607d8c",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0057",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "leopold.ulyanov@corp.example.com",
+   "file": "data/commits.jsonl",
+   "key": "af8338958a5401dfc1790c0e093b0a9de0607d8c",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0058",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "f290fa4705e42de53d74560f7e946cdf9a694dae",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0059",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "leopold.ulyanov@corp.example.com",
+   "file": "data/commits.jsonl",
+   "key": "f290fa4705e42de53d74560f7e946cdf9a694dae",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0060",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "f290fa4705e42de53d74560f7e946cdf9a694dae",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0061",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "leopold.ulyanov@corp.example.com",
+   "file": "data/commits.jsonl",
+   "key": "f290fa4705e42de53d74560f7e946cdf9a694dae",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0062",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "f290fa4705e42de53d74560f7e946cdf9a694dae",
+   "path": "message",
+   "span": [
+    63,
+    78
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0063",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "c4b7ee0dcfe513982f6ae21e5c577f940246c0f6",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0064",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "leopold.ulyanov@corp.example.com",
+   "file": "data/commits.jsonl",
+   "key": "c4b7ee0dcfe513982f6ae21e5c577f940246c0f6",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0065",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "c4b7ee0dcfe513982f6ae21e5c577f940246c0f6",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0066",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "leopold.ulyanov@corp.example.com",
+   "file": "data/commits.jsonl",
+   "key": "c4b7ee0dcfe513982f6ae21e5c577f940246c0f6",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0067",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "c4b7ee0dcfe513982f6ae21e5c577f940246c0f6",
+   "path": "message",
+   "span": [
+    84,
+    99
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0068",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "2e0a15c48890f646d4dfa7bc8844430ebed888aa",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0069",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "leopold.ulyanov@corp.example.com",
+   "file": "data/commits.jsonl",
+   "key": "2e0a15c48890f646d4dfa7bc8844430ebed888aa",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0070",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "2e0a15c48890f646d4dfa7bc8844430ebed888aa",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0071",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "leopold.ulyanov@corp.example.com",
+   "file": "data/commits.jsonl",
+   "key": "2e0a15c48890f646d4dfa7bc8844430ebed888aa",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0072",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "675454808360c61d66ca343d7c8cd317781fd1e8",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0073",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "leopold.ulyanov@corp.example.com",
+   "file": "data/commits.jsonl",
+   "key": "675454808360c61d66ca343d7c8cd317781fd1e8",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0074",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "675454808360c61d66ca343d7c8cd317781fd1e8",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0075",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "leopold.ulyanov@corp.example.com",
+   "file": "data/commits.jsonl",
+   "key": "675454808360c61d66ca343d7c8cd317781fd1e8",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0076",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "675454808360c61d66ca343d7c8cd317781fd1e8",
+   "path": "message",
+   "span": [
+    82,
+    97
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0077",
+   "entity_id": "E02",
+   "alias_id": "E02.a1",
+   "form": "full_name",
+   "value": "Ulrike Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "675454808360c61d66ca343d7c8cd317781fd1e8",
+   "path": "message",
+   "span": [
+    242,
+    258
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0078",
+   "entity_id": "E02",
+   "alias_id": "E02.a2",
+   "form": "email",
+   "value": "ulrike.jablonski@example.com",
+   "file": "data/commits.jsonl",
+   "key": "675454808360c61d66ca343d7c8cd317781fd1e8",
+   "path": "message",
+   "span": [
+    260,
+    288
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0079",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "75c545486080042952c775f7964212c15ce65f73",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0080",
+   "entity_id": "E01",
+   "alias_id": "E01.a4",
+   "form": "email",
+   "value": "lulyanov@apache.example.org",
+   "file": "data/commits.jsonl",
+   "key": "75c545486080042952c775f7964212c15ce65f73",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0081",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "75c545486080042952c775f7964212c15ce65f73",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0082",
+   "entity_id": "E01",
+   "alias_id": "E01.a4",
+   "form": "email",
+   "value": "lulyanov@apache.example.org",
+   "file": "data/commits.jsonl",
+   "key": "75c545486080042952c775f7964212c15ce65f73",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0083",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "75c545486080042952c775f7964212c15ce65f73",
+   "path": "message",
+   "span": [
+    92,
+    107
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0084",
+   "entity_id": "E02",
+   "alias_id": "E02.a1",
+   "form": "full_name",
+   "value": "Ulrike Jablonski",
+   "file": "data/commits.jsonl",
+   "key": "75c545486080042952c775f7964212c15ce65f73",
+   "path": "message",
+   "span": [
+    126,
+    142
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0085",
+   "entity_id": "E02",
+   "alias_id": "E02.a2",
+   "form": "email",
+   "value": "ulrike.jablonski@example.com",
+   "file": "data/commits.jsonl",
+   "key": "75c545486080042952c775f7964212c15ce65f73",
+   "path": "message",
+   "span": [
+    144,
+    172
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0086",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "81b522790bc59cb05fc5ff58f299a9a9f2eaa4fb",
+   "path": "author.name",
+   "span": null,
+   "surface": "commits.author.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0087",
+   "entity_id": "E01",
+   "alias_id": "E01.a4",
+   "form": "email",
+   "value": "lulyanov@apache.example.org",
+   "file": "data/commits.jsonl",
+   "key": "81b522790bc59cb05fc5ff58f299a9a9f2eaa4fb",
+   "path": "author.email",
+   "span": null,
+   "surface": "commits.author.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0088",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "81b522790bc59cb05fc5ff58f299a9a9f2eaa4fb",
+   "path": "committer.name",
+   "span": null,
+   "surface": "commits.committer.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0089",
+   "entity_id": "E01",
+   "alias_id": "E01.a4",
+   "form": "email",
+   "value": "lulyanov@apache.example.org",
+   "file": "data/commits.jsonl",
+   "key": "81b522790bc59cb05fc5ff58f299a9a9f2eaa4fb",
+   "path": "committer.email",
+   "span": null,
+   "surface": "commits.committer.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0090",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/commits.jsonl",
+   "key": "81b522790bc59cb05fc5ff58f299a9a9f2eaa4fb",
+   "path": "message",
+   "span": [
+    92,
+    107
+   ],
+   "surface": "commits.message",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0091",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/comments.jsonl",
+   "key": "12735894",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0092",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/comments.jsonl",
+   "key": "12735894",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0093",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/comments.jsonl",
+   "key": "12736258",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0094",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/comments.jsonl",
+   "key": "12736258",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0095",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "wendell-mor",
+   "file": "data/comments.jsonl",
+   "key": "12736323",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0096",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Wendell Moreau",
+   "file": "data/comments.jsonl",
+   "key": "12736323",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0097",
+   "entity_id": "E01",
+   "alias_id": "E01.a5",
+   "form": "first_name",
+   "value": "Leopold",
+   "file": "data/comments.jsonl",
+   "key": "12736323",
+   "path": "body",
+   "span": [
+    214,
+    221
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0098",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/comments.jsonl",
+   "key": "12749628",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0099",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/comments.jsonl",
+   "key": "12749628",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0100",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/comments.jsonl",
+   "key": "12749695",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0101",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/comments.jsonl",
+   "key": "12749695",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0102",
+   "entity_id": "E02",
+   "alias_id": "E02.a3",
+   "form": "first_name",
+   "value": "Ulrike",
+   "file": "data/comments.jsonl",
+   "key": "12749695",
+   "path": "body",
+   "span": [
+    197,
+    203
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0103",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "wendell-mor",
+   "file": "data/comments.jsonl",
+   "key": "12750595",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0104",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Wendell Moreau",
+   "file": "data/comments.jsonl",
+   "key": "12750595",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0105",
+   "entity_id": "E01",
+   "alias_id": "E01.a5",
+   "form": "first_name",
+   "value": "Leopold",
+   "file": "data/comments.jsonl",
+   "key": "12750595",
+   "path": "body",
+   "span": [
+    654,
+    661
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0106",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "wendell-mor",
+   "file": "data/comments.jsonl",
+   "key": "12750595",
+   "path": "body",
+   "span": [
+    712,
+    723
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0107",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "wendell-mor",
+   "file": "data/comments.jsonl",
+   "key": "12750597",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0108",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Wendell Moreau",
+   "file": "data/comments.jsonl",
+   "key": "12750597",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0109",
+   "entity_id": "E01",
+   "alias_id": "E01.a5",
+   "form": "first_name",
+   "value": "Leopold",
+   "file": "data/comments.jsonl",
+   "key": "12750597",
+   "path": "body",
+   "span": [
+    3,
+    10
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0110",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/comments.jsonl",
+   "key": "12757765",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0111",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/comments.jsonl",
+   "key": "12757765",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0112",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/comments.jsonl",
+   "key": "12757766",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0113",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/comments.jsonl",
+   "key": "12757766",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0114",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "wendell-mor",
+   "file": "data/comments.jsonl",
+   "key": "12757990",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0115",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Wendell Moreau",
+   "file": "data/comments.jsonl",
+   "key": "12757990",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0116",
+   "entity_id": "E01",
+   "alias_id": "E01.a5",
+   "form": "first_name",
+   "value": "Leopold",
+   "file": "data/comments.jsonl",
+   "key": "12757990",
+   "path": "body",
+   "span": [
+    0,
+    7
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0117",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "wendell-mor",
+   "file": "data/comments.jsonl",
+   "key": "12758967",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0118",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Wendell Moreau",
+   "file": "data/comments.jsonl",
+   "key": "12758967",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0119",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/comments.jsonl",
+   "key": "12758967",
+   "path": "body",
+   "span": [
+    2,
+    10
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0120",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "wendell-mor",
+   "file": "data/comments.jsonl",
+   "key": "12758969",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0121",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Wendell Moreau",
+   "file": "data/comments.jsonl",
+   "key": "12758969",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0122",
+   "entity_id": "E01",
+   "alias_id": "E01.a5",
+   "form": "first_name",
+   "value": "Leopold",
+   "file": "data/comments.jsonl",
+   "key": "12758969",
+   "path": "body",
+   "span": [
+    0,
+    7
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0123",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "wendell-mor",
+   "file": "data/comments.jsonl",
+   "key": "12759331",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0124",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Wendell Moreau",
+   "file": "data/comments.jsonl",
+   "key": "12759331",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0125",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/comments.jsonl",
+   "key": "12759336",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0126",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/comments.jsonl",
+   "key": "12759336",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0127",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/comments.jsonl",
+   "key": "13268191",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0128",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/comments.jsonl",
+   "key": "13268191",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0129",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/comments.jsonl",
+   "key": "13268200",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0130",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/comments.jsonl",
+   "key": "13268200",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0131",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "wendell-mor",
+   "file": "data/comments.jsonl",
+   "key": "13268591",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0132",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Wendell Moreau",
+   "file": "data/comments.jsonl",
+   "key": "13268591",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0133",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/comments.jsonl",
+   "key": "13268591",
+   "path": "body",
+   "span": [
+    206,
+    221
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0134",
+   "entity_id": "E04",
+   "alias_id": "E04.a1",
+   "form": "username",
+   "value": "soreko",
+   "file": "data/comments.jsonl",
+   "key": "13268615",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0135",
+   "entity_id": "E04",
+   "alias_id": "E04.a2",
+   "form": "full_name",
+   "value": "Soren Kowalczyk",
+   "file": "data/comments.jsonl",
+   "key": "13268615",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0136",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/comments.jsonl",
+   "key": "13268615",
+   "path": "body",
+   "span": [
+    334,
+    349
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0137",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/comments.jsonl",
+   "key": "13268899",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0138",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/comments.jsonl",
+   "key": "13268899",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0139",
+   "entity_id": "E03",
+   "alias_id": "E03.a3",
+   "form": "first_name",
+   "value": "Wendell",
+   "file": "data/comments.jsonl",
+   "key": "13268899",
+   "path": "body",
+   "span": [
+    74,
+    81
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0140",
+   "entity_id": "E03",
+   "alias_id": "E03.a3",
+   "form": "first_name",
+   "value": "Wendell",
+   "file": "data/comments.jsonl",
+   "key": "13268899",
+   "path": "body",
+   "span": [
+    84,
+    91
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0141",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "wendell-mor",
+   "file": "data/comments.jsonl",
+   "key": "14482219",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0142",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Wendell Moreau",
+   "file": "data/comments.jsonl",
+   "key": "14482219",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0143",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/comments.jsonl",
+   "key": "14482364",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0144",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/comments.jsonl",
+   "key": "14482364",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0145",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/comments.jsonl",
+   "key": "14482364",
+   "path": "body",
+   "span": [
+    101,
+    109
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0146",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/comments.jsonl",
+   "key": "14482695",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0147",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/comments.jsonl",
+   "key": "14482695",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0148",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "wendell-mor",
+   "file": "data/comments.jsonl",
+   "key": "15113862",
+   "path": "author.username",
+   "span": null,
+   "surface": "comments.author.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0149",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Wendell Moreau",
+   "file": "data/comments.jsonl",
+   "key": "15113862",
+   "path": "author.display_name",
+   "span": null,
+   "surface": "comments.author.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0150",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/comments.jsonl",
+   "key": "15113862",
+   "path": "body",
+   "span": [
+    93,
+    101
+   ],
+   "surface": "comments.body",
+   "synthetic": true,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0151",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/people.jsonl",
+   "key": "dev-001",
+   "path": "display_name",
+   "span": null,
+   "surface": "people.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0152",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "leopold.ulyanov@corp.example.com",
+   "file": "data/people.jsonl",
+   "key": "dev-001",
+   "path": "emails.0",
+   "span": null,
+   "surface": "people.emails",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0153",
+   "entity_id": "E01",
+   "alias_id": "E01.a4",
+   "form": "email",
+   "value": "lulyanov@apache.example.org",
+   "file": "data/people.jsonl",
+   "key": "dev-001",
+   "path": "emails.1",
+   "span": null,
+   "surface": "people.emails",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0154",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/people.jsonl",
+   "key": "dev-001",
+   "path": "accounts.0.name",
+   "span": null,
+   "surface": "people.accounts.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0155",
+   "entity_id": "E01",
+   "alias_id": "E01.a3",
+   "form": "email",
+   "value": "leopold.ulyanov@corp.example.com",
+   "file": "data/people.jsonl",
+   "key": "dev-001",
+   "path": "accounts.0.email",
+   "span": null,
+   "surface": "people.accounts.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0156",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/people.jsonl",
+   "key": "dev-001",
+   "path": "accounts.1.name",
+   "span": null,
+   "surface": "people.accounts.name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0157",
+   "entity_id": "E01",
+   "alias_id": "E01.a4",
+   "form": "email",
+   "value": "lulyanov@apache.example.org",
+   "file": "data/people.jsonl",
+   "key": "dev-001",
+   "path": "accounts.1.email",
+   "span": null,
+   "surface": "people.accounts.email",
+   "synthetic": false,
+   "accept": [
+    "email"
+   ]
+  },
+  {
+   "occ_id": "O0158",
+   "entity_id": "E01",
+   "alias_id": "E01.a1",
+   "form": "username",
+   "value": "lulyanov",
+   "file": "data/people.jsonl",
+   "key": "dev-001",
+   "path": "accounts.2.username",
+   "span": null,
+   "surface": "people.accounts.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0159",
+   "entity_id": "E01",
+   "alias_id": "E01.a2",
+   "form": "full_name",
+   "value": "Leopold Ulyanov",
+   "file": "data/people.jsonl",
+   "key": "dev-001",
+   "path": "accounts.2.display_name",
+   "span": null,
+   "surface": "people.accounts.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0160",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Wendell Moreau",
+   "file": "data/people.jsonl",
+   "key": "dev-002",
+   "path": "display_name",
+   "span": null,
+   "surface": "people.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0161",
+   "entity_id": "E03",
+   "alias_id": "E03.a1",
+   "form": "username",
+   "value": "wendell-mor",
+   "file": "data/people.jsonl",
+   "key": "dev-002",
+   "path": "accounts.0.username",
+   "span": null,
+   "surface": "people.accounts.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0162",
+   "entity_id": "E03",
+   "alias_id": "E03.a2",
+   "form": "full_name",
+   "value": "Wendell Moreau",
+   "file": "data/people.jsonl",
+   "key": "dev-002",
+   "path": "accounts.0.display_name",
+   "span": null,
+   "surface": "people.accounts.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0163",
+   "entity_id": "E04",
+   "alias_id": "E04.a2",
+   "form": "full_name",
+   "value": "Soren Kowalczyk",
+   "file": "data/people.jsonl",
+   "key": "dev-003",
+   "path": "display_name",
+   "span": null,
+   "surface": "people.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  },
+  {
+   "occ_id": "O0164",
+   "entity_id": "E04",
+   "alias_id": "E04.a1",
+   "form": "username",
+   "value": "soreko",
+   "file": "data/people.jsonl",
+   "key": "dev-003",
+   "path": "accounts.0.username",
+   "span": null,
+   "surface": "people.accounts.username",
+   "synthetic": false,
+   "accept": [
+    "username"
+   ]
+  },
+  {
+   "occ_id": "O0165",
+   "entity_id": "E04",
+   "alias_id": "E04.a2",
+   "form": "full_name",
+   "value": "Soren Kowalczyk",
+   "file": "data/people.jsonl",
+   "key": "dev-003",
+   "path": "accounts.0.display_name",
+   "span": null,
+   "surface": "people.accounts.display_name",
+   "synthetic": false,
+   "accept": [
+    "name"
+   ]
+  }
+ ],
+ "distractors": [
+  {
+   "value": "@Override",
+   "kind": "code"
+  },
+  {
+   "value": "@param",
+   "kind": "code"
+  },
+  {
+   "value": "@since",
+   "kind": "code"
+  },
+  {
+   "value": "Apache Curator",
+   "kind": "library"
+  },
+  {
+   "value": "Guava",
+   "kind": "library"
+  },
+  {
+   "value": "Hadoop QA",
+   "kind": "bot"
+  },
+  {
+   "value": "Hadoop-hdfs-trunk",
+   "kind": "ci_job"
+  },
+  {
+   "value": "Jackson",
+   "kind": "library"
+  },
+  {
+   "value": "Jenkins",
+   "kind": "product"
+  },
+  {
+   "value": "dev@hdfs.apache.org",
+   "kind": "mailing_list"
+  },
+  {
+   "value": "hadoopqa",
+   "kind": "bot"
+  },
+  {
+   "value": "user@hdfs.apache.org",
+   "kind": "mailing_list"
+  }
+ ]
+}

@@ -1,0 +1,255 @@
+{
+ "task_id": "t06-zookeeper-ci-logs",
+ "cleaner": "noop",
+ "elapsed_s": 0.0,
+ "score": 0.0,
+ "gate": true,
+ "components": {
+  "entity_recall": 0.0,
+  "continuity": 0.0,
+  "precision": 1.0,
+  "integrity": 1.0
+ },
+ "diagnostics": {
+  "grader_version": "grader-0.3",
+  "harmonic_mean": 0.0,
+  "score_v1": 0.0,
+  "min_component": 0.0,
+  "solved": false,
+  "gate_schema": true,
+  "gate_links": true,
+  "gate_text": true,
+  "occurrence_recall": 0.0,
+  "occurrence_recall_structured": 0.0,
+  "occurrence_recall_free_text": 0.0,
+  "separation": 1.0,
+  "entity_success": 0.0,
+  "entities_ok": [],
+  "bcubed_precision": 1.0,
+  "bcubed_recall": 0.02857142857142857,
+  "form_accuracy": 0.0,
+  "persona_resolved": 0.0,
+  "text_preservation": 1.0,
+  "distractor_preservation": 1.0,
+  "schema_valid": true,
+  "n_entities": 4,
+  "n_occurrences": 140,
+  "n_leaked": 140,
+  "n_residual_token_hits": 199,
+  "n_overscrub_edits": 0,
+  "n_integrity_failures": 0,
+  "n_link_failures": 0,
+  "n_schema_errors": 0,
+  "n_declared_personas": 0,
+  "mapping_errors": [],
+  "mapping_leaks": 0,
+  "recall_by_surface": {
+   "ci_builds.log": 0.0,
+   "ci_builds.triggered_by.display_name": 0.0,
+   "ci_builds.triggered_by.username": 0.0,
+   "comments.author.display_name": 0.0,
+   "comments.author.username": 0.0,
+   "comments.body": 0.0,
+   "commits.author.email": 0.0,
+   "commits.author.name": 0.0,
+   "commits.committer.email": 0.0,
+   "commits.committer.name": 0.0,
+   "commits.message": 0.0,
+   "issues.assignee.display_name": 0.0,
+   "issues.assignee.username": 0.0,
+   "issues.creator.display_name": 0.0,
+   "issues.creator.username": 0.0,
+   "issues.description": 0.0,
+   "issues.reporter.display_name": 0.0,
+   "issues.reporter.username": 0.0
+  }
+ },
+ "failures": {
+  "leaks": [
+   [
+    "O0040",
+    "commits.author.name",
+    "Bartosz Jablonski",
+    "Bartosz Jablonski"
+   ],
+   [
+    "O0041",
+    "commits.author.email",
+    "bartosz.jablonski@lab.example.org",
+    "bartosz.jablonski@lab.example.org"
+   ],
+   [
+    "O0042",
+    "commits.committer.name",
+    "Bartosz Jablonski",
+    "Bartosz Jablonski"
+   ],
+   [
+    "O0043",
+    "commits.committer.email",
+    "bartosz.jablonski@lab.example.org",
+    "bartosz.jablonski@lab.example.org"
+   ],
+   [
+    "O0046",
+    "commits.author.name",
+    "Bartosz Jablonski",
+    "Bartosz Jablonski"
+   ],
+   [
+    "O0047",
+    "commits.author.email",
+    "bartosz.jablonski@lab.example.org",
+    "bartosz.jablonski@lab.example.org"
+   ],
+   [
+    "O0048",
+    "commits.committer.name",
+    "Bartosz Jablonski",
+    "Bartosz Jablonski"
+   ],
+   [
+    "O0049",
+    "commits.committer.email",
+    "bartosz.jablonski@lab.example.org",
+    "bartosz.jablonski@lab.example.org"
+   ],
+   [
+    "O0052",
+    "commits.author.name",
+    "Bartosz Jablonski",
+    "Bartosz Jablonski"
+   ],
+   [
+    "O0053",
+    "commits.author.email",
+    "bartosz.jablonski@lab.example.org",
+    "bartosz.jablonski@lab.example.org"
+   ],
+   [
+    "O0054",
+    "commits.committer.name",
+    "Bartosz Jablonski",
+    "Bartosz Jablonski"
+   ],
+   [
+    "O0055",
+    "commits.committer.email",
+    "bartosz.jablonski@lab.example.org",
+    "bartosz.jablonski@lab.example.org"
+   ],
+   [
+    "O0056",
+    "commits.message",
+    "Bartosz Jablonski",
+    "Bartosz Jablonski"
+   ],
+   [
+    "O0059",
+    "commits.author.name",
+    "Bartosz Jablonski",
+    "Bartosz Jablonski"
+   ],
+   [
+    "O0060",
+    "commits.author.email",
+    "bartosz.jablonski@lab.example.org",
+    "bartosz.jablonski@lab.example.org"
+   ],
+   [
+    "O0061",
+    "commits.committer.name",
+    "Bartosz Jablonski",
+    "Bartosz Jablonski"
+   ],
+   [
+    "O0062",
+    "commits.committer.email",
+    "bartosz.jablonski@lab.example.org",
+    "bartosz.jablonski@lab.example.org"
+   ],
+   [
+    "O0063",
+    "commits.message",
+    "Bartosz Jablonski",
+    "Bartosz Jablonski"
+   ],
+   [
+    "O0066",
+    "commits.author.name",
+    "Bartosz Jablonski",
+    "Bartosz Jablonski"
+   ],
+   [
+    "O0067",
+    "commits.author.email",
+    "bartosz.jablonski@lab.example.org",
+    "bartosz.jablonski@lab.example.org"
+   ],
+   [
+    "O0068",
+    "commits.committer.name",
+    "Bartosz Jablonski",
+    "Bartosz Jablonski"
+   ],
+   [
+    "O0069",
+    "commits.committer.email",
+    "bartosz.jablonski@lab.example.org",
+    "bartosz.jablonski@lab.example.org"
+   ],
+   [
+    "O0070",
+    "commits.message",
+    "bartosz.jablonski",
+    "bartosz.jablonski"
+   ],
+   [
+    "O0076",
+    "commits.author.name",
+    "Bartosz Jablonski",
+    "Bartosz Jablonski"
+   ],
+   [
+    "O0077",
+    "commits.author.email",
+    "bartosz.jablonski@lab.example.org",
+    "bartosz.jablonski@lab.example.org"
+   ]
+  ],
+  "continuity": [
+   {
+    "entity": "E01",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E02",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E03",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E04",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   }
+  ],
+  "overscrub": [],
+  "integrity": [],
+  "links": [],
+  "schema": []
+ }
+}

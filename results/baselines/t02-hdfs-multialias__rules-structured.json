@@ -1,0 +1,259 @@
+{
+ "task_id": "t02-hdfs-multialias",
+ "cleaner": "rules-structured",
+ "elapsed_s": 0.0017,
+ "score": 0.0,
+ "gate": true,
+ "components": {
+  "entity_recall": 0.0,
+  "continuity": 0.6666666666666666,
+  "precision": 1.0,
+  "integrity": 1.0
+ },
+ "diagnostics": {
+  "grader_version": "grader-0.3",
+  "harmonic_mean": 0.0,
+  "score_v1": 0.0,
+  "min_component": 0.0,
+  "solved": false,
+  "gate_schema": true,
+  "gate_links": true,
+  "gate_text": true,
+  "occurrence_recall": 0.7537688442211056,
+  "occurrence_recall_structured": 1.0,
+  "occurrence_recall_free_text": 0.0,
+  "separation": 1.0,
+  "entity_success": 0.0,
+  "entities_ok": [],
+  "bcubed_precision": 1.0,
+  "bcubed_recall": 0.5915143874301464,
+  "form_accuracy": 1.0,
+  "persona_resolved": 1.0,
+  "text_preservation": 1.0,
+  "distractor_preservation": 1.0,
+  "schema_valid": true,
+  "n_entities": 9,
+  "n_occurrences": 199,
+  "n_leaked": 49,
+  "n_residual_token_hits": 65,
+  "n_overscrub_edits": 0,
+  "n_integrity_failures": 0,
+  "n_link_failures": 0,
+  "n_schema_errors": 0,
+  "n_declared_personas": 0,
+  "mapping_errors": [],
+  "mapping_leaks": 0,
+  "recall_by_surface": {
+   "comments.author.display_name": 1.0,
+   "comments.author.username": 1.0,
+   "comments.body": 0.0,
+   "commits.author.email": 1.0,
+   "commits.author.name": 1.0,
+   "commits.committer.email": 1.0,
+   "commits.committer.name": 1.0,
+   "commits.message": 0.0,
+   "issues.assignee.display_name": 1.0,
+   "issues.assignee.username": 1.0,
+   "issues.creator.display_name": 1.0,
+   "issues.creator.username": 1.0,
+   "issues.description": 0.0,
+   "issues.reporter.display_name": 1.0,
+   "issues.reporter.username": 1.0
+  }
+ },
+ "failures": {
+  "leaks": [
+   [
+    "O0049",
+    "commits.message",
+    "Tatiana Wainwright",
+    "Tatiana Wainwright"
+   ],
+   [
+    "O0054",
+    "commits.message",
+    "Tatiana Wainwright",
+    "Tatiana Wainwright"
+   ],
+   [
+    "O0059",
+    "commits.message",
+    "Clementine Coutinho",
+    "Clementine Coutinho"
+   ],
+   [
+    "O0068",
+    "commits.message",
+    "Brigitte Gallagher",
+    "Brigitte Gallagher"
+   ],
+   [
+    "O0073",
+    "commits.message",
+    "Brigitte Gallagher",
+    "Brigitte Gallagher"
+   ],
+   [
+    "O0078",
+    "commits.message",
+    "leopold.jablonski",
+    "leopold.jablonski"
+   ],
+   [
+    "O0083",
+    "commits.message",
+    "leopold.jablonski",
+    "leopold.jablonski"
+   ],
+   [
+    "O0088",
+    "commits.message",
+    "Ulrike Eriksen",
+    "Ulrike Eriksen"
+   ],
+   [
+    "O0089",
+    "commits.message",
+    "pascual.lindqvist",
+    "pascual.lindqvist"
+   ],
+   [
+    "O0094",
+    "commits.message",
+    "Ulrike Eriksen",
+    "Ulrike Eriksen"
+   ],
+   [
+    "O0095",
+    "commits.message",
+    "pascual.lindqvist",
+    "pascual.lindqvist"
+   ],
+   [
+    "O0100",
+    "commits.message",
+    "Ulrike Eriksen",
+    "Ulrike Eriksen"
+   ],
+   [
+    "O0101",
+    "commits.message",
+    "pascual.lindqvist",
+    "pascual.lindqvist"
+   ],
+   [
+    "O0106",
+    "commits.message",
+    "Ulrike Eriksen",
+    "Ulrike Eriksen"
+   ],
+   [
+    "O0107",
+    "commits.message",
+    "pascual.lindqvist",
+    "pascual.lindqvist"
+   ],
+   [
+    "O0112",
+    "commits.message",
+    "Ulrike Eriksen",
+    "Ulrike Eriksen"
+   ],
+   [
+    "O0113",
+    "commits.message",
+    "pascual.lindqvist",
+    "pascual.lindqvist"
+   ],
+   [
+    "O0114",
+    "commits.message",
+    "Gideon Iwasaki",
+    "Gideon Iwasaki"
+   ],
+   [
+    "O0115",
+    "commits.message",
+    "gideon.iwasaki@lab.example.org",
+    "gideon.iwasaki@lab.example.org"
+   ],
+   [
+    "O0120",
+    "commits.message",
+    "Ulrike Eriksen",
+    "Ulrike Eriksen"
+   ],
+   [
+    "O0121",
+    "commits.message",
+    "pascual.lindqvist",
+    "pascual.lindqvist"
+   ],
+   [
+    "O0007",
+    "issues.description",
+    "tatiana-wai",
+    "tatiana-wai"
+   ],
+   [
+    "O0044",
+    "issues.description",
+    "eriksenu",
+    "eriksenu"
+   ],
+   [
+    "O0124",
+    "comments.body",
+    "tatiana-wai",
+    "tatiana-wai"
+   ],
+   [
+    "O0125",
+    "comments.body",
+    "Tanya",
+    "Tanya"
+   ]
+  ],
+  "continuity": [
+   {
+    "entity": "E07",
+    "personas": {
+     "P02": 36,
+     "P08": 2
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.author.username",
+      "pascual-lin",
+      "ialbrecht"
+     ],
+     [
+      "comments.author.display_name",
+      "P. Lindqvist",
+      "I. Albrecht"
+     ]
+    ]
+   },
+   {
+    "entity": "E08",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E09",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   }
+  ],
+  "overscrub": [],
+  "integrity": [],
+  "links": [],
+  "schema": []
+ }
+}

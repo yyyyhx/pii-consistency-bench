@@ -1,0 +1,839 @@
+{
+ "task_id": "h2-curator-namesakes",
+ "cleaner": "redact",
+ "elapsed_s": 0.0109,
+ "score": 0.0,
+ "gate": true,
+ "components": {
+  "entity_recall": 0.896551724137931,
+  "continuity": 0.0,
+  "precision": 1.0,
+  "integrity": 1.0
+ },
+ "diagnostics": {
+  "grader_version": "grader-0.3",
+  "harmonic_mean": 0.0,
+  "score_v1": 0.0,
+  "min_component": 0.0,
+  "solved": false,
+  "gate_schema": true,
+  "gate_links": true,
+  "gate_text": true,
+  "occurrence_recall": 0.9922077922077922,
+  "occurrence_recall_structured": 1.0,
+  "occurrence_recall_free_text": 0.972972972972973,
+  "separation": 1.0,
+  "entity_success": 0.0,
+  "entities_ok": [],
+  "bcubed_precision": 1.0,
+  "bcubed_recall": 0.07532467532467532,
+  "form_accuracy": 0.0,
+  "persona_resolved": 0.0,
+  "text_preservation": 1.0,
+  "distractor_preservation": 1.0,
+  "schema_valid": true,
+  "n_entities": 29,
+  "n_occurrences": 385,
+  "n_leaked": 3,
+  "n_residual_token_hits": 3,
+  "n_overscrub_edits": 0,
+  "n_integrity_failures": 0,
+  "n_link_failures": 0,
+  "n_schema_errors": 0,
+  "n_declared_personas": 0,
+  "mapping_errors": [],
+  "mapping_leaks": 0,
+  "recall_by_surface": {
+   "ci_builds.log": 1.0,
+   "comments.author.display_name": 1.0,
+   "comments.author.username": 1.0,
+   "comments.body": 1.0,
+   "commits.author.email": 1.0,
+   "commits.author.name": 1.0,
+   "commits.committer.email": 1.0,
+   "commits.committer.name": 1.0,
+   "commits.message": 0.9,
+   "issues.assignee.display_name": 1.0,
+   "issues.assignee.username": 1.0,
+   "issues.description": 1.0,
+   "issues.reporter.display_name": 1.0,
+   "issues.reporter.username": 1.0,
+   "mail.body": 0.9091,
+   "mail.from.email": 1.0,
+   "mail.from.name": 1.0,
+   "pr_comments.author.display_name": 1.0,
+   "pr_comments.author.login": 1.0,
+   "pr_comments.body": 1.0,
+   "pull_requests.creator.display_name": 1.0,
+   "pull_requests.creator.login": 1.0,
+   "pull_requests.description": 1.0,
+   "pull_requests.source_repo_url": 1.0,
+   "reviews.body": 1.0,
+   "reviews.creator.display_name": 1.0,
+   "reviews.creator.login": 1.0
+  }
+ },
+ "failures": {
+  "leaks": [
+   [
+    "O0084",
+    "commits.message",
+    "clementine.oyelaran@mail.example.org",
+    "clementine.oyelaran@mail.example.org"
+   ],
+   [
+    "O0112",
+    "commits.message",
+    "bartosz.delacroix@example.com",
+    "bartosz.delacroix@example.com"
+   ],
+   [
+    "O0363",
+    "mail.body",
+    "haruki.szymanski at dev dot example dot net",
+    "haruki.szymanski at dev dot example dot net"
+   ]
+  ],
+  "continuity": [
+   {
+    "entity": "E03",
+    "personas": {
+     "None": 28
+    },
+    "bad_form": 28,
+    "shared_with": [],
+    "examples": [
+     [
+      "commits.author.name",
+      "Haruki Szymanski",
+      "[REDACTED]"
+     ],
+     [
+      "commits.author.email",
+      "haruki.szymanski@dev.example.net",
+      "[REDACTED_EMAIL]"
+     ],
+     [
+      "commits.committer.name",
+      "Haruki Szymanski",
+      "[REDACTED]"
+     ],
+     [
+      "commits.committer.email",
+      "haruki.szymanski@dev.example.net",
+      "[REDACTED_EMAIL]"
+     ]
+    ]
+   },
+   {
+    "entity": "E09",
+    "personas": {
+     "None": 10
+    },
+    "bad_form": 10,
+    "shared_with": [],
+    "examples": [
+     [
+      "commits.author.name",
+      "Kasimir Urquhart",
+      "[REDACTED]"
+     ],
+     [
+      "commits.author.email",
+      "kasimir.urquhart@corp.example.com",
+      "[REDACTED_EMAIL]"
+     ],
+     [
+      "commits.committer.name",
+      "Kasimir Urquhart",
+      "[REDACTED]"
+     ],
+     [
+      "commits.committer.email",
+      "kasimir.urquhart@corp.example.com",
+      "[REDACTED_EMAIL]"
+     ]
+    ]
+   },
+   {
+    "entity": "E04",
+    "personas": {
+     "None": 26
+    },
+    "bad_form": 26,
+    "shared_with": [],
+    "examples": [
+     [
+      "commits.author.name",
+      "Bartosz Castellanos",
+      "[REDACTED]"
+     ],
+     [
+      "commits.author.email",
+      "bartosz.castellanos@example.com",
+      "[REDACTED_EMAIL]"
+     ],
+     [
+      "commits.committer.name",
+      "Bartosz Castellanos",
+      "[REDACTED]"
+     ],
+     [
+      "commits.committer.email",
+      "bartosz.castellanos@example.com",
+      "[REDACTED_EMAIL]"
+     ]
+    ]
+   },
+   {
+    "entity": "E06",
+    "personas": {
+     "None": 17
+    },
+    "bad_form": 17,
+    "shared_with": [],
+    "examples": [
+     [
+      "commits.author.name",
+      "Mireille Jorgensen",
+      "[REDACTED]"
+     ],
+     [
+      "commits.author.email",
+      "mireille.jorgensen@corp.example.com",
+      "[REDACTED_EMAIL]"
+     ],
+     [
+      "commits.committer.name",
+      "Mireille Jorgensen",
+      "[REDACTED]"
+     ],
+     [
+      "commits.committer.email",
+      "mireille.jorgensen@corp.example.com",
+      "[REDACTED_EMAIL]"
+     ]
+    ]
+   },
+   {
+    "entity": "E08",
+    "personas": {
+     "None": 9
+    },
+    "bad_form": 9,
+    "shared_with": [],
+    "examples": [
+     [
+      "commits.author.name",
+      "Pascual Eberhardt",
+      "[REDACTED]"
+     ],
+     [
+      "commits.author.email",
+      "pascual.eberhardt@example.com",
+      "[REDACTED_EMAIL]"
+     ],
+     [
+      "commits.committer.name",
+      "Pascual Eberhardt",
+      "[REDACTED]"
+     ],
+     [
+      "commits.committer.email",
+      "pascual.eberhardt@example.com",
+      "[REDACTED_EMAIL]"
+     ]
+    ]
+   },
+   {
+    "entity": "E07",
+    "personas": {
+     "None": 8
+    },
+    "bad_form": 8,
+    "shared_with": [],
+    "examples": [
+     [
+      "commits.author.name",
+      "Vasco Arcuri",
+      "[REDACTED]"
+     ],
+     [
+      "commits.author.email",
+      "vasco.arcuri@mail.example.org",
+      "[REDACTED_EMAIL]"
+     ],
+     [
+      "commits.committer.name",
+      "Vasco Arcuri",
+      "[REDACTED]"
+     ],
+     [
+      "commits.committer.email",
+      "vasco.arcuri@mail.example.org",
+      "[REDACTED_EMAIL]"
+     ]
+    ]
+   },
+   {
+    "entity": "E02",
+    "personas": {
+     "None": 28
+    },
+    "bad_form": 28,
+    "shared_with": [],
+    "examples": [
+     [
+      "commits.author.name",
+      "Wilhelmina Quiroga",
+      "[REDACTED]"
+     ],
+     [
+      "commits.author.email",
+      "wilhelmina.quiroga@dev.example.net",
+      "[REDACTED_EMAIL]"
+     ],
+     [
+      "commits.committer.name",
+      "Wilhelmina Quiroga",
+      "[REDACTED]"
+     ],
+     [
+      "commits.committer.email",
+      "wilhelmina.quiroga@dev.example.net",
+      "[REDACTED_EMAIL]"
+     ]
+    ]
+   },
+   {
+    "entity": "E05",
+    "personas": {
+     "None": 27
+    },
+    "bad_form": 27,
+    "shared_with": [],
+    "examples": [
+     [
+      "commits.author.name",
+      "Dagny Lombardi",
+      "[REDACTED]"
+     ],
+     [
+      "commits.author.email",
+      "dagny.lombardi@dev.example.net",
+      "[REDACTED_EMAIL]"
+     ],
+     [
+      "commits.committer.name",
+      "Dagny Lombardi",
+      "[REDACTED]"
+     ],
+     [
+      "commits.committer.email",
+      "dagny.lombardi@dev.example.net",
+      "[REDACTED_EMAIL]"
+     ]
+    ]
+   },
+   {
+    "entity": "E10",
+    "personas": {
+     "None": 11
+    },
+    "bad_form": 11,
+    "shared_with": [],
+    "examples": [
+     [
+      "commits.author.name",
+      "Clementine Oyelaran",
+      "[REDACTED]"
+     ],
+     [
+      "commits.author.email",
+      "clementine.oyelaran@dev.example.net",
+      "[REDACTED_EMAIL]"
+     ],
+     [
+      "commits.committer.name",
+      "Clementine Oyelaran",
+      "[REDACTED]"
+     ],
+     [
+      "commits.committer.email",
+      "clementine.oyelaran@dev.example.net",
+      "[REDACTED_EMAIL]"
+     ]
+    ]
+   },
+   {
+    "entity": "E16",
+    "personas": {
+     "None": 8
+    },
+    "bad_form": 8,
+    "shared_with": [],
+    "examples": [
+     [
+      "commits.message",
+      "Clementine Oyelaran",
+      "[REDACTED]"
+     ],
+     [
+      "issues.reporter.username",
+      "oyelaranc",
+      "[REDACTED_USER]"
+     ],
+     [
+      "issues.reporter.display_name",
+      "Clementine Oyelaran",
+      "[REDACTED]"
+     ],
+     [
+      "comments.author.username",
+      "oyelaranc",
+      "[REDACTED_USER]"
+     ]
+    ]
+   },
+   {
+    "entity": "E01",
+    "personas": {
+     "None": 48
+    },
+    "bad_form": 48,
+    "shared_with": [],
+    "examples": [
+     [
+      "commits.author.name",
+      "Bartosz Delacroix",
+      "[REDACTED]"
+     ],
+     [
+      "commits.author.email",
+      "bartosz.delacroix@dev.example.net",
+      "[REDACTED_EMAIL]"
+     ],
+     [
+      "commits.committer.name",
+      "Bartosz Delacroix",
+      "[REDACTED]"
+     ],
+     [
+      "commits.committer.email",
+      "bartosz.delacroix@dev.example.net",
+      "[REDACTED_EMAIL]"
+     ]
+    ]
+   },
+   {
+    "entity": "E11",
+    "personas": {
+     "None": 3
+    },
+    "bad_form": 3,
+    "shared_with": [],
+    "examples": [
+     [
+      "commits.committer.name",
+      "Tatiana Kowalczyk",
+      "[REDACTED]"
+     ],
+     [
+      "commits.committer.email",
+      "tatiana.kowalczyk@mail.example.org",
+      "[REDACTED_EMAIL]"
+     ],
+     [
+      "ci_builds.log",
+      "tatiana.kowalczyk@mail.example.org",
+      "[REDACTED_EMAIL]"
+     ]
+    ]
+   },
+   {
+    "entity": "E14",
+    "personas": {
+     "None": 4
+    },
+    "bad_form": 4,
+    "shared_with": [],
+    "examples": [
+     [
+      "commits.message",
+      "Bartosz Delacroix",
+      "[REDACTED]"
+     ],
+     [
+      "pull_requests.description",
+      "bartosz-del",
+      "[REDACTED_USER]"
+     ],
+     [
+      "reviews.creator.login",
+      "bartosz-del",
+      "[REDACTED_USER]"
+     ],
+     [
+      "reviews.creator.display_name",
+      "Bartosz Delacroix",
+      "[REDACTED]"
+     ]
+    ]
+   },
+   {
+    "entity": "E12",
+    "personas": {
+     "None": 4
+    },
+    "bad_form": 4,
+    "shared_with": [],
+    "examples": [
+     [
+      "commits.committer.name",
+      "Chiara Ostrowski",
+      "[REDACTED]"
+     ],
+     [
+      "commits.committer.email",
+      "chiara.ostrowski@example.com",
+      "[REDACTED_EMAIL]"
+     ],
+     [
+      "ci_builds.log",
+      "chiara.ostrowski@example.com",
+      "[REDACTED_EMAIL]"
+     ],
+     [
+      "ci_builds.log",
+      "chiara.ostrowski@example.com",
+      "[REDACTED_EMAIL]"
+     ]
+    ]
+   },
+   {
+    "entity": "E19",
+    "personas": {
+     "None": 9
+    },
+    "bad_form": 9,
+    "shared_with": [],
+    "examples": [
+     [
+      "issues.reporter.username",
+      "marixi",
+      "[REDACTED_USER]"
+     ],
+     [
+      "issues.reporter.display_name",
+      "Marisol Xiong",
+      "[REDACTED]"
+     ],
+     [
+      "comments.body",
+      "Marisol",
+      "[REDACTED]"
+     ],
+     [
+      "comments.author.username",
+      "marixi",
+      "[REDACTED_USER]"
+     ]
+    ]
+   },
+   {
+    "entity": "E20",
+    "personas": {
+     "None": 31
+    },
+    "bad_form": 31,
+    "shared_with": [],
+    "examples": [
+     [
+      "issues.assignee.username",
+      "wainwrightr",
+      "[REDACTED_USER]"
+     ],
+     [
+      "issues.assignee.display_name",
+      "Radomir Wainwright",
+      "[REDACTED]"
+     ],
+     [
+      "issues.description",
+      "wainwrightr",
+      "[REDACTED_USER]"
+     ],
+     [
+      "issues.reporter.username",
+      "wainwrightr",
+      "[REDACTED_USER]"
+     ]
+    ]
+   },
+   {
+    "entity": "E22",
+    "personas": {
+     "None": 5
+    },
+    "bad_form": 5,
+    "shared_with": [],
+    "examples": [
+     [
+      "issues.assignee.username",
+      "vasquezf",
+      "[REDACTED_USER]"
+     ],
+     [
+      "issues.assignee.display_name",
+      "Fenella Vasquez",
+      "[REDACTED]"
+     ],
+     [
+      "issues.description",
+      "vasquezf",
+      "[REDACTED_USER]"
+     ],
+     [
+      "comments.author.username",
+      "vasquezf",
+      "[REDACTED_USER]"
+     ]
+    ]
+   },
+   {
+    "entity": "E23",
+    "personas": {
+     "None": 5
+    },
+    "bad_form": 5,
+    "shared_with": [],
+    "examples": [
+     [
+      "issues.reporter.username",
+      "jessta",
+      "[REDACTED_USER]"
+     ],
+     [
+      "issues.reporter.display_name",
+      "Jessamy Takahashi",
+      "[REDACTED]"
+     ],
+     [
+      "comments.body",
+      "Jessamy",
+      "[REDACTED]"
+     ],
+     [
+      "comments.author.username",
+      "jessta",
+      "[REDACTED_USER]"
+     ]
+    ]
+   },
+   {
+    "entity": "E25",
+    "personas": {
+     "None": 6
+    },
+    "bad_form": 6,
+    "shared_with": [],
+    "examples": [
+     [
+      "issues.reporter.username",
+      "dobrowolskiu",
+      "[REDACTED_USER]"
+     ],
+     [
+      "issues.reporter.display_name",
+      "Ulrike Dobrowolski",
+      "[REDACTED]"
+     ],
+     [
+      "comments.body",
+      "Ulrike",
+      "[REDACTED]"
+     ],
+     [
+      "comments.author.username",
+      "dobrowolskiu",
+      "[REDACTED_USER]"
+     ]
+    ]
+   },
+   {
+    "entity": "E24",
+    "personas": {
+     "None": 4
+    },
+    "bad_form": 4,
+    "shared_with": [],
+    "examples": [
+     [
+      "issues.reporter.username",
+      "thorvaldsenh",
+      "[REDACTED_USER]"
+     ],
+     [
+      "issues.reporter.display_name",
+      "Haruki Thorvaldsen",
+      "[REDACTED]"
+     ],
+     [
+      "comments.body",
+      "Haruki",
+      "[REDACTED]"
+     ],
+     [
+      "comments.body",
+      "thorvaldsenh",
+      "[REDACTED_USER]"
+     ]
+    ]
+   },
+   {
+    "entity": "E26",
+    "personas": {
+     "None": 12
+    },
+    "bad_form": 12,
+    "shared_with": [],
+    "examples": [
+     [
+      "issues.reporter.username",
+      "byilmaz",
+      "[REDACTED_USER]"
+     ],
+     [
+      "issues.reporter.display_name",
+      "Bartosz Yilmaz",
+      "[REDACTED]"
+     ],
+     [
+      "issues.reporter.username",
+      "byilmaz",
+      "[REDACTED_USER]"
+     ],
+     [
+      "issues.reporter.display_name",
+      "Bartosz Yilmaz",
+      "[REDACTED]"
+     ]
+    ]
+   },
+   {
+    "entity": "E27",
+    "personas": {
+     "None": 11
+    },
+    "bad_form": 11,
+    "shared_with": [],
+    "examples": [
+     [
+      "issues.reporter.username",
+      "kalindaf",
+      "[REDACTED_USER]"
+     ],
+     [
+      "issues.reporter.display_name",
+      "Kalinda Ferreira",
+      "[REDACTED]"
+     ],
+     [
+      "issues.reporter.username",
+      "kalindaf",
+      "[REDACTED_USER]"
+     ],
+     [
+      "issues.reporter.display_name",
+      "Kalinda Ferreira",
+      "[REDACTED]"
+     ]
+    ]
+   },
+   {
+    "entity": "E28",
+    "personas": {
+     "None": 17
+    },
+    "bad_form": 17,
+    "shared_with": [],
+    "examples": [
+     [
+      "issues.reporter.username",
+      "desmond.bergstrom",
+      "[REDACTED_USER]"
+     ],
+     [
+      "issues.reporter.display_name",
+      "Desmond Bergstrom",
+      "[REDACTED]"
+     ],
+     [
+      "issues.reporter.username",
+      "desmond.bergstrom",
+      "[REDACTED_USER]"
+     ],
+     [
+      "issues.reporter.display_name",
+      "Desmond Bergstrom",
+      "[REDACTED]"
+     ]
+    ]
+   },
+   {
+    "entity": "E21",
+    "personas": {
+     "None": 28
+    },
+    "bad_form": 28,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.author.username",
+      "zamorag",
+      "[REDACTED_USER]"
+     ],
+     [
+      "comments.author.display_name",
+      "Gideon Zamora",
+      "[REDACTED]"
+     ],
+     [
+      "comments.author.username",
+      "zamorag",
+      "[REDACTED_USER]"
+     ],
+     [
+      "comments.author.display_name",
+      "Gideon Zamora",
+      "[REDACTED]"
+     ]
+    ]
+   },
+   {
+    "entity": "E29",
+    "personas": {
+     "None": 2
+    },
+    "bad_form": 2,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.author.username",
+      "agallagher",
+      "[REDACTED_USER]"
+     ],
+     [
+      "comments.author.display_name",
+      "Aurelia Gallagher",
+      "[REDACTED]"
+     ]
+    ]
+   }
+  ],
+  "overscrub": [],
+  "integrity": [],
+  "links": [],
+  "schema": []
+ }
+}

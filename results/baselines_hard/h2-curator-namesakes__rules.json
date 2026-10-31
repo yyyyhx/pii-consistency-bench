@@ -1,0 +1,436 @@
+{
+ "task_id": "h2-curator-namesakes",
+ "cleaner": "rules",
+ "elapsed_s": 0.0069,
+ "score": 0.8117073170731708,
+ "gate": true,
+ "components": {
+  "entity_recall": 0.896551724137931,
+  "continuity": 0.5517241379310345,
+  "precision": 1.0,
+  "integrity": 1.0
+ },
+ "diagnostics": {
+  "grader_version": "grader-0.3",
+  "harmonic_mean": 0.8117073170731708,
+  "score_v1": 0.8117073170731708,
+  "min_component": 0.5517241379310345,
+  "solved": false,
+  "gate_schema": true,
+  "gate_links": true,
+  "gate_text": true,
+  "occurrence_recall": 0.9922077922077922,
+  "occurrence_recall_structured": 1.0,
+  "occurrence_recall_free_text": 0.972972972972973,
+  "separation": 0.7931034482758621,
+  "entity_success": 0.5517241379310345,
+  "entities_ok": [
+   "E02",
+   "E11",
+   "E12",
+   "E13",
+   "E15",
+   "E17",
+   "E18",
+   "E19",
+   "E20",
+   "E21",
+   "E22",
+   "E23",
+   "E25",
+   "E27",
+   "E28",
+   "E29"
+  ],
+  "bcubed_precision": 0.926957194360998,
+  "bcubed_recall": 0.7760049682869156,
+  "form_accuracy": 1.0,
+  "persona_resolved": 1.0,
+  "text_preservation": 1.0,
+  "distractor_preservation": 1.0,
+  "schema_valid": true,
+  "n_entities": 29,
+  "n_occurrences": 385,
+  "n_leaked": 3,
+  "n_residual_token_hits": 3,
+  "n_overscrub_edits": 0,
+  "n_integrity_failures": 0,
+  "n_link_failures": 0,
+  "n_schema_errors": 0,
+  "n_declared_personas": 0,
+  "mapping_errors": [],
+  "mapping_leaks": 0,
+  "recall_by_surface": {
+   "ci_builds.log": 1.0,
+   "comments.author.display_name": 1.0,
+   "comments.author.username": 1.0,
+   "comments.body": 1.0,
+   "commits.author.email": 1.0,
+   "commits.author.name": 1.0,
+   "commits.committer.email": 1.0,
+   "commits.committer.name": 1.0,
+   "commits.message": 0.9,
+   "issues.assignee.display_name": 1.0,
+   "issues.assignee.username": 1.0,
+   "issues.description": 1.0,
+   "issues.reporter.display_name": 1.0,
+   "issues.reporter.username": 1.0,
+   "mail.body": 0.9091,
+   "mail.from.email": 1.0,
+   "mail.from.name": 1.0,
+   "pr_comments.author.display_name": 1.0,
+   "pr_comments.author.login": 1.0,
+   "pr_comments.body": 1.0,
+   "pull_requests.creator.display_name": 1.0,
+   "pull_requests.creator.login": 1.0,
+   "pull_requests.description": 1.0,
+   "pull_requests.source_repo_url": 1.0,
+   "reviews.body": 1.0,
+   "reviews.creator.display_name": 1.0,
+   "reviews.creator.login": 1.0
+  }
+ },
+ "failures": {
+  "leaks": [
+   [
+    "O0084",
+    "commits.message",
+    "clementine.oyelaran@mail.example.org",
+    "clementine.oyelaran@mail.example.org"
+   ],
+   [
+    "O0112",
+    "commits.message",
+    "bartosz.delacroix@example.com",
+    "bartosz.delacroix@example.com"
+   ],
+   [
+    "O0363",
+    "mail.body",
+    "haruki.szymanski at dev dot example dot net",
+    "haruki.szymanski at dev dot example dot net"
+   ]
+  ],
+  "continuity": [
+   {
+    "entity": "E03",
+    "personas": {
+     "P12": 20,
+     "P27": 8
+    },
+    "bad_form": 0,
+    "shared_with": [
+     "E24"
+    ],
+    "examples": [
+     [
+      "pull_requests.creator.login",
+      "hollowlynx88",
+      "flindgren"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "hollowlynx88",
+      "flindgren"
+     ],
+     [
+      "pull_requests.source_repo_url",
+      "hollowlynx88",
+      "flindgren"
+     ],
+     [
+      "pr_comments.body",
+      "hollowlynx88",
+      "flindgren"
+     ]
+    ]
+   },
+   {
+    "entity": "E09",
+    "personas": {
+     "P13": 6,
+     "P30": 4
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "pull_requests.creator.login",
+      "polarwren72",
+      "swhitmore"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "polarwren72",
+      "swhitmore"
+     ],
+     [
+      "pr_comments.body",
+      "polarwren72",
+      "swhitmore"
+     ],
+     [
+      "pr_comments.body",
+      "polarwren72",
+      "swhitmore"
+     ]
+    ]
+   },
+   {
+    "entity": "E04",
+    "personas": {
+     "P14": 20,
+     "P29": 4,
+     "P07": 2
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.body",
+      "polarfalcon99",
+      "epemberton"
+     ],
+     [
+      "pull_requests.creator.login",
+      "polarfalcon99",
+      "epemberton"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "polarfalcon99",
+      "epemberton"
+     ],
+     [
+      "pr_comments.body",
+      "polarfalcon99",
+      "epemberton"
+     ]
+    ]
+   },
+   {
+    "entity": "E06",
+    "personas": {
+     "P15": 12,
+     "P31": 5
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.body",
+      "rapidosprey12",
+      "cwestergaard"
+     ],
+     [
+      "pull_requests.creator.login",
+      "rapidosprey12",
+      "cwestergaard"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "rapidosprey12",
+      "cwestergaard"
+     ],
+     [
+      "pull_requests.source_repo_url",
+      "rapidosprey12",
+      "cwestergaard"
+     ]
+    ]
+   },
+   {
+    "entity": "E08",
+    "personas": {
+     "P16": 4,
+     "P32": 5
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "commits.author.name",
+      "Pascual Eberhardt",
+      "Perpetua Dunmore"
+     ],
+     [
+      "commits.author.email",
+      "pascual.eberhardt@example.com",
+      "perpetua.dunmore@pseudonym.example"
+     ],
+     [
+      "commits.committer.name",
+      "Pascual Eberhardt",
+      "Perpetua Dunmore"
+     ],
+     [
+      "commits.committer.email",
+      "pascual.eberhardt@example.com",
+      "perpetua.dunmore@pseudonym.example"
+     ]
+    ]
+   },
+   {
+    "entity": "E07",
+    "personas": {
+     "P17": 4,
+     "P33": 4
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.body",
+      "briskmarten56",
+      "emontague"
+     ],
+     [
+      "pull_requests.creator.login",
+      "briskmarten56",
+      "emontague"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "briskmarten56",
+      "emontague"
+     ],
+     [
+      "pull_requests.source_repo_url",
+      "briskmarten56",
+      "emontague"
+     ]
+    ]
+   },
+   {
+    "entity": "E05",
+    "personas": {
+     "P19": 16,
+     "P34": 11
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.body",
+      "mistyosprey32",
+      "runderhill"
+     ],
+     [
+      "comments.body",
+      "mistyosprey32",
+      "runderhill"
+     ],
+     [
+      "pull_requests.creator.login",
+      "mistyosprey32",
+      "runderhill"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "mistyosprey32",
+      "runderhill"
+     ]
+    ]
+   },
+   {
+    "entity": "E10",
+    "personas": {
+     "P09": 11
+    },
+    "bad_form": 0,
+    "shared_with": [
+     "E16"
+    ],
+    "examples": []
+   },
+   {
+    "entity": "E16",
+    "personas": {
+     "P09": 8
+    },
+    "bad_form": 0,
+    "shared_with": [
+     "E10"
+    ],
+    "examples": []
+   },
+   {
+    "entity": "E01",
+    "personas": {
+     "P20": 30,
+     "P24": 13,
+     "P07": 5
+    },
+    "bad_form": 0,
+    "shared_with": [
+     "E14"
+    ],
+    "examples": [
+     [
+      "comments.body",
+      "delacroixb",
+      "jingersoll"
+     ],
+     [
+      "comments.body",
+      "delacroixb",
+      "jingersoll"
+     ],
+     [
+      "pull_requests.creator.login",
+      "delacroixb",
+      "jingersoll"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "Bartosz D. Delacroix",
+      "Jarek Ingersoll"
+     ]
+    ]
+   },
+   {
+    "entity": "E14",
+    "personas": {
+     "P20": 4
+    },
+    "bad_form": 0,
+    "shared_with": [
+     "E01"
+    ],
+    "examples": []
+   },
+   {
+    "entity": "E24",
+    "personas": {
+     "P23": 3,
+     "P12": 1
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.body",
+      "Haruki",
+      "Vesna"
+     ]
+    ]
+   },
+   {
+    "entity": "E26",
+    "personas": {
+     "P07": 12
+    },
+    "bad_form": 0,
+    "shared_with": [
+     "E01",
+     "E04"
+    ],
+    "examples": []
+   }
+  ],
+  "overscrub": [],
+  "integrity": [],
+  "links": [],
+  "schema": []
+ }
+}

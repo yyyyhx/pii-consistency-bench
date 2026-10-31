@@ -1,0 +1,487 @@
+{
+ "task_id": "h1-storm-opaque",
+ "cleaner": "rules",
+ "elapsed_s": 0.0107,
+ "score": 0.850965250965251,
+ "gate": true,
+ "components": {
+  "entity_recall": 0.9354838709677419,
+  "continuity": 0.6129032258064516,
+  "precision": 1.0,
+  "integrity": 1.0
+ },
+ "diagnostics": {
+  "grader_version": "grader-0.3",
+  "harmonic_mean": 0.850965250965251,
+  "score_v1": 0.850965250965251,
+  "min_component": 0.6129032258064516,
+  "solved": false,
+  "gate_schema": true,
+  "gate_links": true,
+  "gate_text": true,
+  "occurrence_recall": 0.9958419958419958,
+  "occurrence_recall_structured": 1.0,
+  "occurrence_recall_free_text": 0.9865771812080537,
+  "separation": 0.935483870967742,
+  "entity_success": 0.5806451612903226,
+  "entities_ok": [
+   "E11",
+   "E13",
+   "E14",
+   "E15",
+   "E16",
+   "E17",
+   "E18",
+   "E19",
+   "E20",
+   "E21",
+   "E22",
+   "E23",
+   "E24",
+   "E26",
+   "E28",
+   "E29",
+   "E30",
+   "E31"
+  ],
+  "bcubed_precision": 0.9778402837226366,
+  "bcubed_recall": 0.7053978126912248,
+  "form_accuracy": 1.0,
+  "persona_resolved": 1.0,
+  "text_preservation": 1.0,
+  "distractor_preservation": 1.0,
+  "schema_valid": true,
+  "n_entities": 31,
+  "n_occurrences": 481,
+  "n_leaked": 2,
+  "n_residual_token_hits": 2,
+  "n_overscrub_edits": 0,
+  "n_integrity_failures": 0,
+  "n_link_failures": 0,
+  "n_schema_errors": 0,
+  "n_declared_personas": 0,
+  "mapping_errors": [],
+  "mapping_leaks": 0,
+  "recall_by_surface": {
+   "ci_builds.log": 1.0,
+   "comments.author.display_name": 1.0,
+   "comments.author.username": 1.0,
+   "comments.body": 1.0,
+   "commits.author.email": 1.0,
+   "commits.author.name": 1.0,
+   "commits.committer.email": 1.0,
+   "commits.committer.name": 1.0,
+   "commits.message": 0.9688,
+   "issues.assignee.display_name": 1.0,
+   "issues.assignee.username": 1.0,
+   "issues.description": 1.0,
+   "issues.reporter.display_name": 1.0,
+   "issues.reporter.username": 1.0,
+   "mail.body": 0.9524,
+   "mail.from.email": 1.0,
+   "mail.from.name": 1.0,
+   "pr_comments.author.display_name": 1.0,
+   "pr_comments.author.login": 1.0,
+   "pr_comments.body": 1.0,
+   "pull_requests.creator.display_name": 1.0,
+   "pull_requests.creator.login": 1.0,
+   "pull_requests.description": 1.0,
+   "pull_requests.source_repo_url": 1.0,
+   "reviews.body": 1.0,
+   "reviews.creator.display_name": 1.0,
+   "reviews.creator.login": 1.0
+  }
+ },
+ "failures": {
+  "leaks": [
+   [
+    "O0134",
+    "commits.message",
+    "brigitte.brennan@lab.example.org",
+    "brigitte.brennan@lab.example.org"
+   ],
+   [
+    "O0426",
+    "mail.body",
+    "thaddeus.szymanski at mail dot example dot org",
+    "thaddeus.szymanski at mail dot example dot org"
+   ]
+  ],
+  "continuity": [
+   {
+    "entity": "E02",
+    "personas": {
+     "P07": 30,
+     "P37": 11,
+     "P25": 4
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.body",
+      "briskbison72",
+      "mquarrie"
+     ],
+     [
+      "comments.body",
+      "briskbison72",
+      "mquarrie"
+     ],
+     [
+      "pull_requests.creator.login",
+      "briskbison72",
+      "mquarrie"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "briskbison72",
+      "mquarrie"
+     ]
+    ]
+   },
+   {
+    "entity": "E01",
+    "personas": {
+     "P08": 48,
+     "P35": 16
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.body",
+      "rapidnewt41",
+      "gokonkwo"
+     ],
+     [
+      "comments.body",
+      "rapidnewt41",
+      "gokonkwo"
+     ],
+     [
+      "pull_requests.creator.login",
+      "rapidnewt41",
+      "gokonkwo"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "rapidnewt41",
+      "gokonkwo"
+     ]
+    ]
+   },
+   {
+    "entity": "E09",
+    "personas": {
+     "P09": 12,
+     "P38": 5
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.body",
+      "dustymarten28",
+      "dwhitmore"
+     ],
+     [
+      "pull_requests.creator.login",
+      "dustymarten28",
+      "dwhitmore"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "dustymarten28",
+      "dwhitmore"
+     ],
+     [
+      "pull_requests.source_repo_url",
+      "dustymarten28",
+      "dwhitmore"
+     ]
+    ]
+   },
+   {
+    "entity": "E06",
+    "personas": {
+     "P10": 15,
+     "P40": 5
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.body",
+      "tidalplover82",
+      "rcoverdale"
+     ],
+     [
+      "pull_requests.creator.login",
+      "tidalplover82",
+      "rcoverdale"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "tidalplover82",
+      "rcoverdale"
+     ],
+     [
+      "pr_comments.body",
+      "tidalplover82",
+      "rcoverdale"
+     ]
+    ]
+   },
+   {
+    "entity": "E07",
+    "personas": {
+     "P11": 18,
+     "P39": 6
+    },
+    "bad_form": 0,
+    "shared_with": [
+     "E25"
+    ],
+    "examples": [
+     [
+      "comments.body",
+      "frostykestrel19",
+      "fyardley"
+     ],
+     [
+      "pull_requests.creator.login",
+      "frostykestrel19",
+      "fyardley"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "frostykestrel19",
+      "fyardley"
+     ],
+     [
+      "pull_requests.source_repo_url",
+      "frostykestrel19",
+      "fyardley"
+     ]
+    ]
+   },
+   {
+    "entity": "E08",
+    "personas": {
+     "P12": 6,
+     "P41": 4,
+     "P26": 4
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.body",
+      "quietfox57",
+      "fmontague"
+     ],
+     [
+      "pull_requests.creator.login",
+      "quietfox57",
+      "fmontague"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "quietfox57",
+      "fmontague"
+     ],
+     [
+      "pr_comments.body",
+      "quietfox57",
+      "fmontague"
+     ]
+    ]
+   },
+   {
+    "entity": "E03",
+    "personas": {
+     "P13": 18,
+     "P42": 11
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.body",
+      "dustyibis62",
+      "ejessop"
+     ],
+     [
+      "comments.body",
+      "dustyibis62",
+      "ejessop"
+     ],
+     [
+      "pull_requests.creator.login",
+      "dustyibis62",
+      "ejessop"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "dustyibis62",
+      "ejessop"
+     ]
+    ]
+   },
+   {
+    "entity": "E05",
+    "personas": {
+     "P14": 12,
+     "P43": 4
+    },
+    "bad_form": 0,
+    "shared_with": [
+     "E27"
+    ],
+    "examples": [
+     [
+      "pull_requests.creator.login",
+      "rapidosprey11",
+      "cwestergaard"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "rapidosprey11",
+      "cwestergaard"
+     ],
+     [
+      "pull_requests.source_repo_url",
+      "rapidosprey11",
+      "cwestergaard"
+     ],
+     [
+      "pr_comments.body",
+      "rapidosprey11",
+      "cwestergaard"
+     ]
+    ]
+   },
+   {
+    "entity": "E04",
+    "personas": {
+     "P16": 31,
+     "P44": 13,
+     "P27": 2
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.body",
+      "polarwren26",
+      "meverleigh"
+     ],
+     [
+      "comments.body",
+      "polarwren26",
+      "meverleigh"
+     ],
+     [
+      "pull_requests.creator.login",
+      "polarwren26",
+      "meverleigh"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "polarwren26",
+      "meverleigh"
+     ]
+    ]
+   },
+   {
+    "entity": "E10",
+    "personas": {
+     "P17": 8,
+     "P45": 5,
+     "P28": 4
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.body",
+      "frostygecko41",
+      "ilockhart"
+     ],
+     [
+      "pull_requests.creator.login",
+      "frostygecko41",
+      "ilockhart"
+     ],
+     [
+      "pull_requests.creator.display_name",
+      "frostygecko41",
+      "ilockhart"
+     ],
+     [
+      "pull_requests.source_repo_url",
+      "frostygecko41",
+      "ilockhart"
+     ]
+    ]
+   },
+   {
+    "entity": "E27",
+    "personas": {
+     "P18": 7,
+     "P14": 5
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.body",
+      "Thaddeus",
+      "Osric"
+     ],
+     [
+      "comments.body",
+      "Thaddeus",
+      "Osric"
+     ],
+     [
+      "comments.body",
+      "Thaddeus",
+      "Osric"
+     ],
+     [
+      "comments.body",
+      "Thaddeus",
+      "Osric"
+     ]
+    ]
+   },
+   {
+    "entity": "E25",
+    "personas": {
+     "P22": 2,
+     "P11": 2
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.body",
+      "Yolanda",
+      "Margit"
+     ],
+     [
+      "comments.body",
+      "Yolanda",
+      "Margit"
+     ]
+    ]
+   }
+  ],
+  "overscrub": [],
+  "integrity": [],
+  "links": [],
+  "schema": []
+ }
+}

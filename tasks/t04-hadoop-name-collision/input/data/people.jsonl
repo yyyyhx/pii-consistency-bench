@@ -1,0 +1,7 @@
+{"person_id": "dev-001", "display_name": "Ulrike Arcuri", "emails": ["ulrike.arcuri@lab.example.org"], "accounts": [{"system": "git", "name": "Ulrike Arcuri", "email": "ulrike.arcuri@lab.example.org"}, {"system": "jira", "username": "uarcuri", "display_name": "Ulrike Arcuri"}]}
+{"person_id": "dev-002", "display_name": "Bartosz Barzani", "emails": [], "accounts": [{"system": "jira", "username": "bartoszb", "display_name": "Bartosz Barzani"}]}
+{"person_id": "dev-003", "display_name": "Dmitri Castellano", "emails": [], "accounts": [{"system": "jira", "username": "dmitca", "display_name": "Dmitri Castellano"}]}
+{"person_id": "dev-004", "display_name": "Umberto Mendoza", "emails": [], "accounts": [{"system": "jira", "username": "umbertom", "display_name": "Umberto Mendoza"}]}
+{"person_id": "dev-005", "display_name": "Horatio Eberhardt", "emails": [], "accounts": [{"system": "jira", "username": "horatioe", "display_name": "Horatio Eberhardt"}]}
+{"person_id": "dev-006", "display_name": "Dmitri Castellano", "emails": [], "accounts": [{"system": "jira", "username": "dmitri-cas", "display_name": "Dmitri Castellano"}]}
+{"person_id": "dev-007", "display_name": "Gideon Szymanski", "emails": [], "accounts": [{"system": "jira", "username": "gideons", "display_name": "Gideon Szymanski"}]}

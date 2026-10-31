@@ -1,0 +1,394 @@
+{
+ "task_id": "t05-hadoop-long-history",
+ "cleaner": "redact",
+ "elapsed_s": 0.0057,
+ "score": 0.0,
+ "gate": true,
+ "components": {
+  "entity_recall": 0.5,
+  "continuity": 0.0,
+  "precision": 1.0,
+  "integrity": 1.0
+ },
+ "diagnostics": {
+  "grader_version": "grader-0.3",
+  "harmonic_mean": 0.0,
+  "score_v1": 0.0,
+  "min_component": 0.0,
+  "solved": false,
+  "gate_schema": true,
+  "gate_links": true,
+  "gate_text": true,
+  "occurrence_recall": 0.9502369668246445,
+  "occurrence_recall_structured": 1.0,
+  "occurrence_recall_free_text": 0.78125,
+  "separation": 1.0,
+  "entity_success": 0.0,
+  "entities_ok": [],
+  "bcubed_precision": 1.0,
+  "bcubed_recall": 0.018957345971563982,
+  "form_accuracy": 0.0,
+  "persona_resolved": 0.0,
+  "text_preservation": 1.0,
+  "distractor_preservation": 1.0,
+  "schema_valid": true,
+  "n_entities": 8,
+  "n_occurrences": 422,
+  "n_leaked": 21,
+  "n_residual_token_hits": 26,
+  "n_overscrub_edits": 0,
+  "n_integrity_failures": 0,
+  "n_link_failures": 0,
+  "n_schema_errors": 0,
+  "n_declared_personas": 0,
+  "mapping_errors": [],
+  "mapping_leaks": 0,
+  "recall_by_surface": {
+   "comments.author.display_name": 1.0,
+   "comments.author.username": 1.0,
+   "comments.body": 0.8,
+   "commits.author.email": 1.0,
+   "commits.author.name": 1.0,
+   "commits.committer.email": 1.0,
+   "commits.committer.name": 1.0,
+   "commits.message": 0.7143,
+   "issues.assignee.display_name": 1.0,
+   "issues.assignee.username": 1.0,
+   "issues.creator.display_name": 1.0,
+   "issues.creator.username": 1.0,
+   "issues.description": 1.0,
+   "issues.reporter.display_name": 1.0,
+   "issues.reporter.username": 1.0
+  }
+ },
+ "failures": {
+  "leaks": [
+   [
+    "O0096",
+    "commits.message",
+    "Desmond Xiong",
+    "Desmond Xiong"
+   ],
+   [
+    "O0097",
+    "commits.message",
+    "desmond.xiong@dev.example.net",
+    "desmond.xiong@dev.example.net"
+   ],
+   [
+    "O0127",
+    "commits.message",
+    "Giselle Castellanos",
+    "Giselle Castellanos"
+   ],
+   [
+    "O0128",
+    "commits.message",
+    "giselle.castellanos@mail.example.org",
+    "giselle.castellanos@mail.example.org"
+   ],
+   [
+    "O0138",
+    "commits.message",
+    "Desmond Xiong",
+    "Desmond Xiong"
+   ],
+   [
+    "O0139",
+    "commits.message",
+    "desmond.xiong@dev.example.net",
+    "desmond.xiong@dev.example.net"
+   ],
+   [
+    "O0183",
+    "commits.message",
+    "Giselle Castellanos",
+    "Giselle Castellanos"
+   ],
+   [
+    "O0184",
+    "commits.message",
+    "giselle.castellanos@mail.example.org",
+    "giselle.castellanos@mail.example.org"
+   ],
+   [
+    "O0198",
+    "commits.message",
+    "Desmond Xiong",
+    "Desmond Xiong"
+   ],
+   [
+    "O0199",
+    "commits.message",
+    "desmond.xiong@dev.example.net",
+    "desmond.xiong@dev.example.net"
+   ],
+   [
+    "O0279",
+    "comments.body",
+    "Giselle",
+    "Giselle"
+   ],
+   [
+    "O0303",
+    "comments.body",
+    "soren.petrakis at corp dot example dot com",
+    "soren.petrakis at corp dot example dot com"
+   ],
+   [
+    "O0324",
+    "comments.body",
+    "Desmond",
+    "Desmond"
+   ],
+   [
+    "O0358",
+    "comments.body",
+    "Giselle",
+    "Giselle"
+   ],
+   [
+    "O0362",
+    "comments.body",
+    "Giselle",
+    "Giselle"
+   ],
+   [
+    "O0377",
+    "comments.body",
+    "seraphina.oyelaran at mail dot example dot org",
+    "seraphina.oyelaran at mail dot example dot org"
+   ],
+   [
+    "O0386",
+    "comments.body",
+    "Desmond",
+    "Desmond"
+   ],
+   [
+    "O0396",
+    "comments.body",
+    "Giselle",
+    "Giselle"
+   ],
+   [
+    "O0404",
+    "comments.body",
+    "soren.petrakis at corp dot example dot com",
+    "soren.petrakis at corp dot example dot com"
+   ],
+   [
+    "O0419",
+    "comments.body",
+    "Giselle",
+    "Giselle"
+   ],
+   [
+    "O0422",
+    "comments.body",
+    "Giselle",
+    "Giselle"
+   ]
+  ],
+  "continuity": [
+   {
+    "entity": "E01",
+    "personas": {
+     "None": 195
+    },
+    "bad_form": 195,
+    "shared_with": [],
+    "examples": [
+     [
+      "commits.author.name",
+      "Soren Petrakis",
+      "[REDACTED]"
+     ],
+     [
+      "commits.author.email",
+      "soren.petrakis@corp.example.com",
+      "[REDACTED_EMAIL]"
+     ],
+     [
+      "commits.committer.name",
+      "Soren Petrakis",
+      "[REDACTED]"
+     ],
+     [
+      "commits.committer.email",
+      "soren.petrakis@corp.example.com",
+      "[REDACTED_EMAIL]"
+     ]
+    ]
+   },
+   {
+    "entity": "E05",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E02",
+    "personas": {
+     "None": 77
+    },
+    "bad_form": 77,
+    "shared_with": [],
+    "examples": [
+     [
+      "commits.author.name",
+      "Isidore Kaminski",
+      "[REDACTED]"
+     ],
+     [
+      "commits.author.email",
+      "isidore.kaminski@example.com",
+      "[REDACTED_EMAIL]"
+     ],
+     [
+      "commits.committer.name",
+      "Isidore Kaminski",
+      "[REDACTED]"
+     ],
+     [
+      "commits.committer.email",
+      "isidore.kaminski@example.com",
+      "[REDACTED_EMAIL]"
+     ]
+    ]
+   },
+   {
+    "entity": "E03",
+    "personas": {
+     "None": 65
+    },
+    "bad_form": 65,
+    "shared_with": [],
+    "examples": [
+     [
+      "commits.message",
+      "Seraphina Oyelaran",
+      "[REDACTED]"
+     ],
+     [
+      "commits.committer.name",
+      "Seraphina Oyelaran",
+      "[REDACTED]"
+     ],
+     [
+      "commits.committer.email",
+      "seraphina.oyelaran@mail.example.org",
+      "[REDACTED_EMAIL]"
+     ],
+     [
+      "commits.committer.name",
+      "Seraphina Oyelaran",
+      "[REDACTED]"
+     ]
+    ]
+   },
+   {
+    "entity": "E06",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E04",
+    "personas": {
+     "None": 15
+    },
+    "bad_form": 15,
+    "shared_with": [],
+    "examples": [
+     [
+      "commits.message",
+      "Oksana Szymanski",
+      "[REDACTED]"
+     ],
+     [
+      "commits.message",
+      "Oksana Szymanski",
+      "[REDACTED]"
+     ],
+     [
+      "commits.message",
+      "Oksana Szymanski",
+      "[REDACTED]"
+     ],
+     [
+      "issues.reporter.username",
+      "oksanas",
+      "[REDACTED_USER]"
+     ]
+    ]
+   },
+   {
+    "entity": "E07",
+    "personas": {
+     "None": 4
+    },
+    "bad_form": 4,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.author.username",
+      "yiwasaki",
+      "[REDACTED_USER]"
+     ],
+     [
+      "comments.author.display_name",
+      "Yusuf Iwasaki",
+      "[REDACTED]"
+     ],
+     [
+      "comments.body",
+      "yiwasaki",
+      "[REDACTED_USER]"
+     ],
+     [
+      "comments.body",
+      "Yusuf",
+      "[REDACTED]"
+     ]
+    ]
+   },
+   {
+    "entity": "E08",
+    "personas": {
+     "None": 45
+    },
+    "bad_form": 45,
+    "shared_with": [],
+    "examples": [
+     [
+      "comments.author.username",
+      "clementine-men",
+      "[REDACTED_USER]"
+     ],
+     [
+      "comments.author.display_name",
+      "Clementine Mendoza",
+      "[REDACTED]"
+     ],
+     [
+      "comments.author.username",
+      "clementine-men",
+      "[REDACTED_USER]"
+     ],
+     [
+      "comments.author.display_name",
+      "Clementine Mendoza",
+      "[REDACTED]"
+     ]
+    ]
+   }
+  ],
+  "overscrub": [],
+  "integrity": [],
+  "links": [],
+  "schema": []
+ }
+}

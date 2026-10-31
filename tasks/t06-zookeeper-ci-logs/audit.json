@@ -1,0 +1,66 @@
+{
+ "task_id": "t06-zookeeper-ci-logs",
+ "records": {
+  "data/commits.jsonl": 7,
+  "data/issues.jsonl": 6,
+  "data/comments.jsonl": 21,
+  "data/ci_builds.jsonl": 7
+ },
+ "entities": 4,
+ "pool_size": 8,
+ "occurrences": 140,
+ "occurrences_synthetic": 40,
+ "occurrences_free_text": 36,
+ "occurrences_by_surface": {
+  "ci_builds.log": 17,
+  "ci_builds.triggered_by.display_name": 2,
+  "ci_builds.triggered_by.username": 2,
+  "comments.author.display_name": 18,
+  "comments.author.username": 18,
+  "comments.body": 11,
+  "commits.author.email": 7,
+  "commits.author.name": 7,
+  "commits.committer.email": 7,
+  "commits.committer.name": 7,
+  "commits.message": 5,
+  "issues.assignee.display_name": 6,
+  "issues.assignee.username": 6,
+  "issues.creator.display_name": 6,
+  "issues.creator.username": 6,
+  "issues.description": 3,
+  "issues.reporter.display_name": 6,
+  "issues.reporter.username": 6
+ },
+ "aliases_per_entity": {
+  "E01": 7,
+  "E02": 3,
+  "E03": 2,
+  "E04": 2
+ },
+ "collisions": [],
+ "distractors": 4,
+ "sanitizer_paragraph_decisions": {
+  "accept": 65380,
+  "too_short": 15200,
+  "mention": 9399,
+  "address": 1308,
+  "name": 1273,
+  "handle": 709,
+  "name_mid_sentence": 586,
+  "lower_name": 541,
+  "unknown_proper": 396,
+  "quote_header": 195,
+  "lower_address": 115,
+  "email": 80,
+  "initials": 26,
+  "assign_leftover": 9
+ },
+ "non_dictionary_capitalized_tokens": {
+  "Stat": 7,
+  "Hadoop": 3,
+  "Findbugs": 3,
+  "Thu": 1,
+  "Using": 1
+ },
+ "validation": "ok"
+}

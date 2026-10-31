@@ -1,0 +1,256 @@
+{
+ "task_id": "t08-zookeeper-pulls-mail",
+ "cleaner": "rules",
+ "elapsed_s": 0.0072,
+ "score": 0.9063745019920318,
+ "gate": true,
+ "components": {
+  "entity_recall": 0.7222222222222222,
+  "continuity": 0.9722222222222222,
+  "precision": 1.0,
+  "integrity": 1.0
+ },
+ "diagnostics": {
+  "grader_version": "grader-0.3",
+  "harmonic_mean": 0.9063745019920318,
+  "score_v1": 0.9063745019920318,
+  "min_component": 0.7222222222222222,
+  "solved": false,
+  "gate_schema": true,
+  "gate_links": true,
+  "gate_text": true,
+  "occurrence_recall": 0.9434523809523809,
+  "occurrence_recall_structured": 1.0,
+  "occurrence_recall_free_text": 0.8020833333333334,
+  "separation": 1.0,
+  "entity_success": 0.6944444444444444,
+  "entities_ok": [
+   "E04",
+   "E10",
+   "E12",
+   "E13",
+   "E14",
+   "E15",
+   "E16",
+   "E17",
+   "E18",
+   "E19",
+   "E20",
+   "E21",
+   "E22",
+   "E24",
+   "E25",
+   "E26",
+   "E27",
+   "E28",
+   "E29",
+   "E30",
+   "E31",
+   "E32",
+   "E34",
+   "E35",
+   "E36"
+  ],
+  "bcubed_precision": 1.0,
+  "bcubed_recall": 0.8849502248652857,
+  "form_accuracy": 1.0,
+  "persona_resolved": 1.0,
+  "text_preservation": 1.0,
+  "distractor_preservation": 1.0,
+  "schema_valid": true,
+  "n_entities": 36,
+  "n_occurrences": 336,
+  "n_leaked": 19,
+  "n_residual_token_hits": 19,
+  "n_overscrub_edits": 0,
+  "n_integrity_failures": 0,
+  "n_link_failures": 0,
+  "n_schema_errors": 0,
+  "n_declared_personas": 0,
+  "mapping_errors": [],
+  "mapping_leaks": 0,
+  "recall_by_surface": {
+   "comments.author.display_name": 1.0,
+   "comments.author.username": 1.0,
+   "comments.body": 0.8421,
+   "commits.author.email": 1.0,
+   "commits.author.name": 1.0,
+   "commits.committer.email": 1.0,
+   "commits.committer.name": 1.0,
+   "commits.message": 1.0,
+   "issues.assignee.display_name": 1.0,
+   "issues.assignee.username": 1.0,
+   "issues.description": 1.0,
+   "issues.reporter.display_name": 1.0,
+   "issues.reporter.username": 1.0,
+   "mail.body": 0.7143,
+   "mail.from.email": 1.0,
+   "mail.from.name": 1.0,
+   "pr_comments.author.display_name": 1.0,
+   "pr_comments.author.login": 1.0,
+   "pr_comments.body": 1.0,
+   "pull_requests.creator.display_name": 1.0,
+   "pull_requests.creator.login": 1.0,
+   "pull_requests.description": 1.0,
+   "pull_requests.source_repo_url": 0.0,
+   "reviews.body": 1.0,
+   "reviews.creator.display_name": 1.0,
+   "reviews.creator.login": 1.0
+  }
+ },
+ "failures": {
+  "leaks": [
+   [
+    "O0120",
+    "comments.body",
+    "Lalia",
+    "Lalia"
+   ],
+   [
+    "O0170",
+    "comments.body",
+    "Roz",
+    "Roz"
+   ],
+   [
+    "O0193",
+    "comments.body",
+    "Chiarina",
+    "Chiarina"
+   ],
+   [
+    "O0197",
+    "pull_requests.source_repo_url",
+    "emeric.oyelaran",
+    "emeric.oyelaran"
+   ],
+   [
+    "O0201",
+    "pull_requests.source_repo_url",
+    "emeric.oyelaran",
+    "emeric.oyelaran"
+   ],
+   [
+    "O0205",
+    "pull_requests.source_repo_url",
+    "kferreira",
+    "kferreira"
+   ],
+   [
+    "O0209",
+    "pull_requests.source_repo_url",
+    "kferreira",
+    "kferreira"
+   ],
+   [
+    "O0217",
+    "pull_requests.source_repo_url",
+    "dobrowolskio",
+    "dobrowolskio"
+   ],
+   [
+    "O0220",
+    "pull_requests.source_repo_url",
+    "dobrowolskio",
+    "dobrowolskio"
+   ],
+   [
+    "O0223",
+    "pull_requests.source_repo_url",
+    "hortib",
+    "hortib"
+   ],
+   [
+    "O0226",
+    "pull_requests.source_repo_url",
+    "hortib",
+    "hortib"
+   ],
+   [
+    "O0283",
+    "mail.body",
+    "oksana.dobrowolski at lab dot example dot org",
+    "oksana.dobrowolski at lab dot example dot org"
+   ],
+   [
+    "O0293",
+    "mail.body",
+    "emeric.oyelaran at mail dot example dot org",
+    "emeric.oyelaran at mail dot example dot org"
+   ],
+   [
+    "O0300",
+    "mail.body",
+    "haruki.barzani at example dot com",
+    "haruki.barzani at example dot com"
+   ],
+   [
+    "O0304",
+    "mail.body",
+    "haruki.barzani at example dot com",
+    "haruki.barzani at example dot com"
+   ],
+   [
+    "O0311",
+    "mail.body",
+    "zoltan.eriksen at mail dot example dot org",
+    "zoltan.eriksen at mail dot example dot org"
+   ],
+   [
+    "O0319",
+    "mail.body",
+    "hortense.ibarra at dev dot example dot net",
+    "hortense.ibarra at dev dot example dot net"
+   ],
+   [
+    "O0327",
+    "mail.body",
+    "kasimir.ferreira at dev dot example dot net",
+    "kasimir.ferreira at dev dot example dot net"
+   ],
+   [
+    "O0335",
+    "mail.body",
+    "quentin.achterberg at lab dot example dot org",
+    "quentin.achterberg at lab dot example dot org"
+   ]
+  ],
+  "continuity": [
+   {
+    "entity": "E11",
+    "personas": {
+     "P20": 4,
+     "P31": 4
+    },
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": [
+     [
+      "reviews.creator.login",
+      "wzamora",
+      "jlockhart"
+     ],
+     [
+      "reviews.creator.display_name",
+      "Wilhelmina S. Zamora",
+      "Jarek Lockhart"
+     ],
+     [
+      "pr_comments.author.login",
+      "wzamora",
+      "jlockhart"
+     ],
+     [
+      "pr_comments.author.display_name",
+      "Wilhelmina S. Zamora",
+      "Jarek Lockhart"
+     ]
+    ]
+   }
+  ],
+  "overscrub": [],
+  "integrity": [],
+  "links": [],
+  "schema": []
+ }
+}

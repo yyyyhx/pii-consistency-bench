@@ -1,0 +1,106 @@
+[
+  {
+    "persona_id": "P01",
+    "full_name": "Henrik Lindgren",
+    "first_name": "Henrik",
+    "last_name": "Lindgren",
+    "email": "henrik.lindgren@pseudonym.example",
+    "username": "hlindgren"
+  },
+  {
+    "persona_id": "P02",
+    "full_name": "Saoirse Ravenscroft",
+    "first_name": "Saoirse",
+    "last_name": "Ravenscroft",
+    "email": "saoirse.ravenscroft@pseudonym.example",
+    "username": "sravenscroft"
+  },
+  {
+    "persona_id": "P03",
+    "full_name": "Hamish Underhill",
+    "first_name": "Hamish",
+    "last_name": "Underhill",
+    "email": "hamish.underhill@pseudonym.example",
+    "username": "hunderhill"
+  },
+  {
+    "persona_id": "P04",
+    "full_name": "Lysander Ingersoll",
+    "first_name": "Lysander",
+    "last_name": "Ingersoll",
+    "email": "lysander.ingersoll@pseudonym.example",
+    "username": "lingersoll"
+  },
+  {
+    "persona_id": "P05",
+    "full_name": "Viggo Tremblay",
+    "first_name": "Viggo",
+    "last_name": "Tremblay",
+    "email": "viggo.tremblay@pseudonym.example",
+    "username": "vtremblay"
+  },
+  {
+    "persona_id": "P06",
+    "full_name": "Leontine Quennell",
+    "first_name": "Leontine",
+    "last_name": "Quennell",
+    "email": "leontine.quennell@pseudonym.example",
+    "username": "lquennell"
+  },
+  {
+    "persona_id": "P07",
+    "full_name": "Piotr Duquesne",
+    "first_name": "Piotr",
+    "last_name": "Duquesne",
+    "email": "piotr.duquesne@pseudonym.example",
+    "username": "pduquesne"
+  },
+  {
+    "persona_id": "P08",
+    "full_name": "Cressida Whitmore",
+    "first_name": "Cressida",
+    "last_name": "Whitmore",
+    "email": "cressida.whitmore@pseudonym.example",
+    "username": "cwhitmore"
+  },
+  {
+    "persona_id": "P09",
+    "full_name": "Galina Engstrom",
+    "first_name": "Galina",
+    "last_name": "Engstrom",
+    "email": "galina.engstrom@pseudonym.example",
+    "username": "gengstrom"
+  },
+  {
+    "persona_id": "P10",
+    "full_name": "Isolde Dunmore",
+    "first_name": "Isolde",
+    "last_name": "Dunmore",
+    "email": "isolde.dunmore@pseudonym.example",
+    "username": "idunmore"
+  },
+  {
+    "persona_id": "P11",
+    "full_name": "Orla Valdivia",
+    "first_name": "Orla",
+    "last_name": "Valdivia",
+    "email": "orla.valdivia@pseudonym.example",
+    "username": "ovaldivia"
+  },
+  {
+    "persona_id": "P12",
+    "full_name": "Katarina Marchetti",
+    "first_name": "Katarina",
+    "last_name": "Marchetti",
+    "email": "katarina.marchetti@pseudonym.example",
+    "username": "kmarchetti"
+  },
+  {
+    "persona_id": "P13",
+    "full_name": "Winifred Hallorann",
+    "first_name": "Winifred",
+    "last_name": "Hallorann",
+    "email": "winifred.hallorann@pseudonym.example",
+    "username": "whallorann"
+  }
+]

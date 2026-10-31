@@ -1,0 +1,258 @@
+{
+ "task_id": "t07-hdfs-distractors",
+ "cleaner": "noop",
+ "elapsed_s": 0.0,
+ "score": 0.0,
+ "gate": true,
+ "components": {
+  "entity_recall": 0.0,
+  "continuity": 0.0,
+  "precision": 1.0,
+  "integrity": 1.0
+ },
+ "diagnostics": {
+  "grader_version": "grader-0.3",
+  "harmonic_mean": 0.0,
+  "score_v1": 0.0,
+  "min_component": 0.0,
+  "solved": false,
+  "gate_schema": true,
+  "gate_links": true,
+  "gate_text": true,
+  "occurrence_recall": 0.0,
+  "occurrence_recall_structured": 0.0,
+  "occurrence_recall_free_text": 0.0,
+  "separation": 1.0,
+  "entity_success": 0.0,
+  "entities_ok": [],
+  "bcubed_precision": 1.0,
+  "bcubed_recall": 0.024242424242424242,
+  "form_accuracy": 0.0,
+  "persona_resolved": 0.0,
+  "text_preservation": 1.0,
+  "distractor_preservation": 1.0,
+  "schema_valid": true,
+  "n_entities": 4,
+  "n_occurrences": 165,
+  "n_leaked": 165,
+  "n_residual_token_hits": 246,
+  "n_overscrub_edits": 0,
+  "n_integrity_failures": 0,
+  "n_link_failures": 0,
+  "n_schema_errors": 0,
+  "n_declared_personas": 0,
+  "mapping_errors": [],
+  "mapping_leaks": 0,
+  "recall_by_surface": {
+   "comments.author.display_name": 0.0,
+   "comments.author.username": 0.0,
+   "comments.body": 0.0,
+   "commits.author.email": 0.0,
+   "commits.author.name": 0.0,
+   "commits.committer.email": 0.0,
+   "commits.committer.name": 0.0,
+   "commits.message": 0.0,
+   "issues.assignee.display_name": 0.0,
+   "issues.assignee.username": 0.0,
+   "issues.creator.display_name": 0.0,
+   "issues.creator.username": 0.0,
+   "issues.description": 0.0,
+   "issues.reporter.display_name": 0.0,
+   "issues.reporter.username": 0.0,
+   "people.accounts.display_name": 0.0,
+   "people.accounts.email": 0.0,
+   "people.accounts.name": 0.0,
+   "people.accounts.username": 0.0,
+   "people.display_name": 0.0,
+   "people.emails": 0.0
+  }
+ },
+ "failures": {
+  "leaks": [
+   [
+    "O0039",
+    "commits.author.name",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0040",
+    "commits.author.email",
+    "leopold.ulyanov@corp.example.com",
+    "leopold.ulyanov@corp.example.com"
+   ],
+   [
+    "O0041",
+    "commits.committer.name",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0042",
+    "commits.committer.email",
+    "leopold.ulyanov@corp.example.com",
+    "leopold.ulyanov@corp.example.com"
+   ],
+   [
+    "O0043",
+    "commits.message",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0044",
+    "commits.author.name",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0045",
+    "commits.author.email",
+    "leopold.ulyanov@corp.example.com",
+    "leopold.ulyanov@corp.example.com"
+   ],
+   [
+    "O0046",
+    "commits.committer.name",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0047",
+    "commits.committer.email",
+    "leopold.ulyanov@corp.example.com",
+    "leopold.ulyanov@corp.example.com"
+   ],
+   [
+    "O0048",
+    "commits.message",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0049",
+    "commits.author.name",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0050",
+    "commits.author.email",
+    "leopold.ulyanov@corp.example.com",
+    "leopold.ulyanov@corp.example.com"
+   ],
+   [
+    "O0051",
+    "commits.committer.name",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0052",
+    "commits.committer.email",
+    "leopold.ulyanov@corp.example.com",
+    "leopold.ulyanov@corp.example.com"
+   ],
+   [
+    "O0053",
+    "commits.message",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0054",
+    "commits.author.name",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0055",
+    "commits.author.email",
+    "leopold.ulyanov@corp.example.com",
+    "leopold.ulyanov@corp.example.com"
+   ],
+   [
+    "O0056",
+    "commits.committer.name",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0057",
+    "commits.committer.email",
+    "leopold.ulyanov@corp.example.com",
+    "leopold.ulyanov@corp.example.com"
+   ],
+   [
+    "O0058",
+    "commits.author.name",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0059",
+    "commits.author.email",
+    "leopold.ulyanov@corp.example.com",
+    "leopold.ulyanov@corp.example.com"
+   ],
+   [
+    "O0060",
+    "commits.committer.name",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0061",
+    "commits.committer.email",
+    "leopold.ulyanov@corp.example.com",
+    "leopold.ulyanov@corp.example.com"
+   ],
+   [
+    "O0062",
+    "commits.message",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ],
+   [
+    "O0063",
+    "commits.author.name",
+    "Leopold Ulyanov",
+    "Leopold Ulyanov"
+   ]
+  ],
+  "continuity": [
+   {
+    "entity": "E01",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E02",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E03",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   },
+   {
+    "entity": "E04",
+    "personas": {},
+    "bad_form": 0,
+    "shared_with": [],
+    "examples": []
+   }
+  ],
+  "overscrub": [],
+  "integrity": [],
+  "links": [],
+  "schema": []
+ }
+}

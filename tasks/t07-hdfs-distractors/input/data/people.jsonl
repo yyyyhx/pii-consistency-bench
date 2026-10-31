@@ -1,0 +1,3 @@
+{"person_id": "dev-001", "display_name": "Leopold Ulyanov", "emails": ["leopold.ulyanov@corp.example.com", "lulyanov@apache.example.org"], "accounts": [{"system": "git", "name": "Leopold Ulyanov", "email": "leopold.ulyanov@corp.example.com"}, {"system": "git", "name": "Leopold Ulyanov", "email": "lulyanov@apache.example.org"}, {"system": "jira", "username": "lulyanov", "display_name": "Leopold Ulyanov"}]}
+{"person_id": "dev-002", "display_name": "Wendell Moreau", "emails": [], "accounts": [{"system": "jira", "username": "wendell-mor", "display_name": "Wendell Moreau"}]}
+{"person_id": "dev-003", "display_name": "Soren Kowalczyk", "emails": [], "accounts": [{"system": "jira", "username": "soreko", "display_name": "Soren Kowalczyk"}]}
